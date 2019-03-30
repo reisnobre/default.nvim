@@ -23,15 +23,11 @@ set history=500
 
 " Enable filetype plugins
 filetype plugin on
-" filetype indent on
+filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
 
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
-let mapleader = ' '
-let maplocalleader = ' '
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -149,19 +145,9 @@ let g:used_javascript_libs = 'vue,underscore'
 let g:vue_disable_pre_processors=1
 
 
-"+--- Prompt for a command to run ---+
-map <Leader>tp :VimuxPromptCommand<CR>
-
-"+--- Run last command executed by VimuxRunCommand ---+
-map <Leader>tl :VimuxRunLastCommand<CR>
-
-"+--- Inspect runner pane ---+
-map <Leader>ti :VimuxInspectRunner<CR>
 
 "+--- Leader --+
 
-"+--- Fast Save ---+
-noremap <Leader>s :update<CR>
 
 " JJ ESC
 ino jj <esc>
@@ -174,35 +160,19 @@ ino jj <esc>
 
 "+--- Enable Elite mode ---+
 let g:elite_mode=1
-if get(g:, 'elite_mode')
- 	nnoremap <Up>    :resize +2<CR>
- 	nnoremap <Down>  :resize -2<CR>
- 	nnoremap <Left>  :vertical resize +2<CR>
- 	nnoremap <Right> :vertical resize -2<CR>
-endif
 
 "+--- Emmet ---+
 " let g:user_emmet_leader_key='<C-Q>'
 let g:user_emmet_leader_key='<C-y>'
 autocmd BufRead, BufNewFile *.vue setlocal filetype=vue.html.javascript.css
-autocmd FileType javascript nmap <buffer> <C-]> :YcmCompleter GoTo<CR>
 
 " autocmd BufWinLeave *.* mkview
 " autocmd BufWinEnter *.* silent loadview 
 " autocmd BufNew * execute ":tabmove99"
 
-"+--- Utilsnips ---+
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 
 let g:UltiSnipsSnippetsDir="~/.config/nvim/plugged/snippets/UltiSnips"
 
-"+--- Utilsnips ---+
-
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard -x *.meta']
 "
 " "NERDtree shit
 let NERDTreeQuitOnOpen=1
@@ -210,47 +180,9 @@ let NERDTreeQuitOnOpen=1
 "Session
 let g:session_autoload = 'yes'
 
-" "Fgods
-set pastetoggle=<F2>
-noremap <F3> :set ft=
-noremap <F4> :call TabSize()<Left><Left>
-noremap <F11> :so $MYVIMRC <CR>
-noremap <F12> :tabe $MYVIMRC <CR>
-
-"+--- Smooth Scrolling ---+
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 
 "Convert line endings from dos to unix
 noremap <Leader>ç :e ++ff=dos <bar> set ff=unix <bar> update <CR>
-
-" Awesome split moving, CTRL+j/k to switch between splits. Obs.: The guy who
-"+--- Split Moving ---+
-map <c-j> <C-W>j<C-W>_
-map <c-k> <C-W>k<C-W>_
-map <c-h> <C-W>h<C-W>\|
-map <c-l> <C-W>l<C-W>\|
-
-" "Learn it
-cnoremap $t <CR>:t''<CR>
-cnoremap $T <CR>:T''<CR>
-cnoremap $m <CR>:m''<CR>
-cnoremap $M <CR>:M''<CR>
-cnoremap $d <CR>:d<CR>``
-"
-" "Quick single file refactor
-noremap <Leader>r ye:%s,",
-
-" "comment shit
-noremap <Leader>cs 80i=<esc>
-
-"Quick all files refactor
-noremap <Leader>f ye:Far " 
-
-" "NERDTree
-nnoremap <Leader>n :NERDTree<CR>
 
 "Remember options when reopening files
 set viewoptions=cursor,folds,slash,unix,options
@@ -261,7 +193,6 @@ cnoreabbrev ag Ack
 cnoreabbrev aG Ack
 cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
-nnoremap <Leader>a :Ack! -w 
 let g:ackhighlight = 1
 set backupcopy=yes
 "
