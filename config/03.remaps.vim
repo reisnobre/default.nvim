@@ -76,3 +76,8 @@ nnoremap <Leader>a :Ack! -w
 " Quick all files refactor with vim-far
 noremap <Leader>f ye:Far " 
 
+" let g:user_emmet_leader_key='<C-Q>'
+let g:user_emmet_leader_key='<C-y>'
+
+" JJ ESC
+ino jj <esc>

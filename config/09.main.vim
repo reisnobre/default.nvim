@@ -1,60 +1,3 @@
-" Sections
-"    -> Plugins 
-"    -> General
-"    -> VIM user interface
-"    -> Colors and Fonts
-"    -> Files and backups
-"    -> Text, tab and indent related
-"    -> Visual mode related
-"    -> Moving around, tabs and buffers
-"    -> Status line
-"    -> Editing mappings
-"    -> vimgrep searching and cope displaying
-"    -> Spell checking
-"    -> Misc
-"    -> Helper functions
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Sets how many lines of history VIM has to remember
-set history=500
-
-" Enable filetype plugins
-filetype plugin on
-filetype indent on
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Set 7 lines 
-
-" Makes search act like search in modern browsers
-set incsearch 
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw 
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch 
-
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -117,22 +60,6 @@ set nowrap "No wrap lines
 " => Visual mode related
 """"""""""""""""""""""""""""""
 
-set go-=m
-set go-=T
-set go-=r
-set go-=L
-set nocompatible
-set tabstop=2
-set shiftwidth=2
-set autochdir 
-set shellslash
-set foldmethod=indent
-set laststatus=2
-let g:nord_uniform_status_lines = 1
-set clipboard=unnamed
-set expandtab
-
-
 " CTRLP ignore files
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.cs.meta
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|meta|swp|wav)$'
@@ -144,32 +71,17 @@ set fileformat=unix
 let g:used_javascript_libs = 'vue,underscore'
 let g:vue_disable_pre_processors=1
 
-
-
-"+--- Leader --+
-
-
-" JJ ESC
-ino jj <esc>
-
 " Ale error navigation
 " nnoremap <silent> <C-k>1 :exe "normal \<Plug>(ale_previous)"<CR>
 " nnoremap <silent> <C-j>1 :exe "normal \<Plug>(ale_next)"<CR>
 " nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 " nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-"+--- Enable Elite mode ---+
-let g:elite_mode=1
-
-"+--- Emmet ---+
-" let g:user_emmet_leader_key='<C-Q>'
-let g:user_emmet_leader_key='<C-y>'
 autocmd BufRead, BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 " autocmd BufWinLeave *.* mkview
 " autocmd BufWinEnter *.* silent loadview 
 " autocmd BufNew * execute ":tabmove99"
-
 
 let g:UltiSnipsSnippetsDir="~/.config/nvim/plugged/snippets/UltiSnips"
 
