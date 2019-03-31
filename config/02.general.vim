@@ -2,6 +2,21 @@
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Default file format
+set fileformat=unix
+
+" Smart indent
+set si 
+
+"Auto indent
+set ai 
+
+"No wrap lines
+set nowrap 
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -48,5 +63,35 @@ let g:nord_uniform_status_lines = 1
 set clipboard=unnamed
 set expandtab
 
+"Session
+let g:session_autoload = 'yes'
+
+"Remember options when reopening files
+set viewoptions=cursor,folds,slash,unix,options
+
 " Enable Elite mode
 let g:elite_mode=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins General Config 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" CTRLP ignore files
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.cs.meta
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|meta|swp|wav)$'
+let g:buffergator_autoexpand_on_split = 0
+
+" Utilsnips Dir
+let g:UltiSnipsSnippetsDir="~/.config/nvim/plugged/snippets/UltiSnips"
+
+" "NERDtree 
+let NERDTreeQuitOnOpen=1
+
+" FAR
+let g:ackprg = 'ag --vimgrep --smart-case'                                                   
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
+let g:ackhighlight = 1
+set backupcopy=yes

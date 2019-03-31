@@ -1,20 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing Mappings
+" => General Remaps 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Leader
-" With a map leader it's possible to do extra key combinations
-" like <leader>w saves the current file
+" New Leader
 let mapleader = ' '
 let maplocalleader = ' '
-
-" Prompt for a command to run
-map <Leader>tp :VimuxPromptCommand<CR>
-
-" Run last command executed by VimuxRunCommand
-map <Leader>tl :VimuxRunLastCommand<CR>
-
-" Inspect runner pane
-map <Leader>ti :VimuxInspectRunner<CR>
 
 " Fast Save
 noremap <Leader>s :update<CR>
@@ -25,21 +14,11 @@ nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
-" Utilsnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
-
-" Ctrlp
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard -x *.meta']
-
 " FMaps 
 set pastetoggle=<F2>
 noremap <F3> :set ft=
 noremap <F4> :call TabSize()<Left><Left>
-noremap <F11> :so $MYVIMRC <CR>
+noremap <F10> :so $MYVIMRC <CR>
 noremap <F12> :tabe $MYVIMRC <CR>
 
 " Smooth Scrolling
@@ -67,17 +46,38 @@ noremap <Leader>r ye:%s,",
 " Quick comment shit
 noremap <Leader>cs 80i=<esc>
 
+
+" JJ ESC
+ino jj <esc>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins Remaps 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Ale error navigation
+" nnoremap <silent> <C-k>1 :exe "normal \<Plug>(ale_previous)"<CR>
+" nnoremap <silent> <C-j>1 :exe "normal \<Plug>(ale_next)"<CR>
+" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+" nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" Utilsnips
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
+
+" Ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard -x *.meta']
+
 " NERDTree
 nnoremap <Leader>n :NERDTree<CR>
-" Far
-"
+
+" Ack! 
 nnoremap <Leader>a :Ack! -w 
 
 " Quick all files refactor with vim-far
 noremap <Leader>f ye:Far " 
 
-" let g:user_emmet_leader_key='<C-Q>'
+" Remap Emmet Remap 
 let g:user_emmet_leader_key='<C-y>'
-
-" JJ ESC
-ino jj <esc>
