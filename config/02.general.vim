@@ -59,7 +59,6 @@ set autochdir
 set shellslash
 set foldmethod=indent
 set laststatus=2
-let g:nord_uniform_status_lines = 1
 set clipboard=unnamed
 set expandtab
 
@@ -95,3 +94,6 @@ cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 let g:ackhighlight = 1
 set backupcopy=yes
+
+" Nord
+let g:nord_uniform_status_lines = 1
