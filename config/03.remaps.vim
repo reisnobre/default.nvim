@@ -1,6 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General Remaps 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " New Leader
 let mapleader = ' '
 let maplocalleader = ' '
@@ -57,8 +55,8 @@ ino jj <esc>
 " Ale error navigation
 " nnoremap <silent> <C-k>1 :exe "normal \<Plug>(ale_previous)"<CR>
 " nnoremap <silent> <C-j>1 :exe "normal \<Plug>(ale_next)"<CR>
-" nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-" nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Utilsnips
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -81,3 +79,10 @@ noremap <Leader>f ye:Far "
 
 " Remap Emmet Remap 
 let g:user_emmet_leader_key='<C-y>'
+
+" Miniyank
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)<Paste>
+
+map <leader>p <Plug>(miniyank-startput)
+map <leader>P <Plug>(miniyank-startPut)

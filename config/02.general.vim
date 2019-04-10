@@ -61,6 +61,7 @@ set foldmethod=indent
 set laststatus=2
 set clipboard=unnamed
 set expandtab
+set shell=/bin/bash
 
 "Session
 let g:session_autoload = 'yes'

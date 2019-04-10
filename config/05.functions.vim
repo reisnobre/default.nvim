@@ -11,5 +11,5 @@ function TabSize2()
  	set shiftwidth=2
 endfunction
 "
-au Filetype php, python call TabSize4()
+au Filetype php,python call TabSize4()
 au Filetype html,javascript,css,scss,sass,vue call TabSize2()
