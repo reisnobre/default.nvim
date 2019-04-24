@@ -21,7 +21,6 @@ Plug 'NLKNguyen/papercolor-theme'
 
 
 " IDE / Workflow
-Plug 'Raimondi/delimitMate'
 Plug 'https://github.com/terryma/vim-smooth-scroll.git'
 Plug 'https://github.com/mileszs/ack.vim.git'
 Plug 'jeetsukumaran/vim-buffergator'
@@ -30,7 +29,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'freencis/snippets'
 Plug 'https://github.com/reisnobre/rn-snippets'
 Plug 'https://github.com/SirVer/ultisnips.git'
-Plug 'https://github.com/Valloric/YouCompleteMe.git'
+" Plug 'https://github.com/Valloric/YouCompleteMe.git'
 Plug 'https://github.com/tomtom/tcomment_vim.git'
 Plug 'https://github.com/honza/vim-snippets.git'
 Plug 'https://github.com/mattn/emmet-vim.git'
@@ -41,6 +40,9 @@ Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ryanoasis/vim-devicons'
 Plug 'wakatime/vim-wakatime'
 Plug 'bfredl/nvim-miniyank'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
 " Plug 'https://github.com/Townk/vim-autoclose'
 " Plug 'https://github.com/justinmk/vim-sneak.git'
 " Plug 'git-time-metric/gtm-vim-plugin'
@@ -56,5 +58,7 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'w0rp/ale'
 Plug 'maximbaz/lightline-ale'
 Plug 'StanAngeloff/php.vim'
+Plug 'justinmk/vim-syntax-extra'
+Plug 'jwalton512/vim-blade'
 
 call plug#end()

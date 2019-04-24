@@ -53,10 +53,11 @@ ino jj <esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ale error navigation
-" nnoremap <silent> <C-k>1 :exe "normal \<Plug>(ale_previous)"<CR>
-" nnoremap <silent> <C-j>1 :exe "normal \<Plug>(ale_next)"<CR>
-nmap <silent> <C-k> <Plug>(ale_previous_wrap)
-nmap <silent> <C-j> <Plug>(ale_next_wrap)
+nmap <silent> <C-K> <Plug>(ale_previous_wrap)
+nmap <silent> <C-J> <Plug>(ale_next_wrap)
+nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
+nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+
 
 " Utilsnips
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -86,3 +87,20 @@ map P <Plug>(miniyank-autoPut)<Paste>
 
 map <leader>p <Plug>(miniyank-startput)
 map <leader>P <Plug>(miniyank-startPut)
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Git
+" mappings {{{
+let g:gitgutter_map_keys = 0
+nnoremap <leader>gg :G
+nnoremap <leader>g :Git<space>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gd :Gdiff
+nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gw :Gbrowse<CR>
+nnoremap <leader>gc :Gcommit %
+nnoremap <leader>gl :Glog<CR>
+nnoremap <leader>gp :Gpush
+  " }}}

@@ -6,7 +6,7 @@ let g:lightline = {
       \ 'active': {
       \     'left': [
       \         [ 'mode', 'paste' ],
-      \     	  [ 'gtmstatus','fugitive', 'filename', 'readonly', 'modified' ],
+      \     	  [ 'cocstatus','gtmstatus','fugitive', 'filename', 'readonly', 'modified' ],
       \     ],
       \     'right': [ 
       \		      [ 'linter_checking','linter_errors', 'linter_warnings', 'linter_ok'],
@@ -16,6 +16,7 @@ let g:lightline = {
       \	    ]
       \ },
       \ 'component_function': {
+      \     'cocstatus': 'coc#status',
       \     'fugitive': 'LightlineFugitive',
       \     'readonly': 'LightlineReadonly',
       \     'modified': 'LightlineModified',
