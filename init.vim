@@ -1,4 +1,4 @@
-" Configs 
+
 " -> Plugins 
 " -> General
 " -> Remaps 

@@ -6,10 +6,11 @@ let g:lightline = {
       \ 'active': {
       \     'left': [
       \         [ 'mode', 'paste' ],
-      \     	  [ 'cocstatus','gtmstatus','fugitive', 'filename', 'readonly', 'modified' ],
+      \     	  [ 'gtmstatus','fugitive', 'filename', 'readonly', 'modified' ],
       \     ],
       \     'right': [ 
-      \		      [ 'linter_checking','linter_errors', 'linter_warnings', 'linter_ok'],
+      \         [ 'cocstatus' ],
+      \		      [ 'linter_checking','linter_errors', 'linter_warnings', 'linter_ok' ],
       \		      [ 'lineinfo' ],
       \         [ 'percent' ],
       \         [ 'fileformat', 'fileencoding', 'filetype'],

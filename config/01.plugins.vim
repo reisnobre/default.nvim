@@ -41,6 +41,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'wakatime/vim-wakatime'
 Plug 'bfredl/nvim-miniyank'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'majutsushi/tagbar'
+
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " Plug 'https://github.com/Townk/vim-autoclose'

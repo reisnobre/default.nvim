@@ -1,10 +1,15 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "json"],
-  "eslint.filetypes": [ "javascript", "vue" ],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"],
   "html.filetypes": [ "html", "vue"],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
-  "diagnostic.infoSign": "•"
+  "diagnostic.infoSign": "•",
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.parser": "babylon",
+  "prettier.disableLanguages": []
 }

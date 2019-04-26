@@ -53,10 +53,8 @@ ino jj <esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ale error navigation
-nmap <silent> <C-K> <Plug>(ale_previous_wrap)
-nmap <silent> <C-J> <Plug>(ale_next_wrap)
-nmap <silent> <C-j> <Plug>(coc-diagnostic-next)
-nmap <silent> <C-k> <Plug>(coc-diagnostic-prev)
+nmap <C-k> <Plug>(ale_previous_wrap)
+nmap <C-j> <Plug>(ale_next_wrap)
 
 
 " Utilsnips
@@ -103,4 +101,7 @@ nnoremap <leader>gw :Gbrowse<CR>
 nnoremap <leader>gc :Gcommit %
 nnoremap <leader>gl :Glog<CR>
 nnoremap <leader>gp :Gpush
-  " }}}
+" Coc diagnostic 
+
+nmap <silent> cn <Plug>(coc-diagnostic-next)
+nmap <silent> cp <Plug>(coc-diagnostic-prev)
