@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " New Leader
 let mapleader = ' '
 let maplocalleader = ' '
@@ -48,13 +48,16 @@ noremap <Leader>cs 80i=<esc>
 " JJ ESC
 ino jj <esc>
 
+" Tabs
+nnoremap <silent> <C-t> :tabnext <CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Remaps 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Ale error navigation
-nmap <C-k> <Plug>(ale_previous_wrap)
-nmap <C-j> <Plug>(ale_next_wrap)
+nmap <C-n> <Plug>(ale_previous_wrap)
+nmap <C-N> <Plug>(ale_next_wrap)
 
 
 " Utilsnips

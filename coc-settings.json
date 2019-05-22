@@ -1,7 +1,7 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"],
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"," python"],
   "html.filetypes": [ "html", "vue"],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
