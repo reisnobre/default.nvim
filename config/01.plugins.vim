@@ -41,6 +41,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'wakatime/vim-wakatime'
 Plug 'bfredl/nvim-miniyank'
 Plug 'majutsushi/tagbar'
+Plug 'kshenoy/vim-signature'
 
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
