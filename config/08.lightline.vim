@@ -11,9 +11,7 @@ let g:lightline = {
       \     'right': [ 
       \         [ 'cocstatus' ],
       \		      [ 'linter_checking','linter_errors', 'linter_warnings', 'linter_ok' ],
-      \		      [ 'lineinfo' ],
-      \         [ 'percent' ],
-      \         [ 'fileformat', 'fileencoding', 'filetype'],
+      \         [ 'filetype' ],
       \	    ]
       \ },
       \ 'component_function': {

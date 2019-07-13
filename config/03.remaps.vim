@@ -51,6 +51,9 @@ ino jj <esc>
 " Tabs
 nnoremap <silent> <C-t> :tabnext <CR>
 
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Remaps 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -108,3 +111,18 @@ nnoremap <leader>gp :Gpush
 
 nmap <silent> cn <Plug>(coc-diagnostic-next)
 nmap <silent> cp <Plug>(coc-diagnostic-prev)
+
+
+" Multi cursor
+let g:multi_cursor_use_default_mapping = 0
+
+" Default mapping
+" let g:multi_cursor_start_word_key      = ' w'
+" let g:multi_cursor_select_all_word_key = '<A-n>'
+" let g:multi_cursor_start_key           = 'g<C-n>'
+" let g:multi_cursor_select_all_key      = 'g<A-n>'
+" let g:multi_cursor_next_key            = '<C-n>'
+" let g:multi_cursor_prev_key            = '<C-p>'
+" let g:multi_cursor_skip_key            = '<C-x>'
+" let g:multi_cursor_quit_key            = '<Esc>'
+

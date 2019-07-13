@@ -39,6 +39,8 @@ set magic
 " Show matching brackets when text indicator is over them
 set showmatch 
 
+" Spell checking
+" set spell
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -62,6 +64,9 @@ set laststatus=2
 set clipboard=unnamed
 set expandtab
 set shell=/bin/bash
+set winheight=30
+set winwidth=30
+set winminwidth=5
 
 "Session
 let g:session_autoload = 'yes'

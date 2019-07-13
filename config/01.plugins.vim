@@ -9,6 +9,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/lightline.vim'
 Plug 'myusuf3/numbers.vim'
+Plug 'ap/vim-css-color'
 
 " Color Themes 
 Plug 'arcticicestudio/nord-vim'
@@ -42,15 +43,12 @@ Plug 'wakatime/vim-wakatime'
 Plug 'bfredl/nvim-miniyank'
 Plug 'majutsushi/tagbar'
 Plug 'kshenoy/vim-signature'
+Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'terryma/vim-multiple-cursors'
+
 
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
-" Plug 'https://github.com/Townk/vim-autoclose'
-" Plug 'https://github.com/justinmk/vim-sneak.git'
-" Plug 'git-time-metric/gtm-vim-plugin'
-" Plug 'https://github.com/vim-scripts/restore_view.vim.git'
-" Plug 'https://github.com/xolox/vim-session'
-" Plug 'lervag/vimtex'
 
 
 " Syntax
