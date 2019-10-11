@@ -85,13 +85,6 @@ noremap <Leader>f ye:Far "
 " Remap Emmet Remap 
 let g:user_emmet_leader_key='<C-y>'
 
-" Miniyank
-map p <Plug>(miniyank-autoput)
-map P <Plug>(miniyank-autoPut)<Paste>
-
-map <leader>p <Plug>(miniyank-startput)
-map <leader>P <Plug>(miniyank-startPut)
-
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
 

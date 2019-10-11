@@ -40,15 +40,12 @@ Plug 'brooth/far.vim'
 Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'ryanoasis/vim-devicons'
 Plug 'wakatime/vim-wakatime'
-Plug 'bfredl/nvim-miniyank'
 Plug 'majutsushi/tagbar'
 Plug 'kshenoy/vim-signature'
-Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'terryma/vim-multiple-cursors'
 
 
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
 
 
 " Syntax
