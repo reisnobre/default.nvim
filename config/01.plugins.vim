@@ -49,8 +49,8 @@ Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 
 " Syntax
-Plug 'https://github.com/posva/vim-vue.git'
-Plug 'https://github.com/pangloss/vim-javascript.git'
+Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'w0rp/ale'
 Plug 'maximbaz/lightline-ale'
