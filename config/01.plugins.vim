@@ -57,5 +57,6 @@ Plug 'maximbaz/lightline-ale'
 Plug 'StanAngeloff/php.vim'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'jwalton512/vim-blade'
+Plug 'https://github.com/Shougo/echodoc.vim'
 
 call plug#end()

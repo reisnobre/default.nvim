@@ -1,6 +1,26 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" if hidden is not set, TextEdit might fail.
+set hidden
+
+" Some server have issues with backup files, see #649
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" Smaller updatetime for CursorHold & CursorHoldI
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+set completeopt=longest,menuone
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -77,6 +97,15 @@ set viewoptions=cursor,folds,slash,unix,options
 " Enable Elite mode
 let g:elite_mode=1
 
+augroup checktime
+    autocmd!
+    if !has("gui_running")
+        "silent! necessary otherwise throws errors when using command
+        "line window.
+        autocmd BufEnter,FocusGained,BufEnter,FocusLost,WinLeave * checktime
+    endif
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins General Config 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,37 +133,9 @@ set backupcopy=yes
 " Nord
 let g:nord_uniform_status_lines = 1
 
-" if hidden is not set, TextEdit might fail.
-set hidden
-
-" Some server have issues with backup files, see #649
-set nobackup
-set nowritebackup
-
-" Better display for messages
-set cmdheight=2
-
-" Smaller updatetime for CursorHold & CursorHoldI
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_echo_msg_format = '%linter%: %s'
-let g:ale_linters = {
-  \ 'javascript': ['eslint'],
-  \ 'typescript': ['eslint', 'tslint', 'tsserver'],
-  \ 'vue': ['eslint', 'stylelint', 'tsserver'],
-  \ 'php': ['phpcs'],
-  \ 'html': []
-\ }
-let g:ale_linter_aliases = {'vue': ['css', 'javascript', 'typescript']}
-
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => COC 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
 inoremap <silent><expr> <TAB>
@@ -153,4 +154,6 @@ noremap <silent><expr> <C-j> coc#refresh()
 " Coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" let g:gutentags_trace = 1
+imap <silent><expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+imap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

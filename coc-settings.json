@@ -1,5 +1,5 @@
 {
-  "suggest.echodocSupport": true,
+  "suggest.snippetIndicator": "►",
   "suggest.maxCompleteItemCount": 20,
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"," python"],
   "html.filetypes": [ "html", "vue"],

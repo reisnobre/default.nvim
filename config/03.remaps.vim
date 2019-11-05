@@ -1,4 +1,4 @@
-  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " New Leader
 let mapleader = ' '
 let maplocalleader = ' '
@@ -99,9 +99,9 @@ nnoremap <leader>gb :Gblame<CR>
 nnoremap <leader>gw :Gbrowse<CR>
 nnoremap <leader>gc :Gcommit %
 nnoremap <leader>gl :Glog<CR>
-nnoremap <leader>gp :Gpush
-" Coc diagnostic 
+nnoremap <leader>gp :
 
+" Coc diagnostic 
 nmap <silent> cn <Plug>(coc-diagnostic-next)
 nmap <silent> cp <Plug>(coc-diagnostic-prev)
 
