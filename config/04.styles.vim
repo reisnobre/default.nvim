@@ -15,5 +15,9 @@ syntax enable
 set foldcolumn=1
 
 " Colorscheme
-colorscheme nord
-set background=dark
+if iterm_profile == 'Nord'
+  colo Nord
+else
+    colo solarized
+    set background=light
+endif

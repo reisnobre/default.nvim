@@ -13,7 +13,8 @@ Plug 'ap/vim-css-color'
 
 " Color Themes 
 Plug 'arcticicestudio/nord-vim'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'rakr/vim-two-firewatch'
+Plug 'altercation/vim-colors-solarized'
 " Plug 'https://github.com/othree/xml.vim.git'
 " Plug 'https://github.com/romainl/Apprentice.git'
 " Plug 'https://github.com/terryma/vim-multiple-cursors.git'

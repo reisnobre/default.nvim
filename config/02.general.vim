@@ -157,3 +157,6 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 imap <silent><expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 imap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
+let iterm_profile = $ITERM_PROFILE

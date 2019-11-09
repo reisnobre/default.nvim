@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ale
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_text_changed = 'always'
 let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
@@ -15,8 +15,8 @@ let g:ale_linter_aliases = {'vue': ['css', 'javascript', 'typescript']}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Lightline 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:lightline = {
-      \ 'colorscheme': 'nord',
       \ 'active': {
       \     'left': [
       \         [ 'mode', 'paste' ],
@@ -45,6 +45,13 @@ let g:lightline = {
       \     'right': ''
       \ }
       \ }
+
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == 'Nord'
+  let g:lightline.colorscheme = 'nord' 
+else
+  let g:lightline.colorscheme = 'solarized'
+endif
 
 let g:lightline.component_expand = {
       \ 'linter_checking': 'lightline#ale#checking',
@@ -93,4 +100,8 @@ function! LightlineFilename()
   return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
         \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
+
+
+function! LightlineTheme()
 endfunction
