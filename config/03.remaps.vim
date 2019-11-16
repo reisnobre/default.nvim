@@ -1,28 +1,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Remaps
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " JJ ESC
 ino jj <esc>
-
 " New Leader
 let mapleader = ' '
 let maplocalleader = ' '
 
-
 " Fast Save
 noremap <Leader>s :update<CR>
-
-" Quick single file refactor
-noremap <Leader>r ye:%s,",
 
 " Quick comment shit
 noremap <Leader>cs 80i=<esc>
 
-" Ack! 
-nnoremap <Leader>a :Ack! -w 
-
-" Quick all files refactor with vim-far
-noremap <Leader>f ye:Far " 
+" Quick single file refactor
+noremap <Leader>r ye:%s,",
 
 " Elite Resize
 nnoremap <Up>    :resize +2<CR>
@@ -55,6 +46,7 @@ cnoremap $T <CR>:T''<CR>
 cnoremap $m <CR>:m''<CR>
 cnoremap $M <CR>:M''<CR>
 cnoremap $d <CR>:d<CR>``
+
 " Tabs
 nnoremap <silent> <C-t> :tabnext <CR>
 
@@ -70,27 +62,27 @@ nmap <C-n> <Plug>(ale_previous_wrap)
 nmap <C-N> <Plug>(ale_next_wrap)
 
 
-" " Utilsnips
+" Utilsnips
 " let g:UltiSnipsExpandTrigger="<c-j>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
 
-" Ctrlp
-" let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard -x *.meta']
+" NERDTree
 
+" Ack! 
+nnoremap <Leader>a :Ack! -w 
+
+" Quick all files refactor with vim-far
+noremap <Leader>f ye:Far " 
 
 " Remap Emmet Remap 
 let g:user_emmet_leader_key='<C-y>'
 
 " Tagbar
-nmap <F8> :TagbarToggle<CR>
+" nmap <F8> :TagbarToggle<CR>
 
 " Git
 " mappings {{{
 let g:gitgutter_map_keys = 0
-
 " Multi cursor
 let g:multi_cursor_use_default_mapping = 0
-

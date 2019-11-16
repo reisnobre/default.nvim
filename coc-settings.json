@@ -1,5 +1,11 @@
 {
-  "suggest.noselect": false,
+  "suggest.snippetIndicator": "►",
+  "suggest.maxCompleteItemCount": 20,
+  "diagnostic.messageTarget": "echo",
+  "signature.target": "echo",
+  "coc.preferences.hoverTarget": "echo",
+  "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"," python"],
+  "html.filetypes": [ "html", "vue"],
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic.infoSign": "•",
@@ -8,15 +14,7 @@
   "prettier.singleQuote": true,
   "prettier.bracketSpacing": true,
   "prettier.parser": "babylon",
-  "html.filetypes": [ "html", "vue"],
-  "coc.preferences.formatOnSaveFiletypes": [
-    "vue",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "javascriptreact",
-    "typescript.tsx",
-    "graphql"
-  ]
+  "prettier.disableLanguages": [],
+  "languageserver":{
+  }
 }
