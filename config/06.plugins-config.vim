@@ -17,9 +17,9 @@ let g:buffergator_autoexpand_on_split = 0
 
 " ====== NERDtree ====== " 
 nnoremap <Leader>n :NERDTree<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
-" let NERDTreeQuitOnOpen=1
+" vmap ++ <plug>NERDCommenterToggle
+" nmap ++ <plug>NERDCommenterToggle
+let NERDTreeQuitOnOpen=1
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeColorMapCustom = {
     \ "Staged"    : "#0ee375",  
@@ -36,21 +36,21 @@ let g:NERDTreeIgnore = ['^node_modules$']
 
 " sync open file with NERDTree
 " " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
+" function! IsNERDTreeOpen()        
+"   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+" endfunction
 
 " Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
 "  file, and we're not in vimdiff
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
+" function! SyncTree()
+"   if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+"     NERDTreeFind
+"     wincmd p
+"   endif
+" endfunction
 
 " Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
+" autocmd BufEnter * call SyncTree()
 
 " ====== FAR ====== " 
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
@@ -67,7 +67,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-emmet',
-  \ 'coc-eslint', 
   \ 'coc-html',
   \ 'coc-imselect',
   \ 'coc-json', 
@@ -137,11 +136,102 @@ nmap <silent> gr <Plug>(coc-references)
 " Coc diagnostic 
 nmap <silent> cn <Plug>(coc-diagnostic-next)
 nmap <silent> cp <Plug>(coc-diagnostic-prev)
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Use K to show documentation in preview window
+" ====== Lightline ====== " 
+let g:ale_lint_on_text_changed = 'always'
+let g:ale_echo_msg_format = '%linter%: %s'
+let g:ale_linters = {
+  \ 'javascript': ['eslint'],
+  \ 'typescript': ['eslint', 'tslint', 'tsserver'],
+  \ 'vue': ['eslint', 'stylelint', 'vetur'],
+  \ 'php': ['phpcs'],
+  \ 'html': []
+\ }
+let g:ale_linter_aliases = {'vue': ['css', 'javascript', 'typescript']}
 
-" ====== Airline ====== " 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Lightline 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! CocCurrentFunction()
+    return get(b:, 'coc_current_function', '')
+endfunction
 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#ale#enabled = 1
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'cocstatus': 'coc#status',
+      \   'currentfunction': 'CocCurrentFunction'
+      \ },
+      \ 'separator': {
+      \     'left': '',
+      \     'right': ''
+      \ },
+      \ 'subseparator': {
+      \     'left': '',
+      \     'right': ''
+      \ }
+      \ }
 
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == 'Nord'
+  let g:lightline.colorscheme = 'nord' 
+else
+  let g:lightline.colorscheme = 'solarized'
+endif
+
+let g:lightline.component_expand = {
+      \ 'linter_checking': 'lightline#ale#checking',
+      \ 'linter_warnings': 'lightline#ale#warnings',
+      \ 'linter_errors': 'lightline#ale#errors',
+      \ 'linter_ok': 'lightline#ale#ok',
+      \ }
+
+let g:lightline.component_type = {
+      \ 'linter_checking': 'warning',
+      \ 'linter_warnings': 'warning',
+      \ 'linter_errors': 'error',
+      \ 'linter_ok': 'left',
+      \ }
+function! LightlineModified()
+  if &filetype == "help"
+    return ""
+  elseif &modified
+    return "+"
+  elseif &modifiable
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineReadonly()
+  if &filetype == "help"
+    return ""
+  elseif &readonly
+    return ""
+  else
+    return ""
+  endif
+endfunction
+
+function! LightlineFugitive()
+  if exists("*fugitive#head")
+    let branch = fugitive#head()
+    return branch !=# '' ? ' '.branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightlineFilename()
+  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
+        \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+        \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
+endfunction
+
+
+function! LightlineTheme()
+endfunction
