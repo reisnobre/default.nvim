@@ -15,6 +15,7 @@ syntax enable
 set foldcolumn=1
 
 " Colorscheme
+let iterm_profile = $ITERM_PROFILE
 if iterm_profile == 'Nord'
   colo Nord
 else

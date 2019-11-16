@@ -1,46 +1,30 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set t_ut=                     " fix 256 colors in tmux http://sunaku.github.io/vim-256color-bce.html
+set nowrap                    " don't wrap lines
+set hidden                    " hide buffer without notice
+" set mouse=a                   " enable mouse
+set autoread                  " auto read external file changes
+set hlsearch                  " highlight the last searched term
+set noshowcmd                 " disable blinking command feedback in bottom-right corner
+" set guicursor=                " disable cursor shape
+set noshowmode                " hide the default mode text (e.g. -- INSERT -- below the statusline)
+set noswapfile                " no swap files
+set cpoptions+=$              " dollar sign while changing
+set pumheight=30              " limit popup menu height
+set shortmess+=c              " disable ins-completion-menu 'match 1 of N' messages
+set synmaxcol=250             " set max syntax highlighting column to sane level
+set conceallevel=2            " hides concealed text
+set updatetime=300            " set updatetime to shorter value
+set virtualedit=all           " let us walk in limbo
+set visualbell t_vb=          " no visual bell
+set spelllang=en,pt_br        " set default spelling languages
+set completeopt-=preview      " disable the preview window
+set clipboard=unnamedplus     " for simplified clipboard copy/paste
+set expandtab shiftwidth=4    " space for tabs by default
+set tabstop=4 softtabstop=4
 
-set relativenumber
-
-set smarttab
-set cindent
-set tabstop=2
-set shiftwidth=2
-" always uses spaces instead of tab characters
-set expandtab
-
-set hidden " Some servers have issues with backup files, see #649 set nobackup set nowritebackup Better display for messages set cmdheight=2 " You will have bad experience for diagnostic messages when it's default 4000.
-set updatetime=300
-
-" don't give |ins-completion-menu| messages.
-set shortmess+=c
-
-" always show signcolumns
-set signcolumn=yes
-
-set nowrap 
-
-"Session
-let g:session_autoload = 'yes'
-
-"Remember options when reopening files
-set viewoptions=cursor,folds,slash,unix,options
-
-" Enable Elite mode
-let g:elite_mode=1
-
-augroup checktime
-    autocmd!
-    if !has("gui_running")
-        "silent! necessary otherwise throws errors when using command
-        "line window.
-        autocmd BufEnter,FocusGained,BufEnter,FocusLost,WinLeave * checktime
-    endif
-augroup END
-
-" Nord
-let g:nord_uniform_status_lines = 1
-let iterm_profile = $ITERM_PROFILE
-
+if has('nvim')
+  set wildoptions=pum         " set wildmenu to use pum
+endif
