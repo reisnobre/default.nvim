@@ -9,12 +9,23 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " coc config
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
+  \ 'coc-css',
+  \ 'coc-emmet',
   \ 'coc-eslint', 
-  \ 'coc-prettier', 
+  \ 'coc-html',
+  \ 'coc-imselect',
   \ 'coc-json', 
+  \ 'coc-list',
+  \ 'coc-marketplace',
+  \ 'coc-pairs',
+  \ 'coc-phpls',
+  \ 'coc-prettier',
+  \ 'coc-python',
+  \ 'coc-snippets',
+  \ 'coc-tsserver',
+  \ 'coc-vetur',
+  \ 'coc-vimlsp',
+  \ 'coc-yank',
   \ ]
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
