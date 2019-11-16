@@ -15,7 +15,6 @@ let g:coc_global_extensions = [
   \ 'coc-html',
   \ 'coc-imselect',
   \ 'coc-json', 
-  \ 'coc-list',
   \ 'coc-marketplace',
   \ 'coc-pairs',
   \ 'coc-phpls',
@@ -71,7 +70,6 @@ endfunction
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
-" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
  
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
 xmap <Leader>a  <Plug>(coc-codeaction-selected)
@@ -102,7 +100,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
 " Add status line support, for integration with other plugin, checkout `:h coc-status`
-" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Using CocList
 " Show all diagnostics

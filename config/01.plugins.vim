@@ -19,6 +19,8 @@ Plug 'tpope/vim-surround'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'wakatime/vim-wakatime'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'w0rp/ale'
+Plug 'maximbaz/lightline-ale'
 
 " Search
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
@@ -36,6 +38,7 @@ Plug 'rakr/vim-two-firewatch'
 " Syntax 
 Plug 'herringtondarkholme/yats.vim' " ts syntax
 Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
 
 " ui 
 " Plug 'yggdroot/indentline'
@@ -55,10 +58,7 @@ Plug 'posva/vim-vue'
 
 
 " syntax
-" Plug 'pangloss/vim-javascript'
 " Plug 'othree/javascript-libraries-syntax.vim'
-" Plug 'w0rp/ale'
-" Plug 'maximbaz/lightline-ale'
 " Plug 'stanangeloff/php.vim'
 " Plug 'justinmk/vim-syntax-extra'
 " Plug 'jwalton512/vim-blade'
