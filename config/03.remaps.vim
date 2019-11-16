@@ -1,10 +1,28 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Remaps
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JJ ESC
+ino jj <esc>
+
 " New Leader
 let mapleader = ' '
 let maplocalleader = ' '
 
+
 " Fast Save
 noremap <Leader>s :update<CR>
+
+" Quick single file refactor
+noremap <Leader>r ye:%s,",
+
+" Quick comment shit
+noremap <Leader>cs 80i=<esc>
+
+" Ack! 
+nnoremap <Leader>a :Ack! -w 
+
+" Quick all files refactor with vim-far
+noremap <Leader>f ye:Far " 
 
 " Elite Resize
 nnoremap <Up>    :resize +2<CR>
@@ -38,15 +56,8 @@ cnoremap $m <CR>:m''<CR>
 cnoremap $M <CR>:M''<CR>
 cnoremap $d <CR>:d<CR>``
 
-" Quick single file refactor
-noremap <Leader>r ye:%s,",
-
-" Quick comment shit
-noremap <Leader>cs 80i=<esc>
 
 
-" JJ ESC
-ino jj <esc>
 
 " Tabs
 nnoremap <silent> <C-t> :tabnext <CR>
@@ -73,14 +84,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard -x *.meta']
 
-" NERDTree
-nnoremap <Leader>n :NERDTree<CR>
-
-" Ack! 
-nnoremap <Leader>a :Ack! -w 
-
-" Quick all files refactor with vim-far
-noremap <Leader>f ye:Far " 
 
 " Remap Emmet Remap 
 let g:user_emmet_leader_key='<C-y>'
@@ -92,38 +95,6 @@ nmap <F8> :TagbarToggle<CR>
 " mappings {{{
 let g:gitgutter_map_keys = 0
 
-" Coc diagnostic 
-nmap <silent> cn <Plug>(coc-diagnostic-next)
-nmap <silent> cp <Plug>(coc-diagnostic-prev)
-
-
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window
-nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
 " Multi cursor
 let g:multi_cursor_use_default_mapping = 0
-
-" Default mapping
-" let g:multi_cursor_start_word_key      = ' w'
-" let g:multi_cursor_select_all_word_key = '<A-n>'
-" let g:multi_cursor_start_key           = 'g<C-n>'
-" let g:multi_cursor_select_all_key      = 'g<A-n>'
-" let g:multi_cursor_next_key            = '<C-n>'
-" let g:multi_cursor_prev_key            = '<C-p>'
-" let g:multi_cursor_skip_key            = '<C-x>'
-" let g:multi_cursor_quit_key            = '<Esc>'
 

@@ -1,62 +1,67 @@
 """"""""""""""""""""""""""""""
 " => Plugins 
 """"""""""""""""""""""""""""""
-
 call plug#begin()
-
-" UI 
-Plug 'Yggdroot/indentLine'
+" IDE
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-Plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/nerdcommenter'
+Plug 'terryma/vim-smooth-scroll'
+Plug 'tomtom/tcomment_vim'
 Plug 'itchyny/lightline.vim'
-Plug 'myusuf3/numbers.vim'
-Plug 'ap/vim-css-color'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'wakatime/vim-wakatime'
+Plug 'jeetsukumaran/vim-buffergator'
 
-" Color Themes 
+" Search
+Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+Plug 'mileszs/ack.vim'
+Plug 'brooth/far.vim'
+
+" Snippets
+Plug 'freencis/snippets'
+Plug 'reisnobre/snippets.nvim'
+
+" Color themes 
 Plug 'arcticicestudio/nord-vim'
 Plug 'rakr/vim-two-firewatch'
-Plug 'altercation/vim-colors-solarized'
-" Plug 'https://github.com/othree/xml.vim.git'
-" Plug 'https://github.com/romainl/Apprentice.git'
-" Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-" Plug 'https://github.com/tommcdo/vim-exchange.git'
-" Plug 'https://github.com/xolox/vim-misc'
 
-
-" IDE / Workflow
-Plug 'https://github.com/terryma/vim-smooth-scroll.git'
-Plug 'https://github.com/mileszs/ack.vim.git'
-Plug 'jeetsukumaran/vim-buffergator'
-Plug 'https://github.com/scrooloose/nerdtree'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
-Plug 'freencis/snippets'
-Plug 'https://github.com/reisnobre/snippets.nvim'
-Plug 'https://github.com/SirVer/ultisnips.git'
-" Plug 'https://github.com/Valloric/YouCompleteMe.git'
-Plug 'https://github.com/tomtom/tcomment_vim.git'
-Plug 'https://github.com/honza/vim-snippets.git'
-Plug 'https://github.com/mattn/emmet-vim.git'
-Plug 'https://github.com/tpope/vim-fugitive.git'
-Plug 'tpope/vim-repeat'
-Plug 'brooth/far.vim'
-Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'ryanoasis/vim-devicons'
-Plug 'wakatime/vim-wakatime'
-Plug 'majutsushi/tagbar'
-Plug 'kshenoy/vim-signature'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'heavenshell/vim-jsdoc'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
-
-
-" Syntax
+" Syntax 
+Plug 'herringtondarkholme/yats.vim' " ts syntax
 Plug 'posva/vim-vue'
-Plug 'pangloss/vim-javascript'
-Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'w0rp/ale'
-Plug 'maximbaz/lightline-ale'
-Plug 'StanAngeloff/php.vim'
-Plug 'justinmk/vim-syntax-extra'
-Plug 'jwalton512/vim-blade'
-Plug 'https://github.com/Shougo/echodoc.vim'
+
+" ui 
+" Plug 'yggdroot/indentline'
+" Plug 'myusuf3/numbers.vim'
+" Plug 'ap/vim-css-color'
+
+
+
+" ide / workflow
+" Plug 'https://github.com/sirver/ultisnips.git'
+" Plug 'https://github.com/honza/vim-snippets.git'
+" Plug 'https://github.com/mattn/emmet-vim.git'
+" Plug 'majutsushi/tagbar'
+" Plug 'kshenoy/vim-signature'
+" Plug 'terryma/vim-multiple-cursors'
+" Plug 'heavenshell/vim-jsdoc'
+
+
+" syntax
+" Plug 'pangloss/vim-javascript'
+" Plug 'othree/javascript-libraries-syntax.vim'
+" Plug 'w0rp/ale'
+" Plug 'maximbaz/lightline-ale'
+" Plug 'stanangeloff/php.vim'
+" Plug 'justinmk/vim-syntax-extra'
+" Plug 'jwalton512/vim-blade'
+" Plug 'https://github.com/shougo/echodoc.vim'
 
 call plug#end()
