@@ -6,7 +6,7 @@ let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'typescript': ['eslint', 'tslint', 'tsserver'],
-  \ 'vue': ['eslint', 'stylelint', 'tsserver'],
+  \ 'vue': ['eslint', 'stylelint', 'vetur'],
   \ 'php': ['phpcs'],
   \ 'html': []
 \ }

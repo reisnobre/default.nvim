@@ -44,8 +44,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'majutsushi/tagbar'
 Plug 'kshenoy/vim-signature'
 Plug 'terryma/vim-multiple-cursors'
-
-
+Plug 'heavenshell/vim-jsdoc'
 Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 
