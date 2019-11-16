@@ -1,7 +1,7 @@
 """"""""""""""""""""""""""""""
 " => Languages config
 """"""""""""""""""""""""""""""
-autocmd BufEnter,BufRead *.vue set filetype=vue.javascript
+" autocmd BufEnter,BufRead *.vue set filetype=vue.javascript
 
 " Vue linter libs 
 let g:used_javascript_libs = 'vue,underscore'

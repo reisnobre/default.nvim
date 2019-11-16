@@ -19,29 +19,26 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-" Plug 'vim-airline/vim-airline'
 Plug 'wakatime/vim-wakatime'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-
+Plug 'maximbaz/lightline-ale'
+"
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 
 " Syntax 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI 
+" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI 
 Plug 'StanAngeloff/php.vim'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
-
+"
 " Snippets 
 Plug 'freencis/snippets'
 Plug '/reisnobre/snippets.nvim'
 Plug 'ryanoasis/vim-devicons'
 
-" Plug 'https://github.com/mattn/emmet-vim.git'
-" Plug 'honza/vim-snippets'
-" Plug 'https://github.com/SirVer/ultisnips.git'
 
 " Themes
 Plug 'arcticicestudio/nord-vim'
@@ -55,5 +52,8 @@ Plug 'rakr/vim-two-firewatch'
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'tpope/vim-repeat'
+" Plug 'https://github.com/mattn/emmet-vim.git'
+" Plug 'honza/vim-snippets'
+" Plug 'https://github.com/SirVer/ultisnips.git'
 
 call plug#end()
