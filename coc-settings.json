@@ -1,5 +1,14 @@
 {
   "suggest.noselect": false,
+  "diagnostic.errorSign": "•",
+  "diagnostic.warningSign": "•",
+  "diagnostic.infoSign": "•",
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "prettier.singleQuote": true,
+  "prettier.bracketSpacing": true,
+  "prettier.parser": "babylon",
+  "html.filetypes": [ "html", "vue"],
   "coc.preferences.formatOnSaveFiletypes": [
     "vue",
     "javascript",
