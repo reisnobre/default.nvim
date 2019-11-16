@@ -34,24 +34,6 @@ let g:NERDTreeColorMapCustom = {
 
 let g:NERDTreeIgnore = ['^node_modules$']
 
-" sync open file with NERDTree
-" " Check if NERDTree is open or active
-" function! IsNERDTreeOpen()        
-"   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-" endfunction
-
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-"  file, and we're not in vimdiff
-" function! SyncTree()
-"   if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-"     NERDTreeFind
-"     wincmd p
-"   endif
-" endfunction
-
-" Highlight currently open buffer in NERDTree
-" autocmd BufEnter * call SyncTree()
-
 " ====== FAR ====== " 
 let g:ackprg = 'ag --vimgrep --smart-case'                                                   
 cnoreabbrev ag Ack
@@ -152,8 +134,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-emmet',
+  \ 'coc-eslint',
   \ 'coc-html',
   \ 'coc-imselect',
+  \ 'coc-highlight',
   \ 'coc-json', 
   \ 'coc-marketplace',
   \ 'coc-pairs',
@@ -238,8 +222,8 @@ let g:ale_sign_warning       = ''
 let g:ale_sign_style_error   = ''
 let g:ale_sign_style_warning = ''
 
-let g:ale_lint_on_insert_leave = 1
-let g:ale_lint_on_text_changed = 'normal'
+" let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_text_changed = 'always'
 
 " autocmd vimrc User ALEJobStarted call lightline#update()
 " autocmd vimrc User ALELintPost   call lightline#update()
@@ -273,7 +257,7 @@ function! s:ale_highlight() abort
   endif
 endfunction
 
-" autocmd vimrc VimEnter,ColorScheme * call s:ale_highlight()
+autocmd VimEnter call s:ale_highlight()
 
 " ====== Lightline ====== " 
 let g:lightline = {'colorscheme': 'nord'}
@@ -285,8 +269,8 @@ let g:lightline.active = {
       \   ],
       \   'right': [
       \     ['lineinfo',
-      \      'coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix', 'coc_status',
-      \      'ale_error', 'ale_warning', 'ale_info', 'ale_style_error', 'ale_style_warning'],
+      \      'coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix', 'coc_status'
+      \      ],
       \     ['filetype'],
       \     ['fileinfo']
       \   ]

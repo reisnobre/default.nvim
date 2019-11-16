@@ -1,7 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set t_ut=                     " fix 256 colors in tmux http://sunaku.github.io/vim-256color-bce.html
 set nowrap                    " don't wrap lines
 set hidden                    " hide buffer without notice
 " set mouse=a                   " enable mouse
@@ -28,3 +27,5 @@ set tabstop=4 softtabstop=4
 if has('nvim')
   set wildoptions=pum         " set wildmenu to use pum
 endif
+
+autocmd VimEnter * source ~/.config/nvim/init.vim
