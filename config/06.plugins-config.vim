@@ -43,3 +43,6 @@ cnoreabbrev Ag Ack
 cnoreabbrev AG Ack
 let g:ackhighlight = 1
 set backupcopy=yes
+
+au FileType javascript :UltiSnipsAddFiletypes javascript
+

@@ -23,12 +23,14 @@ Plug 'wakatime/vim-wakatime'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'maximbaz/lightline-ale'
+Plug 'pgdouyon/vim-evanesco'
 "
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
 
 " Syntax 
 " Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI 
+Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
@@ -36,7 +38,7 @@ Plug 'posva/vim-vue'
 "
 " Snippets 
 Plug 'freencis/snippets'
-Plug '/reisnobre/snippets.nvim'
+Plug 'reisnobre/snippets.nvim'
 Plug 'ryanoasis/vim-devicons'
 
 

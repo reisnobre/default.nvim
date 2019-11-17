@@ -5,6 +5,7 @@ let g:ale_linters = {
   \ 'typescript': ['eslint', 'tsserver'],
   \ 'vue': ['vls', 'vetur', 'eslint'],
   \ 'php': ['phpcs'],
+  \ 'python': ['flake8', 'pylint'],
   \ 'html': []
 \ }
 

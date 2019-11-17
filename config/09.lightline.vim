@@ -10,6 +10,7 @@ let g:lightline = {
             \     	  [ 'filepath', 'filename_active', 'readonly', 'modified' ],
             \     ],
             \     'right': [ 
+            \         [ 'linter_checking','linter_errors', 'linter_warnings', 'linter_ok' ],
             \         [ 'coc_status', 'coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix' ],
             \         [ 'filetype' ],
             \	    ]
@@ -39,6 +40,10 @@ let g:lightline.component_expand = {
             \   'coc_hint'         : 'LightlineCocHints',
             \   'coc_fix'          : 'LightlineCocFixes',
             \   'coc_status'       : 'LightlineCocStatus',
+            \   'linter_checking'  : 'lightline#ale#checking',
+            \   'linter_warnings'  : 'lightline#ale#warnings',
+            \   'linter_errors'    : 'lightline#ale#errors',
+            \   'linter_ok'        : 'lightline#ale#ok',
             \ }
 
 let g:lightline.component_type = {
