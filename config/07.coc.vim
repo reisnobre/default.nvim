@@ -14,9 +14,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-emmet',
+  \ 'coc-eslint',
   \ 'coc-html',
   \ 'coc-imselect',
-  \ 'coc-json', 
+  \ 'coc-highlight',
+  \ 'coc-json',
   \ 'coc-marketplace',
   \ 'coc-pairs',
   \ 'coc-phpls',
@@ -77,7 +79,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Coc diagnostic 
+" Coc diagnostic
 nmap <silent> cn <Plug>(coc-diagnostic-next)
 nmap <silent> cp <Plug>(coc-diagnostic-prev)
 nnoremap <silent> <Leader>d  :<C-u>CocList diagnostics<cr>

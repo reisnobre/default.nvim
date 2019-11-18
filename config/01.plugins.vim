@@ -24,19 +24,20 @@ Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'maximbaz/lightline-ale'
 Plug 'pgdouyon/vim-evanesco'
-"
+Plug 'liuchengxu/vista.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
+Plug 'ntpeters/vim-better-whitespace'
 
-" Syntax 
-" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI 
-Plug 'SirVer/ultisnips'
+" Syntax
+" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI
+" Plug 'SirVer/ultisnips'
 Plug 'StanAngeloff/php.vim'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 "
-" Snippets 
+" Snippets
 Plug 'freencis/snippets'
 Plug 'reisnobre/snippets.nvim'
 Plug 'ryanoasis/vim-devicons'
