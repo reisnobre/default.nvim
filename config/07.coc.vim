@@ -44,6 +44,27 @@ function! s:check_back_space() abort
 endfunction
 
 noremap <silent><expr> <C-j> coc#refresh()
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+" Remap keys for gotos
+"
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Coc diagnostic
+nmap <silent> cn <Plug>(coc-diagnostic-next)
+nmap <silent> cp <Plug>(coc-diagnostic-prev)
+nnoremap <silent> <Leader>d  :<C-u>CocList diagnostics<cr>
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+
+imap <silent><expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
+imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+imap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -52,17 +73,11 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-imap <silent><expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
-imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-imap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Use <C-d> for select selections ranges, needs server support, like: coc-tsserver, coc-python
 " nmap <silent> <C-d> <Plug>(coc-range-select)
 " xmap <silent> <C-d> <Plug>(coc-range-select)
+"
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
@@ -73,15 +88,5 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Coc diagnostic
-nmap <silent> cn <Plug>(coc-diagnostic-next)
-nmap <silent> cp <Plug>(coc-diagnostic-prev)
-nnoremap <silent> <Leader>d  :<C-u>CocList diagnostics<cr>
 
 " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}

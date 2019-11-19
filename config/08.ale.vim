@@ -3,8 +3,8 @@ let g:ale_echo_msg_format = '%linter%: %s'
 let g:ale_linters = {
   \ 'javascript': ['eslint', 'tsserver'],
   \ 'typescript': ['eslint', 'tsserver'],
-  \ 'vue': ['vls', 'vetur', 'eslint'],
-  \ 'php': ['phpcs'],
+  \ 'vue': ['vetur', 'eslint'],
+  \ 'php': [],
   \ 'python': ['flake8', 'pylint'],
   \ 'html': []
 \ }

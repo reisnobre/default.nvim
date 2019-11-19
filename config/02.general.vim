@@ -16,6 +16,7 @@ set cmdheight=2
 
 " don't give |ins-completion-menu| messages.
 set shortmess+=c
+set cursorline
 
 " always show signcolumns
 set signcolumn=yes
@@ -29,13 +30,13 @@ set encoding=utf8
 set fileformat=unix
 
 " Smart indent
-set si 
+set si
 
 "Auto indent
-set ai 
+set ai
 
 "No wrap lines
-set nowrap 
+set nowrap
 
 " Sets how many lines of history VIM has to remember
 set history=500
@@ -48,16 +49,16 @@ filetype indent on
 set autoread
 
 " Makes search act like search in modern browsers
-set incsearch 
+set incsearch
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw 
+set lazyredraw
 
 " For regular expressions turn magic on
 set magic
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 
 " Spell checking
 " set spell
@@ -77,7 +78,7 @@ set go-=L
 set nocompatible
 set tabstop=2
 set shiftwidth=2
-set autochdir 
+set autochdir
 set shellslash
 set foldmethod=indent
 set laststatus=2

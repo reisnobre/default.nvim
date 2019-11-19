@@ -41,6 +41,7 @@ Plug 'posva/vim-vue'
 Plug 'freencis/snippets'
 Plug 'reisnobre/snippets.nvim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'mattn/emmet-vim'
 
 
 " Themes
@@ -55,7 +56,6 @@ Plug 'rakr/vim-two-firewatch'
 " Plug 'othree/javascript-libraries-syntax.vim'
 " Plug 'terryma/vim-multiple-cursors'
 " Plug 'tpope/vim-repeat'
-" Plug 'https://github.com/mattn/emmet-vim.git'
 " Plug 'honza/vim-snippets'
 " Plug 'https://github.com/SirVer/ultisnips.git'
 

@@ -10,7 +10,7 @@ let g:lightline = {
             \     ],
             \     'right': [
             \         [ 'filetype', 'fileinfo' ],
-            \         [ 'lineinfo', 'coc_status', 'coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix' ],
+            \         [ 'lineinfo', 'coc_status', 'coc_error', 'coc_warning', 'coc_fix', 'coc_hint' ],
             \	    ]
             \ },
             \ 'component_function': {
