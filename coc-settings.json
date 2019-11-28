@@ -50,7 +50,7 @@
   "prettier.bracketSpacing": true,
   "prettier.parser": "babylon",
   "prettier.disableLanguages": [],
-  "python.jediEnabled": false,
+  "python.jediEnabled": true,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true
 }
