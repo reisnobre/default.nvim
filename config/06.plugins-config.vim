@@ -10,15 +10,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|meta|swp|wav)$'
 let g:buffergator_autoexpand_on_split = 0
 
-
-" ====== Utilsnips ===== "
-" let g:UltiSnipsSnippetsDir="~/.config/nvim/plugged/snippets/UltiSnips"
-
-
 " ====== NERDtree ====== "
 nnoremap <Leader>n :NERDTree<CR>
-" vmap ++ <plug>NERDCommenterToggle
-" nmap ++ <plug>NERDCommenterToggle
 let NERDTreeQuitOnOpen=1
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeColorMapCustom = {
@@ -33,7 +26,6 @@ let g:NERDTreeColorMapCustom = {
     \ }
 
 let g:NERDTreeIgnore = ['^node_modules$']
-
 
 " ====== FAR ====== "
 let g:ackprg = 'ag --vimgrep --smart-case'
@@ -57,6 +49,6 @@ let g:better_whitespace_filetypes_blacklist = [
 \   'vista', 'vista_kind', 'Mundo', 'MundoDiff', 'defx', 'quickrun', 'codi',
 \   'mail', 'muttrc'
 \ ]
-let g:better_whitespace_operator = ''
 
+let g:better_whitespace_operator = ''
 let g:gtm_plugin_status_enabled = 1

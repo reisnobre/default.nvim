@@ -1,4 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Remaps
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " JJ ESC
 ino jj <esc>
@@ -8,12 +10,16 @@ let maplocalleader = ' '
 
 " Fast Save
 noremap <Leader>s :update<CR>
-
-" Quick comment shit
-noremap <Leader>cs 80i=<esc>
-
 " Quick single file refactor
 noremap <Leader>r ye:%s,",
+
+" Call Ack!
+nnoremap <Leader>a :Ack! -w
+
+" Quick all files refactor with vim-far
+noremap <Leader>f ye:Far "
+
+" Open Vista
 noremap <silent> <Leader>v :Vista!!<CR>
 
 " Elite Resize
@@ -42,48 +48,24 @@ noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 " map <c-l> <C-W>l<C-W>\|
 
 " Learn it
-cnoremap $t <CR>:t''<CR>
-cnoremap $T <CR>:T''<CR>
-cnoremap $m <CR>:m''<CR>
-cnoremap $M <CR>:M''<CR>
-cnoremap $d <CR>:d<CR>``
+" cnoremap $t <CR>:t''<CR>
+" cnoremap $T <CR>:T''<CR>
+" cnoremap $m <CR>:m''<CR>
+" cnoremap $M <CR>:M''<CR>
+" cnoremap $d <CR>:d<CR>``
 
 " Tabs
 nnoremap <silent> <C-t> :tabnext <CR>
 
-nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+" nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+" nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins Remaps
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ale error navigation
-nmap <C-n> <Plug>(ale_previous_wrap)
-nmap <C-N> <Plug>(ale_next_wrap)
-
-
-" Utilsnips
-" let g:UltiSnipsExpandTrigger="<c-j>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-tab>"
-
-" NERDTree
-
-" Ack!
-nnoremap <Leader>a :Ack! -w
-
-" Quick all files refactor with vim-far
-noremap <Leader>f ye:Far "
-
-" Remap Emmet Remap
+" EMMET Remap
 let g:user_emmet_leader_key='<C-y>'
 
-" Tagbar
-" nmap <F8> :TagbarToggle<CR>
-
-" Git
-" mappings {{{
-let g:gitgutter_map_keys = 0
-" Multi cursor
-let g:multi_cursor_use_default_mapping = 0
+" Quick comment shit
+noremap <Leader>cs 80i=<esc>

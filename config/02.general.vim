@@ -1,109 +1,59 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" if hidden is not set, TextEdit might fail.
-set hidden
-" Smaller updatetime for CursorHold & CursorHoldI
-set updatetime=300
-
-" Some server have issues with backup files, see #649
-set nobackup
+set encoding=utf8 " Set utf8 as standard encoding and en_US as the standard language
+set fileformat=unix " Default file format
+set hidden " if hidden is not set, TextEdit might fail.
+set updatetime=300 " Smaller updatetime for CursorHold & CursorHoldI
+set nobackup " Some server have issues with backup files, see #649
 set nowritebackup
-
-" Better display for messages
-set cmdheight=2
-
-
-" don't give |ins-completion-menu| messages.
-set shortmess=aFc
-set cursorline
-
-" always show signcolumns
-set signcolumn=yes
-
+set cmdheight=2 " Better display for messages
+set shortmess=aFc " don't give |ins-completion-menu| messages.
+set cursorline " highlight  the line where the cursor is
+set signcolumn=yes " always show signcolumns
 set completeopt=longest,menuone
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Default file format
-set fileformat=unix
-
-" Smart indent
-set si
-
-"Auto indent
-set ai
-
-"No wrap lines
-set nowrap
-
-" Sets how many lines of history VIM has to remember
-set history=500
+set si " Smart indent
+set ai "Auto indent
+set nowrap "No wrap lines
+set history=500 " Sets how many lines of history VIM has to remember
+set autoread " Set to auto read when a file is changed from the outside
+set incsearch " Makes search act like search in modern browsers
+set lazyredraw " Don't redraw while executing macros (good performance config)
+set magic " For regular expressions turn magic on
+set tm=500 " wait X seconds for a map sequence to complete
+set tabstop=2 " size of tab
+set shiftwidth=2 " size of autoindent
+set nu " numeric ruler
+set rnu " relative ruler
+set shellslash " auto slash at the end of file path
+set foldmethod=indent " fold by indent
+set expandtab " use spaces instead of tabs
+let g:elite_mode=1 " Enable Elite mode, arrows resize windows
 
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
 
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Makes search act like search in modern browsers
-set incsearch
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch
-
-" Spell checking
-" set spell
-" How many tenths of a second to blink when matching brackets
-set mat=2
+set laststatus=2
+set clipboard=unnamed
 
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
-set t_vb=
-set tm=500
 
-set go-=m
-set go-=T
-set go-=r
-set go-=L
-set nocompatible
-set tabstop=2
-set shiftwidth=2
-set autochdir
-set shellslash
-set foldmethod=indent
-set laststatus=2
-set clipboard=unnamed
-set expandtab
-set nu
-set rnu
-" set winheight=30
-" set winwidth=30
-" set winminwidth=5
-
-"Session
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Session
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:session_autoload = 'yes'
+set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
 
-"Remember options when reopening files
-set viewoptions=cursor,folds,slash,unix,options
 
-" Enable Elite mode
-let g:elite_mode=1
 
-augroup checktime
-    autocmd!
-    if !has("gui_running")
-        "silent! necessary otherwise throws errors when using command
-        "line window.
-        autocmd BufEnter,FocusGained,BufEnter,FocusLost,WinLeave * checktime
-    endif
-augroup END
+" augroup checktime
+"     autocmd!
+"     if !has("gui_running")
+"         "silent! necessary otherwise throws errors when using command
+"         "line window.
+"         autocmd BufEnter,FocusGained,BufEnter,FocusLost,WinLeave * checktime
+"     endif
+" augroup END

@@ -3,53 +3,60 @@
 """"""""""""""""""""""""""""""
 
 call plug#begin()
-" IDE
-Plug 'Shougo/echodoc.vim'
-Plug 'brooth/far.vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'jeetsukumaran/vim-buffergator'
-Plug 'mileszs/ack.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'terryma/vim-smooth-scroll'
-Plug 'tomtom/tcomment_vim'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'wakatime/vim-wakatime'
-Plug 'itchyny/lightline.vim'
-Plug 'dense-analysis/ale'
-Plug 'maximbaz/lightline-ale'
-Plug 'reisnobre/vim-evanesco'
-Plug 'liuchengxu/vista.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'Yggdroot/indentLine'
-Plug 'ntpeters/vim-better-whitespace'
+" =============== IDE
+" Essentials
+Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
+Plug 'https://github.com/itchyny/lightline.vim' " lightline
+Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
+Plug 'https://github.com/mileszs/ack.vim' " find anyware
+Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and more
+Plug 'https://github.com/scrooloose/nerdtree' " file tree
+Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
+Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
+Plug 'https://github.com/tomtom/tcomment_vim' " easy commentin
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim' " fuzzy find files
 
-" Syntax
-" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI
-" Plug 'SirVer/ultisnips'
-Plug 'StanAngeloff/php.vim'
-Plug 'ap/vim-css-color'
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue'
-Plug 'git-time-metric/gtm-vim-plugin'
 
+" Nice to have
+Plug 'https://github.com/Shougo/echodoc.vim' " function documentation below the status bar
+Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
+Plug 'https://github.com/airblade/vim-gitgutter' " git status on the side
+Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
+Plug 'https://github.com/liuchengxu/vista.vim' " tags
+Plug 'https://github.com/ntpeters/vim-better-whitespace' " show whitespace on the interface
+Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
+Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
+Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
+Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons  on vim
+
+" To be replaced or removed
+Plug 'https://github.com/brooth/far.vim' " global refactor
+
+
+
+" =============== SYNTAX
+" Essentials
+Plug 'https://github.com/pangloss/vim-javascript'
+" Nice to have
+
+" To be replaced or removed
+Plug 'https://github.com/StanAngeloff/php.vim'
+" Plug 'https://github.com/posva/vim-vue'
+" Plug 'https://github.com/ap/vim-css-color'
 "
-" Snippets
-Plug 'freencis/snippets'
-Plug 'reisnobre/snippets.nvim'
-Plug 'ryanoasis/vim-devicons'
-Plug 'mattn/emmet-vim'
+" =============== SNIPPETS
+Plug 'https://github.com/freencis/snippets'
+Plug 'https://github.com/reisnobre/snippets.nvim'
+Plug 'https://github.com/mattn/emmet-vim'
 
 
-" Themes
-Plug 'arcticicestudio/nord-vim'
-Plug 'rakr/vim-two-firewatch'
+" =============== THEMES
+Plug 'https://github.com/arcticicestudio/nord-vim'
+Plug 'https://github.com/rakr/vim-two-firewatch'
 
+" =============== VAULT
 " Plug 'justinmk/vim-syntax-extra'
 " Plug 'jwalton512/vim-blade'
 " Plug 'kshenoy/vim-signature'
@@ -60,5 +67,11 @@ Plug 'rakr/vim-two-firewatch'
 " Plug 'tpope/vim-repeat'
 " Plug 'honza/vim-snippets'
 " Plug 'https://github.com/SirVer/ultisnips.git'
-
+" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'scrooloose/nerdcommenter'
+" Plug 'dense-analysis/ale' " linter
+" Plug 'maximbaz/lightline-ale' " linter integration
+" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI
+" Plug 'SirVer/ultisnips'
 call plug#end()
+" }}}

@@ -52,11 +52,7 @@ let g:lightline.component_expand = {
             \   'coc_info'         : 'LightlineCocInfos',
             \   'coc_hint'         : 'LightlineCocHints',
             \   'coc_fix'          : 'LightlineCocFixes',
-            \   'coc_status'       : 'LightlineCocStatus',
-            \   'linter_checking'  : 'lightline#ale#checking',
-            \   'linter_warnings'  : 'lightline#ale#warnings',
-            \   'linter_errors'    : 'lightline#ale#errors',
-            \   'linter_ok'        : 'lightline#ale#ok',
+            \   'coc_status'       : 'LightlineCocStaus',
             \ }
 
 let g:lightline.component_type = {
@@ -66,10 +62,6 @@ let g:lightline.component_type = {
             \   'coc_hint'         : 'middle',
             \   'coc_fix'          : 'middle',
             \   'coc_status'       : 'middle',
-            \   'linter_checking'  : 'warning',
-            \   'linter_warnings'  : 'warning',
-            \   'linter_errors'    : 'error',
-            \   'linter_ok'        : 'left',
             \ }
 
 let iterm_profile = $ITERM_PROFILE
