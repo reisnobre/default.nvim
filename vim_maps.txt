@@ -1,0 +1,594 @@
+
+
+n  <NL>        *@:call nerdtree#ui_glue#invokeKeyMap("<C-j>")<CR>
+n  <C-K>       *@:call nerdtree#ui_glue#invokeKeyMap("<C-k>")<CR>
+n  <CR>        *@:call nerdtree#ui_glue#invokeKeyMap("<CR>")<CR>
+n  ?           *@:call nerdtree#ui_glue#invokeKeyMap("?")<CR>
+n  A           *@:call nerdtree#ui_glue#invokeKeyMap("A")<CR>
+n  B           *@:call nerdtree#ui_glue#invokeKeyMap("B")<CR>
+n  C           *@:call nerdtree#ui_glue#invokeKeyMap("C")<CR>
+n  CD          *@:call nerdtree#ui_glue#invokeKeyMap("CD")<CR>
+n  D           *@:call nerdtree#ui_glue#invokeKeyMap("D")<CR>
+n  F           *@:call nerdtree#ui_glue#invokeKeyMap("F")<CR>
+n  I           *@:call nerdtree#ui_glue#invokeKeyMap("I")<CR>
+n  J           *@:call nerdtree#ui_glue#invokeKeyMap("J")<CR>
+n  K           *@:call nerdtree#ui_glue#invokeKeyMap("K")<CR>
+n  O           *@:call nerdtree#ui_glue#invokeKeyMap("O")<CR>
+n  P           *@:call nerdtree#ui_glue#invokeKeyMap("P")<CR>
+n  R           *@:call nerdtree#ui_glue#invokeKeyMap("R")<CR>
+n  T           *@:call nerdtree#ui_glue#invokeKeyMap("T")<CR>
+n  U           *@:call nerdtree#ui_glue#invokeKeyMap("U")<CR>
+n  X           *@:call nerdtree#ui_glue#invokeKeyMap("X")<CR>
+n  [c          *@:call nerdtree#ui_glue#invokeKeyMap("[c")<CR>
+n  ]c          *@:call nerdtree#ui_glue#invokeKeyMap("]c")<CR>
+n  cd          *@:call nerdtree#ui_glue#invokeKeyMap("cd")<CR>
+n  e           *@:call nerdtree#ui_glue#invokeKeyMap("e")<CR>
+n  f           *@:call nerdtree#ui_glue#invokeKeyMap("f")<CR>
+n  go          *@:call nerdtree#ui_glue#invokeKeyMap("go")<CR>
+n  gs          *@:call nerdtree#ui_glue#invokeKeyMap("gs")<CR>
+n  gi          *@:call nerdtree#ui_glue#invokeKeyMap("gi")<CR>
+n  i           *@:call nerdtree#ui_glue#invokeKeyMap("i")<CR>
+n  m           *@:call nerdtree#ui_glue#invokeKeyMap("m")<CR>
+n  o           *@:call nerdtree#ui_glue#invokeKeyMap("o")<CR>
+n  p           *@:call nerdtree#ui_glue#invokeKeyMap("p")<CR>
+n  q           *@:call nerdtree#ui_glue#invokeKeyMap("q")<CR>
+n  r           *@:call nerdtree#ui_glue#invokeKeyMap("r")<CR>
+n  s           *@:call nerdtree#ui_glue#invokeKeyMap("s")<CR>
+n  t           *@:call nerdtree#ui_glue#invokeKeyMap("t")<CR>
+n  u           *@:call nerdtree#ui_glue#invokeKeyMap("u")<CR>
+n  x           *@:call nerdtree#ui_glue#invokeKeyMap("x")<CR>
+n  <MiddleMouse> *@:call nerdtree#ui_glue#invokeKeyMap("<MiddleMouse>")<CR>
+n  <2-LeftMouse> *@:call nerdtree#ui_glue#invokeKeyMap("<2-LeftMouse>")<CR>
+n  <LeftRelease> *@<LeftRelease>:call nerdtree#ui_glue#invokeKeyMap("<LeftRelease>")<CR>
+   <C-B>       * :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
+   <C-D>       * :call smooth_scroll#down(&scroll, 10, 2)<CR>
+   <C-F>       * :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
+n  <C-H>       * :TmuxNavigateLeft<CR>
+ov <C-H>         <C-W>h<C-W>|
+n  <NL>        * :TmuxNavigateDown<CR>
+ov <NL>        * coc#refresh()
+n  <C-K>       * :TmuxNavigateUp<CR>
+ov <C-K>         <C-W>k<C-W>_
+n  <C-L>       * :TmuxNavigateRight<CR>
+ov <C-L>         <C-W>l<C-W>|
+n  <C-N>         <Plug>(ale_next_wrap)
+   <C-P>         <Plug>(ctrlp)
+n  <C-T>       * :tabnext <CR>
+   <C-U>       * :call smooth_scroll#up(&scroll, 10, 2)<CR>
+v  <C-Y>c        <Plug>(emmet-code-pretty)
+n  <C-Y>m        <Plug>(emmet-merge-lines)
+n  <C-Y>A        <Plug>(emmet-anchorize-summary)
+n  <C-Y>a        <Plug>(emmet-anchorize-url)
+n  <C-Y>k        <Plug>(emmet-remove-tag)
+n  <C-Y>j        <Plug>(emmet-split-join-tag)
+n  <C-Y>/        <Plug>(emmet-toggle-comment)
+n  <C-Y>I        <Plug>(emmet-image-encode)
+n  <C-Y>i        <Plug>(emmet-image-size)
+n  <C-Y>N        <Plug>(emmet-move-prev)
+n  <C-Y>n        <Plug>(emmet-move-next)
+v  <C-Y>D        <Plug>(emmet-balance-tag-outword)
+n  <C-Y>D        <Plug>(emmet-balance-tag-outword)
+v  <C-Y>d        <Plug>(emmet-balance-tag-inward)
+n  <C-Y>d        <Plug>(emmet-balance-tag-inward)
+n  <C-Y>u        <Plug>(emmet-update-tag)
+n  <C-Y>;        <Plug>(emmet-expand-word)
+v  <C-Y>,        <Plug>(emmet-expand-abbr)
+n  <C-Y>,        <Plug>(emmet-expand-abbr)
+n  <C-\>       * :TmuxNavigatePrevious<CR>
+v  <C-_>9        <Plug>TComment_<C-_>9
+no <C-_>9        <Plug>TComment_<C-_>9
+v  <C-_>8        <Plug>TComment_<C-_>8
+no <C-_>8        <Plug>TComment_<C-_>8
+v  <C-_>7        <Plug>TComment_<C-_>7
+no <C-_>7        <Plug>TComment_<C-_>7
+v  <C-_>6        <Plug>TComment_<C-_>6
+no <C-_>6        <Plug>TComment_<C-_>6
+v  <C-_>5        <Plug>TComment_<C-_>5
+no <C-_>5        <Plug>TComment_<C-_>5
+v  <C-_>4        <Plug>TComment_<C-_>4
+no <C-_>4        <Plug>TComment_<C-_>4
+v  <C-_>3        <Plug>TComment_<C-_>3
+no <C-_>3        <Plug>TComment_<C-_>3
+v  <C-_>2        <Plug>TComment_<C-_>2
+no <C-_>2        <Plug>TComment_<C-_>2
+v  <C-_>1        <Plug>TComment_<C-_>1
+no <C-_>1        <Plug>TComment_<C-_>1
+   <C-_>ca       <Plug>TComment_<C-_>ca
+   <C-_>cc       <Plug>TComment_<C-_>cc
+   <C-_>s        <Plug>TComment_<C-_>s
+   <C-_>n        <Plug>TComment_<C-_>n
+   <C-_>a        <Plug>TComment_<C-_>a
+   <C-_>b        <Plug>TComment_<C-_>b
+   <C-_>i        <Plug>TComment_<C-_>i
+   <C-_>r        <Plug>TComment_<C-_>r
+   <C-_><Space>   <Plug>TComment_<C-_><Space>
+   <C-_>p        <Plug>TComment_<C-_>p
+v  <C-_><C-_>    <Plug>TComment_<C-_><C-_>
+no <C-_><C-_>    <Plug>TComment_<C-_><C-_>
+   <Space>_s     <Plug>TComment_ _s
+   <Space>_n     <Plug>TComment_ _n
+   <Space>_a     <Plug>TComment_ _a
+   <Space>_b     <Plug>TComment_ _b
+   <Space>_r     <Plug>TComment_ _r
+x  <Space>_i     <Plug>TComment_ _i
+   <Space>_<Space>   <Plug>TComment_ _<Space>
+   <Space>_p     <Plug>TComment_ _p
+x  <Space>__     <Plug>TComment_ __
+nos<Space>__     <Plug>TComment_ __
+n  <Space>ca     <Plug>NERDCommenterAltDelims
+x  <Space>cu     <Plug>NERDCommenterUncomment
+n  <Space>cu     <Plug>NERDCommenterUncomment
+x  <Space>cb     <Plug>NERDCommenterAlignBoth
+n  <Space>cb     <Plug>NERDCommenterAlignBoth
+x  <Space>cl     <Plug>NERDCommenterAlignLeft
+n  <Space>cl     <Plug>NERDCommenterAlignLeft
+n  <Space>cA     <Plug>NERDCommenterAppend
+x  <Space>cy     <Plug>NERDCommenterYank
+n  <Space>cy     <Plug>NERDCommenterYank
+x  <Space>cs     <Plug>NERDCommenterSexy
+n  <Space>cs     <Plug>NERDCommenterSexy
+x  <Space>ci     <Plug>NERDCommenterInvert
+n  <Space>ci     <Plug>NERDCommenterInvert
+n  <Space>c$     <Plug>NERDCommenterToEOL
+x  <Space>cn     <Plug>NERDCommenterNested
+n  <Space>cn     <Plug>NERDCommenterNested
+x  <Space>cm     <Plug>NERDCommenterMinimal
+n  <Space>cm     <Plug>NERDCommenterMinimal
+x  <Space>c<Space>   <Plug>NERDCommenterToggle
+n  <Space>c<Space>   <Plug>NERDCommenterToggle
+x  <Space>cc     <Plug>NERDCommenterComment
+n  <Space>cc     <Plug>NERDCommenterComment
+n  <Space><S-Down> * :BuffergatorMruCycleNext rightbelow sbuffer<CR>
+n  <Space><S-Right> * :BuffergatorMruCycleNext rightbelow vert sbuffer<CR>
+n  <Space><S-Up> * :BuffergatorMruCycleNext leftabove sbuffer<CR>
+n  <Space><S-Left> * :BuffergatorMruCycleNext leftabove vert sbuffer<CR>
+n  <Space><Down> * :BuffergatorMruCyclePrev rightbelow sbuffer<CR>
+n  <Space><Right> * :BuffergatorMruCyclePrev rightbelow vert sbuffer<CR>
+n  <Space><Up> * :BuffergatorMruCyclePrev leftabove sbuffer<CR>
+n  <Space><Left> * :BuffergatorMruCyclePrev leftabove vert sbuffer<CR>
+n  <Space>T    * :BuffergatorTabsClose<CR>
+n  <Space>tc   * :BuffergatorTabsClose<CR>
+n  <Space>to   * :BuffergatorTabsOpen<CR>
+n  <Space>t    * :BuffergatorTabsOpen<CR>
+n  <Space>B    * :BuffergatorClose<CR>
+n  <Space>b    * :BuffergatorOpen<CR>
+n  <Space>k    * :call <SNR>22_show_documentation()<CR>
+n  <Space>d    * :<C-U>CocList diagnostics<CR>
+n  <Space>n    * :NERDTree<CR>
+   <Space>f    * ye:Far <C-R>"
+n  <Space>a    * :Ack! -w
+   <Space>v    * :Vista!!<CR>
+   <Space>r    * ye:%s,<C-R>",
+os <Space>cs   * 80i=<Esc>
+   <Space>s    * :update<CR>
+x  #             <Plug>Evanesco_#
+n  #             <Plug>Evanesco_#
+o  %             <Plug>(MatchitOperationForward)
+x  %             <Plug>(MatchitVisualForward)
+n  %             <Plug>(MatchitNormalForward)
+x  *             <Plug>Evanesco_*
+n  *             <Plug>Evanesco_*
+n  +           * :exe "resize " . (winheight(0) * 3/2)<CR>
+n  -           * :exe "resize " . (winheight(0) * 2/3)<CR>
+n  /             <Plug>Evanesco_/
+n  ?             <Plug>Evanesco_?
+n  N             <Plug>Evanesco_N
+x  S             <Plug>VSurround
+o  [%            <Plug>(MatchitOperationMultiBackward)
+x  [%            <Plug>(MatchitVisualMultiBackward)
+n  [%            <Plug>(MatchitNormalMultiBackward)
+n  [b          * :bp<CR>
+o  ]%            <Plug>(MatchitOperationMultiForward)
+x  ]%            <Plug>(MatchitVisualMultiForward)
+n  ]%            <Plug>(MatchitNormalMultiForward)
+n  ]b          * :bn<CR>
+x  a%            <Plug>(MatchitVisualTextObject)
+n  cS            <Plug>CSurround
+n  cs            <Plug>Csurround
+n  cp            <Plug>(coc-diagnostic-prev)
+n  cn            <Plug>(coc-diagnostic-next)
+n  ds            <Plug>Dsurround
+v  gx            <Plug>NetrwBrowseXVis
+n  gx            <Plug>NetrwBrowseX
+o  g%            <Plug>(MatchitOperationBackward)
+x  g%            <Plug>(MatchitVisualBackward)
+n  g%            <Plug>(MatchitNormalBackward)
+n  gD            <Plug>Evanesco_gD
+n  g#            <Plug>Evanesco_g#
+n  g*            <Plug>Evanesco_g*
+x  gS            <Plug>VgSurround
+x  g>            <Plug>TComment_Comment
+n  g>b           <Plug>TComment_Commentb
+n  g>c           <Plug>TComment_Commentc
+n  g>            <Plug>TComment_Comment
+x  g<            <Plug>TComment_Uncomment
+n  g<b           <Plug>TComment_Uncommentb
+n  g<c           <Plug>TComment_Uncommentc
+n  g<            <Plug>TComment_Uncomment
+x  gc            <Plug>TComment_gc
+n  gcb           <Plug>TComment_gcb
+n  gcc           <Plug>TComment_gcc
+n  gc9c          <Plug>TComment_gc9c
+n  gc9           <Plug>TComment_gc9
+n  gc8c          <Plug>TComment_gc8c
+n  gc8           <Plug>TComment_gc8
+n  gc7c          <Plug>TComment_gc7c
+n  gc7           <Plug>TComment_gc7
+n  gc6c          <Plug>TComment_gc6c
+n  gc6           <Plug>TComment_gc6
+n  gc5c          <Plug>TComment_gc5c
+n  gc5           <Plug>TComment_gc5
+n  gc4c          <Plug>TComment_gc4c
+n  gc4           <Plug>TComment_gc4
+n  gc3c          <Plug>TComment_gc3c
+n  gc3           <Plug>TComment_gc3
+n  gc2c          <Plug>TComment_gc2c
+n  gc2           <Plug>TComment_gc2
+n  gc1c          <Plug>TComment_gc1c
+n  gc1           <Plug>TComment_gc1
+n  gc            <Plug>TComment_gc
+n  gB          * :BuffergatorMruCycleNext<CR>
+n  gb          * :BuffergatorMruCyclePrev<CR>
+n  gr            <Plug>(coc-references)
+n  gi            <Plug>(coc-implementation)
+n  gy            <Plug>(coc-type-definition)
+n  gd            <Plug>Evanesco_gd
+o  ic            <Plug>TComment_ic
+v  ic            <Plug>TComment_ic
+n  n             <Plug>Evanesco_n
+n  ySS           <Plug>YSsurround
+n  ySs           <Plug>YSsurround
+n  yss           <Plug>Yssurround
+n  yS            <Plug>YSurround
+n  ys            <Plug>Ysurround
+n  y<C-G>      & :<C-U>call setreg(v:register, fugitive#Object(@%))<CR>
+v  <Plug>(coc-snippets-select) * :<C-U>call coc#rpc#notify('doKeymap', ['snippets-select'])<CR>
+v  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+n  <Plug>NetrwBrowseX * :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())<CR>
+v  <Plug>(MatchitVisualTextObject)   <Plug>(MatchitVisualMultiBackward)o<Plug>(MatchitVisualMultiForward)
+o  <Plug>(MatchitOperationMultiForward) * :<C-U>call matchit#MultiMatch("W",  "o")<CR>
+o  <Plug>(MatchitOperationMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "o")<CR>
+v  <Plug>(MatchitVisualMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>m'gv``
+v  <Plug>(MatchitVisualMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>m'gv``
+n  <Plug>(MatchitNormalMultiForward) * :<C-U>call matchit#MultiMatch("W",  "n")<CR>
+n  <Plug>(MatchitNormalMultiBackward) * :<C-U>call matchit#MultiMatch("bW", "n")<CR>
+o  <Plug>(MatchitOperationBackward) * :<C-U>call matchit#Match_wrapper('',0,'o')<CR>
+o  <Plug>(MatchitOperationForward) * :<C-U>call matchit#Match_wrapper('',1,'o')<CR>
+v  <Plug>(MatchitVisualBackward) * :<C-U>call matchit#Match_wrapper('',0,'v')<CR>m'gv``
+v  <Plug>(MatchitVisualForward) * :<C-U>call matchit#Match_wrapper('',1,'v')<CR>m'gv``
+n  <Plug>(MatchitNormalBackward) * :<C-U>call matchit#Match_wrapper('',0,'n')<CR>
+n  <Plug>(MatchitNormalForward) * :<C-U>call matchit#Match_wrapper('',1,'n')<CR>
+v  <Plug>(emmet-code-pretty) * :call emmet#codePretty()<CR>
+n  <Plug>(emmet-merge-lines) * :call emmet#mergeLines()<CR>
+n  <Plug>(emmet-anchorize-summary) * :call emmet#anchorizeURL(1)<CR>
+n  <Plug>(emmet-anchorize-url) * :call emmet#anchorizeURL(0)<CR>
+n  <Plug>(emmet-remove-tag) * :call emmet#removeTag()<CR>
+n  <Plug>(emmet-split-join-tag) * :call emmet#splitJoinTag()<CR>
+n  <Plug>(emmet-toggle-comment) * :call emmet#toggleComment()<CR>
+n  <Plug>(emmet-image-encode) * :call emmet#imageEncode()<CR>
+n  <Plug>(emmet-image-size) * :call emmet#imageSize()<CR>
+n  <Plug>(emmet-move-prev-item) * :call emmet#moveNextPrevItem(1)<CR>
+n  <Plug>(emmet-move-next-item) * :call emmet#moveNextPrevItem(0)<CR>
+n  <Plug>(emmet-move-prev) * :call emmet#moveNextPrev(1)<CR>
+n  <Plug>(emmet-move-next) * :call emmet#moveNextPrev(0)<CR>
+v  <Plug>(emmet-balance-tag-outword) * <Esc>:call emmet#balanceTag(-1)<CR>
+n  <Plug>(emmet-balance-tag-outword) * :call emmet#balanceTag(-1)<CR>
+v  <Plug>(emmet-balance-tag-inward) * <Esc>:call emmet#balanceTag(1)<CR>
+n  <Plug>(emmet-balance-tag-inward) * :call emmet#balanceTag(1)<CR>
+n  <Plug>(emmet-update-tag) * :call emmet#updateTag()<CR>
+n  <Plug>(emmet-expand-word) * :call emmet#expandAbbr(1,"")<CR>
+v  <Plug>(emmet-expand-abbr) * :call emmet#expandAbbr(2,"")<CR>
+n  <Plug>(emmet-expand-abbr) * :call emmet#expandAbbr(3,"")<CR>
+n  <Plug>GitGutterPreviewHunk * :call gitgutter#utility#warn('please change your map <Plug>GitGutterPreviewHunk to <Plug>(GitGutterPreviewHunk)')<CR>
+n  <Plug>(GitGutterPreviewHunk) * :GitGutterPreviewHunk<CR>
+n  <Plug>GitGutterUndoHunk * :call gitgutter#utility#warn('please change your map <Plug>GitGutterUndoHunk to <Plug>(GitGutterUndoHunk)')<CR>
+n  <Plug>(GitGutterUndoHunk) * :GitGutterUndoHunk<CR>
+n  <Plug>GitGutterStageHunk * :call gitgutter#utility#warn('please change your map <Plug>GitGutterStageHunk to <Plug>(GitGutterStageHunk)')<CR>
+n  <Plug>(GitGutterStageHunk) * :GitGutterStageHunk<CR>
+x  <Plug>GitGutterStageHunk * :call gitgutter#utility#warn('please change your map <Plug>GitGutterStageHunk to <Plug>(GitGutterStageHunk)')<CR>
+x  <Plug>(GitGutterStageHunk) * :GitGutterStageHunk<CR>
+n  <Plug>GitGutterPrevHunk * &diff ? '[c' : ":\<C-U>call gitgutter#utility#warn('please change your map \<Plug>GitGutterPrevHunk to \<Plug>(GitGutterPrevHunk)')\<CR>"
+n  <Plug>(GitGutterPrevHunk) * &diff ? '[c' : ":\<C-U>execute v:count1 . 'GitGutterPrevHunk'\<CR>"
+n  <Plug>GitGutterNextHunk * &diff ? ']c' : ":\<C-U>call gitgutter#utility#warn('please change your map \<Plug>GitGutterNextHunk to \<Plug>(GitGutterNextHunk)')\<CR>"
+n  <Plug>(GitGutterNextHunk) * &diff ? ']c' : ":\<C-U>execute v:count1 . 'GitGutterNextHunk'\<CR>"
+x  <Plug>(GitGutterTextObjectOuterVisual) * :<C-U>call gitgutter#hunk#text_object(0)<CR>
+x  <Plug>(GitGutterTextObjectInnerVisual) * :<C-U>call gitgutter#hunk#text_object(1)<CR>
+o  <Plug>(GitGutterTextObjectOuterPending) * :<C-U>call gitgutter#hunk#text_object(0)<CR>
+o  <Plug>(GitGutterTextObjectInnerPending) * :<C-U>call gitgutter#hunk#text_object(1)<CR>
+n  <Plug>Evanesco_visual_search_end * :<C-U>call evanesco#evanesco_star_end()<CR>:echo<CR>
+x  <Plug>Evanesco_# * <Esc>:<C-U>call evanesco#evanesco_visual_star('?')<CR>
+x  <Plug>Evanesco_* * <Esc>:<C-U>call evanesco#evanesco_visual_star('/')<CR>
+n  <Plug>Evanesco_gD * :call evanesco#evanesco_star()<CR>gD:call evanesco#evanesco_star_end()<CR>
+n  <Plug>Evanesco_gd * :call evanesco#evanesco_star()<CR>gd:call evanesco#evanesco_star_end()<CR>
+n  <Plug>Evanesco_g# * :call evanesco#evanesco_star()<CR>:keepjumps normal! g#N<CR>:call evanesco#evanesco_star_end()<CR>
+n  <Plug>Evanesco_g* * :call evanesco#evanesco_star()<CR>:keepjumps normal! g*N<CR>:call evanesco#evanesco_star_end()<CR>
+n  <Plug>Evanesco_# * :call evanesco#evanesco_star()<CR>:keepjumps normal! #N<CR>:call evanesco#evanesco_star_end()<CR>
+n  <Plug>Evanesco_* * :call evanesco#evanesco_star()<CR>:keepjumps normal! *N<CR>:call evanesco#evanesco_star_end()<CR>
+n  <Plug>Evanesco_N * :echo<CR>N:call evanesco#evanesco_next_end()<CR>
+n  <Plug>Evanesco_n * :echo<CR>n:call evanesco#evanesco_next_end()<CR>
+n  <Plug>Evanesco_? * :<C-U>call evanesco#evanesco('?')<CR>
+n  <Plug>Evanesco_/ * :<C-U>call evanesco#evanesco('/')<CR>
+n  <Plug>(ale_rename) * :ALERename<CR>
+n  <Plug>(ale_documentation) * :ALEDocumentation<CR>
+n  <Plug>(ale_hover) * :ALEHover<CR>
+n  <Plug>(ale_find_references) * :ALEFindReferences<CR>
+n  <Plug>(ale_go_to_type_definition_in_vsplit) * :ALEGoToTypeDefinitionInVSplit<CR>
+n  <Plug>(ale_go_to_type_definition_in_split) * :ALEGoToTypeDefinitionInSplit<CR>
+n  <Plug>(ale_go_to_type_definition_in_tab) * :ALEGoToTypeDefinitionInTab<CR>
+n  <Plug>(ale_go_to_type_definition) * :ALEGoToTypeDefinition<CR>
+n  <Plug>(ale_go_to_definition_in_vsplit) * :ALEGoToDefinitionInVSplit<CR>
+n  <Plug>(ale_go_to_definition_in_split) * :ALEGoToDefinitionInSplit<CR>
+n  <Plug>(ale_go_to_definition_in_tab) * :ALEGoToDefinitionInTab<CR>
+n  <Plug>(ale_go_to_definition) * :ALEGoToDefinition<CR>
+n  <Plug>(ale_fix) * :ALEFix<CR>
+n  <Plug>(ale_detail) * :ALEDetail<CR>
+n  <Plug>(ale_lint) * :ALELint<CR>
+n  <Plug>(ale_reset_buffer) * :ALEResetBuffer<CR>
+n  <Plug>(ale_disable_buffer) * :ALEDisableBuffer<CR>
+n  <Plug>(ale_enable_buffer) * :ALEEnableBuffer<CR>
+n  <Plug>(ale_toggle_buffer) * :ALEToggleBuffer<CR>
+n  <Plug>(ale_reset) * :ALEReset<CR>
+n  <Plug>(ale_disable) * :ALEDisable<CR>
+n  <Plug>(ale_enable) * :ALEEnable<CR>
+n  <Plug>(ale_toggle) * :ALEToggle<CR>
+n  <Plug>(ale_last) * :ALELast<CR>
+n  <Plug>(ale_first) * :ALEFirst<CR>
+n  <Plug>(ale_next_wrap_warning) * :ALENext -wrap -warning<CR>
+n  <Plug>(ale_next_warning) * :ALENext -warning<CR>
+n  <Plug>(ale_next_wrap_error) * :ALENext -wrap -error<CR>
+n  <Plug>(ale_next_error) * :ALENext -error<CR>
+n  <Plug>(ale_next_wrap) * :ALENextWrap<CR>
+n  <Plug>(ale_next) * :ALENext<CR>
+n  <Plug>(ale_previous_wrap_warning) * :ALEPrevious -wrap -warning<CR>
+n  <Plug>(ale_previous_warning) * :ALEPrevious -warning<CR>
+n  <Plug>(ale_previous_wrap_error) * :ALEPrevious -wrap -error<CR>
+n  <Plug>(ale_previous_error) * :ALEPrevious -error<CR>
+n  <Plug>(ale_previous_wrap) * :ALEPreviousWrap<CR>
+n  <Plug>(ale_previous) * :ALEPrevious<CR>
+v  <Plug>VgSurround * :<C-U>call <SNR>63_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+v  <Plug>VSurround * :<C-U>call <SNR>63_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+n  <Plug>YSurround * <SNR>63_opfunc2('setup')
+n  <Plug>Ysurround * <SNR>63_opfunc('setup')
+n  <Plug>YSsurround * <SNR>63_opfunc2('setup').'_'
+n  <Plug>Yssurround * '^'.v:count1.<SNR>63_opfunc('setup').'g_'
+n  <Plug>CSurround * :<C-U>call <SNR>63_changesurround(1)<CR>
+n  <Plug>Csurround * :<C-U>call <SNR>63_changesurround()<CR>
+n  <Plug>Dsurround * :<C-U>call <SNR>63_dosurround(<SNR>63_inputtarget())<CR>
+n  <Plug>SurroundRepeat * .
+n  <Plug>TComment_gc9c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc9c<CR>g@
+n  <Plug>TComment_gc8c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc8c<CR>g@
+n  <Plug>TComment_gc7c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc7c<CR>g@
+n  <Plug>TComment_gc6c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc6c<CR>g@
+n  <Plug>TComment_gc5c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc5c<CR>g@
+n  <Plug>TComment_gc4c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc4c<CR>g@
+n  <Plug>TComment_gc3c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc3c<CR>g@
+n  <Plug>TComment_gc2c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc2c<CR>g@
+n  <Plug>TComment_gc1c * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc1c<CR>g@
+v  <Plug>TComment_<C-_>9 * :call tcomment#SetOption("count", 9)<CR>
+no <Plug>TComment_<C-_>9 * :call tcomment#SetOption("count", 9)<CR>
+v  <Plug>TComment_<C-_>8 * :call tcomment#SetOption("count", 8)<CR>
+no <Plug>TComment_<C-_>8 * :call tcomment#SetOption("count", 8)<CR>
+v  <Plug>TComment_<C-_>7 * :call tcomment#SetOption("count", 7)<CR>
+no <Plug>TComment_<C-_>7 * :call tcomment#SetOption("count", 7)<CR>
+v  <Plug>TComment_<C-_>6 * :call tcomment#SetOption("count", 6)<CR>
+no <Plug>TComment_<C-_>6 * :call tcomment#SetOption("count", 6)<CR>
+v  <Plug>TComment_<C-_>5 * :call tcomment#SetOption("count", 5)<CR>
+no <Plug>TComment_<C-_>5 * :call tcomment#SetOption("count", 5)<CR>
+v  <Plug>TComment_<C-_>4 * :call tcomment#SetOption("count", 4)<CR>
+no <Plug>TComment_<C-_>4 * :call tcomment#SetOption("count", 4)<CR>
+v  <Plug>TComment_<C-_>3 * :call tcomment#SetOption("count", 3)<CR>
+no <Plug>TComment_<C-_>3 * :call tcomment#SetOption("count", 3)<CR>
+v  <Plug>TComment_<C-_>2 * :call tcomment#SetOption("count", 2)<CR>
+no <Plug>TComment_<C-_>2 * :call tcomment#SetOption("count", 2)<CR>
+v  <Plug>TComment_<C-_>1 * :call tcomment#SetOption("count", 1)<CR>
+no <Plug>TComment_<C-_>1 * :call tcomment#SetOption("count", 1)<CR>
+n  <Plug>TComment_gC * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gC<CR>g@
+n  <Plug>TComment_gc * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc<CR>g@
+x  <Plug>TComment_gc * :TCommentMaybeInline<CR>
+n  <Plug>TComment_gcb * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gcb<CR>g@
+n  <Plug>TComment_gcc * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gcc<CR>g@$
+   <Plug>TComment_ic * :<C-U>call tcomment#textobject#InlineComment()<CR>
+x  <Plug>TComment_Comment * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | '<,'>TCommentMaybeInline!<CR>
+n  <Plug>TComment_Commentb * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Commentb<CR>g@
+n  <Plug>TComment_Commentc * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Commentc<CR>g@$
+n  <Plug>TComment_Commentl * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Commentl<CR>g@$
+n  <Plug>TComment_Comment * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Comment<CR>g@
+x  <Plug>TComment_Uncomment * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | call tcomment#SetOption("mode_extra", "U") | '<,'>TCommentMaybeInline<CR>
+n  <Plug>TComment_Uncommentb * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Uncommentb<CR>g@
+n  <Plug>TComment_Uncommentc * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Uncommentc<CR>g@$
+n  <Plug>TComment_Uncomment * :<C-U>call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_Uncomment<CR>g@
+   <Plug>TComment_<Space>_s * :TCommentAs <C-R>=&ft<CR>_
+   <Plug>TComment_<Space>_n * :TCommentAs <C-R>=&ft<CR><Space>
+   <Plug>TComment_<Space>_a * :TCommentAs<Space>
+   <Plug>TComment_<Space>_b * :TCommentBlock<CR>
+   <Plug>TComment_<Space>_r * :TCommentRight<CR>
+x  <Plug>TComment_<Space>_i * :TCommentInline<CR>
+   <Plug>TComment_<Space>_<Space> * :TComment<Space>
+   <Plug>TComment_<Space>_p * vip:TComment<CR>
+x  <Plug>TComment_<Space>__ * :TCommentMaybeInline<CR>
+nos<Plug>TComment_<Space>__ * :TComment<CR>
+   <Plug>TComment_<C-_>ca * :<C-U>call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#complete#Complete"))<CR>
+   <Plug>TComment_<C-_>cc * :<C-U>call tcomment#SetOption("count", v:count1)<CR>
+   <Plug>TComment_<C-_>s * :TCommentAs <C-R>=&ft<CR>_
+   <Plug>TComment_<C-_>n * :TCommentAs <C-R>=&ft<CR><Space>
+   <Plug>TComment_<C-_>a * :TCommentAs<Space>
+   <Plug>TComment_<C-_>b * :TCommentBlock<CR>
+   <Plug>TComment_<C-_>i * v:TCommentInline mode=I#<CR>
+   <Plug>TComment_<C-_>r * :TCommentRight<CR>
+   <Plug>TComment_<C-_><Space> * :TComment<Space>
+   <Plug>TComment_<C-_>p * m`vip:TComment<CR>``
+v  <Plug>TComment_<C-_><C-_> * :TCommentMaybeInline<CR>
+no <Plug>TComment_<C-_><C-_> * :TComment<CR>
+n  <Plug>NERDCommenterAltDelims * :call <SNR>36_SwitchToAlternativeDelimiters(1)<CR>
+x  <Plug>NERDCommenterUncomment * :call NERDComment("x", "Uncomment")<CR>
+n  <Plug>NERDCommenterUncomment * :call NERDComment("n", "Uncomment")<CR>
+x  <Plug>NERDCommenterAlignBoth * :call NERDComment("x", "AlignBoth")<CR>
+n  <Plug>NERDCommenterAlignBoth * :call NERDComment("n", "AlignBoth")<CR>
+x  <Plug>NERDCommenterAlignLeft * :call NERDComment("x", "AlignLeft")<CR>
+n  <Plug>NERDCommenterAlignLeft * :call NERDComment("n", "AlignLeft")<CR>
+n  <Plug>NERDCommenterAppend * :call NERDComment("n", "Append")<CR>
+x  <Plug>NERDCommenterYank * :call NERDComment("x", "Yank")<CR>
+n  <Plug>NERDCommenterYank * :call NERDComment("n", "Yank")<CR>
+x  <Plug>NERDCommenterSexy * :call NERDComment("x", "Sexy")<CR>
+n  <Plug>NERDCommenterSexy * :call NERDComment("n", "Sexy")<CR>
+x  <Plug>NERDCommenterInvert * :call NERDComment("x", "Invert")<CR>
+n  <Plug>NERDCommenterInvert * :call NERDComment("n", "Invert")<CR>
+n  <Plug>NERDCommenterToEOL * :call NERDComment("n", "ToEOL")<CR>
+x  <Plug>NERDCommenterNested * :call NERDComment("x", "Nested")<CR>
+n  <Plug>NERDCommenterNested * :call NERDComment("n", "Nested")<CR>
+x  <Plug>NERDCommenterMinimal * :call NERDComment("x", "Minimal")<CR>
+n  <Plug>NERDCommenterMinimal * :call NERDComment("n", "Minimal")<CR>
+x  <Plug>NERDCommenterToggle * :call NERDComment("x", "Toggle")<CR>
+n  <Plug>NERDCommenterToggle * :call NERDComment("n", "Toggle")<CR>
+x  <Plug>NERDCommenterComment * :call NERDComment("x", "Comment")<CR>
+n  <Plug>NERDCommenterComment * :call NERDComment("n", "Comment")<CR>
+o  <Plug>(coc-funcobj-a) * :<C-U>call coc#rpc#request('selectFunction', [v:false, ''])<CR>
+o  <Plug>(coc-funcobj-i) * :<C-U>call coc#rpc#request('selectFunction', [v:true, ''])<CR>
+v  <Plug>(coc-funcobj-a) * :<C-U>call coc#rpc#request('selectFunction', [v:false, visualmode()])<CR>
+v  <Plug>(coc-funcobj-i) * :<C-U>call coc#rpc#request('selectFunction', [v:true, visualmode()])<CR>
+n  <Plug>(coc-cursors-position) * :<C-U>call coc#rpc#request('cursorsSelect', [bufnr('%'), 'position', 'n'])<CR>
+n  <Plug>(coc-cursors-word) * :<C-U>call coc#rpc#request('cursorsSelect', [bufnr('%'), 'word', 'n'])<CR>
+v  <Plug>(coc-cursors-range) * :<C-U>call coc#rpc#request('cursorsSelect', [bufnr('%'), 'range', visualmode()])<CR>
+n  <Plug>(coc-cursors-operator) * :<C-U>set operatorfunc=<SNR>32_CursorRangeFromSelected<CR>g@
+n  <Plug>(coc-refactor) * :<C-U>call       CocActionAsync('refactor')<CR>
+n  <Plug>(coc-command-repeat) * :<C-U>call       CocAction('repeatCommand')<CR>
+n  <Plug>(coc-float-jump) * :<C-U>call       coc#util#float_jump()<CR>
+n  <Plug>(coc-float-hide) * :<C-U>call       coc#util#float_hide()<CR>
+n  <Plug>(coc-fix-current) * :<C-U>call       CocActionAsync('doQuickfix')<CR>
+n  <Plug>(coc-openlink) * :<C-U>call       CocActionAsync('openLink')<CR>
+n  <Plug>(coc-references) * :<C-U>call       CocAction('jumpReferences')<CR>
+n  <Plug>(coc-type-definition) * :<C-U>call       CocAction('jumpTypeDefinition')<CR>
+n  <Plug>(coc-implementation) * :<C-U>call       CocAction('jumpImplementation')<CR>
+n  <Plug>(coc-declaration) * :<C-U>call       CocAction('jumpDeclaration')<CR>
+n  <Plug>(coc-definition) * :<C-U>call       CocAction('jumpDefinition')<CR>
+n  <Plug>(coc-diagnostic-prev-error) * :<C-U>call       CocActionAsync('diagnosticPrevious', 'error')<CR>
+n  <Plug>(coc-diagnostic-next-error) * :<C-U>call       CocActionAsync('diagnosticNext',     'error')<CR>
+n  <Plug>(coc-diagnostic-prev) * :<C-U>call       CocActionAsync('diagnosticPrevious')<CR>
+n  <Plug>(coc-diagnostic-next) * :<C-U>call       CocActionAsync('diagnosticNext')<CR>
+n  <Plug>(coc-diagnostic-info) * :<C-U>call       CocActionAsync('diagnosticInfo')<CR>
+n  <Plug>(coc-format) * :<C-U>call       CocActionAsync('format')<CR>
+n  <Plug>(coc-format-selected) * :<C-U>set        operatorfunc=<SNR>32_FormatFromSelected<CR>g@
+n  <Plug>(coc-rename) * :<C-U>call       CocActionAsync('rename')<CR>
+n  <Plug>(coc-codeaction) * :<C-U>call       CocActionAsync('codeAction',         '')<CR>
+n  <Plug>(coc-codeaction-selected) * :<C-U>set        operatorfunc=<SNR>32_CodeActionFromSelected<CR>g@
+v  <Plug>(coc-codeaction-selected) * :<C-U>call       CocActionAsync('codeAction',         visualmode())<CR>
+v  <Plug>(coc-format-selected) * :<C-U>call       CocActionAsync('formatSelected',     visualmode())<CR>
+n  <Plug>(coc-codelens-action) * :<C-U>call       CocActionAsync('codeLensAction')<CR>
+n  <Plug>(coc-range-select) * :<C-U>call       CocAction('rangeSelect',     '', v:true)<CR>
+v  <Plug>(coc-range-select-backword) * :<C-U>call       CocAction('rangeSelect',     visualmode(), v:false)<CR>
+v  <Plug>(coc-range-select) * :<C-U>call       CocAction('rangeSelect',     visualmode(), v:true)<CR>
+n  <M-B>       * :BuffergatorMruCycleNext<CR>
+n  <M-b>       * :BuffergatorMruCyclePrev<CR>
+n  <Plug>(ctrlp) * :<C-U>CtrlP<CR>
+   <F12>       * :tabe $MYVIMRC <CR>
+   <F10>       * :so $MYVIMRC <CR>
+   <F4>        * :call TabSize()<Left><Left>
+   <F3>        * :set ft=
+n  <Right>     * :vertical resize -2<CR>
+n  <Left>      * :vertical resize +2<CR>
+n  <Down>      * :resize -2<CR>
+n  <Up>        * :resize +2<CR>
+
+i  <BS>        * coc#_insert_key('request', '62b5810b-124f-11ea-89c8-57bbad1cd424')
+i  <Plug>(coc-snippets-expand-jump) * coc#_insert_key('request', 'snippets-expand-jump', 1)
+i  <Plug>(coc-snippets-expand) * coc#_insert_key('request', 'snippets-expand', 1)
+i  <Plug>(emmet-merge-lines) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#mergeLines()<CR>
+i  <Plug>(emmet-anchorize-summary) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#anchorizeURL(1)<CR>
+i  <Plug>(emmet-anchorize-url) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#anchorizeURL(0)<CR>
+i  <Plug>(emmet-remove-tag) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#removeTag()<CR>
+i  <Plug>(emmet-split-join-tag) * <Esc>:call emmet#splitJoinTag()<CR>
+i  <Plug>(emmet-toggle-comment) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#toggleComment()<CR>
+i  <Plug>(emmet-image-encode) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#imageEncode()<CR>
+i  <Plug>(emmet-image-size) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#imageSize()<CR>
+i  <Plug>(emmet-move-prev-item) * <Esc>:call emmet#moveNextPrevItem(1)<CR>
+i  <Plug>(emmet-move-next-item) * <Esc>:call emmet#moveNextPrevItem(0)<CR>
+i  <Plug>(emmet-move-prev) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#moveNextPrev(1)<CR>
+i  <Plug>(emmet-move-next) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#moveNextPrev(0)<CR>
+i  <Plug>(emmet-balance-tag-outword) * <Esc>:call emmet#balanceTag(-1)<CR>
+i  <Plug>(emmet-balance-tag-inward) * <Esc>:call emmet#balanceTag(1)<CR>
+i  <Plug>(emmet-update-tag) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#updateTag()<CR>
+i  <Plug>(emmet-expand-word) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#expandAbbr(1,"")<CR>
+i  <Plug>(emmet-expand-abbr) * <C-R>=emmet#util#closePopup()<CR><C-R>=emmet#expandAbbr(0,"")<CR>
+i  <Plug>(ale_complete) * <C-\><C-O>:ALEComplete<CR>
+i  <Plug>ISurround * <C-R>=<SNR>63_insert(1)<CR>
+i  <Plug>Isurround * <C-R>=<SNR>63_insert()<CR>
+i  <Plug>TComment_<C-_>9 * <C-\><C-O>:call tcomment#SetOption("count", 9)<CR>
+i  <Plug>TComment_<C-_>8 * <C-\><C-O>:call tcomment#SetOption("count", 8)<CR>
+i  <Plug>TComment_<C-_>7 * <C-\><C-O>:call tcomment#SetOption("count", 7)<CR>
+i  <Plug>TComment_<C-_>6 * <C-\><C-O>:call tcomment#SetOption("count", 6)<CR>
+i  <Plug>TComment_<C-_>5 * <C-\><C-O>:call tcomment#SetOption("count", 5)<CR>
+i  <Plug>TComment_<C-_>4 * <C-\><C-O>:call tcomment#SetOption("count", 4)<CR>
+i  <Plug>TComment_<C-_>3 * <C-\><C-O>:call tcomment#SetOption("count", 3)<CR>
+i  <Plug>TComment_<C-_>2 * <C-\><C-O>:call tcomment#SetOption("count", 2)<CR>
+i  <Plug>TComment_<C-_>1 * <C-\><C-O>:call tcomment#SetOption("count", 1)<CR>
+i  <Plug>TComment_<C-_>s * <C-O>:TCommentAs <C-R>=&ft<CR>_
+i  <Plug>TComment_<C-_>n * <C-O>:TCommentAs <C-R>=&ft<CR><Space>
+i  <Plug>TComment_<C-_>a * <C-O>:TCommentAs<Space>
+i  <Plug>TComment_<C-_>b * <C-\><C-O>:TCommentBlock mode=#<CR>
+i  <Plug>TComment_<C-_>i * <C-\><C-O>v:TCommentInline mode=#<CR>
+i  <Plug>TComment_<C-_>r * <C-O>:TCommentRight<CR>
+i  <Plug>TComment_<C-_><Space> * <C-O>:TComment<Space>
+i  <Plug>TComment_<C-_>p * <C-O>:norm! m`vip<CR>:TComment<CR><C-O>``
+i  <Plug>TComment_<C-_><C-_> * <C-O>:TComment<CR>
+i  <Plug>NERDCommenterInsert * <Space><BS><Esc>:call NERDComment('i', "insert")<CR>
+i  <Plug>CocRefresh * <C-R>=coc#_complete()<CR>
+i  <S-Tab>       pumvisible() ? "\<C-P>" : "\<S-Tab>"
+i  <C-G>S        <Plug>ISurround
+i  <C-G>s        <Plug>Isurround
+i  <Tab>         pumvisible() ? "\<C-N>" : "\<Tab>"
+i  <NL>          <Plug>(coc-snippets-expand-jump)
+i  <C-L>         <Plug>(coc-snippets-expand)
+i  <CR>        * pumvisible() ? "\<C-Y>" : "\<C-G>u\<CR>"
+c  <C-R><C-G>  & fnameescape(fugitive#Object(@%))
+i  <C-S>         <Plug>Isurround
+i  <C-Y>m        <Plug>(emmet-merge-lines)
+i  <C-Y>A        <Plug>(emmet-anchorize-summary)
+i  <C-Y>a        <Plug>(emmet-anchorize-url)
+i  <C-Y>k        <Plug>(emmet-remove-tag)
+i  <C-Y>j        <Plug>(emmet-split-join-tag)
+i  <C-Y>/        <Plug>(emmet-toggle-comment)
+i  <C-Y>I        <Plug>(emmet-image-encode)
+i  <C-Y>i        <Plug>(emmet-image-size)
+i  <C-Y>N        <Plug>(emmet-move-prev)
+i  <C-Y>n        <Plug>(emmet-move-next)
+i  <C-Y>D        <Plug>(emmet-balance-tag-outword)
+i  <C-Y>d        <Plug>(emmet-balance-tag-inward)
+i  <C-Y>u        <Plug>(emmet-update-tag)
+i  <C-Y>;        <Plug>(emmet-expand-word)
+i  <C-Y>,        <Plug>(emmet-expand-abbr)
+i  <Esc>         pumvisible() ? "\<C-E>" : "\<Esc>"
+i  <C-_>9        <Plug>TComment_<C-_>9
+i  <C-_>8        <Plug>TComment_<C-_>8
+i  <C-_>7        <Plug>TComment_<C-_>7
+i  <C-_>6        <Plug>TComment_<C-_>6
+i  <C-_>5        <Plug>TComment_<C-_>5
+i  <C-_>4        <Plug>TComment_<C-_>4
+i  <C-_>3        <Plug>TComment_<C-_>3
+i  <C-_>2        <Plug>TComment_<C-_>2
+i  <C-_>1        <Plug>TComment_<C-_>1
+i  <C-_>s        <Plug>TComment_<C-_>s
+i  <C-_>n        <Plug>TComment_<C-_>n
+i  <C-_>a        <Plug>TComment_<C-_>a
+i  <C-_>b        <Plug>TComment_<C-_>b
+i  <C-_>i        <Plug>TComment_<C-_>i
+i  <C-_>r        <Plug>TComment_<C-_>r
+i  <C-_><Space>   <Plug>TComment_<C-_><Space>
+i  <C-_>p        <Plug>TComment_<C-_>p
+i  <C-_><C-_>    <Plug>TComment_<C-_><C-_>
+i  "           * coc#_insert_key('request', '62b58109-124f-11ea-89c8-57bbad1cd424')
+c  $d          * <CR>:d<CR>``
+c  $M          * <CR>:M''<CR>
+c  $m          * <CR>:m''<CR>
+c  $T          * <CR>:T''<CR>
+c  $t          * <CR>:t''<CR>
+i  '           * coc#_insert_key('request', '62b58108-124f-11ea-89c8-57bbad1cd424')
+i  (           * coc#_insert_key('request', '62b58100-124f-11ea-89c8-57bbad1cd424')
+i  )           * coc#_insert_key('request', '62b58101-124f-11ea-89c8-57bbad1cd424')
+i  <           * coc#_insert_key('request', '62b58106-124f-11ea-89c8-57bbad1cd424')
+i  >           * coc#_insert_key('request', '62b58107-124f-11ea-89c8-57bbad1cd424')
+i  [           * coc#_insert_key('request', '62b58102-124f-11ea-89c8-57bbad1cd424')
+i  ]           * coc#_insert_key('request', '62b58103-124f-11ea-89c8-57bbad1cd424')
+i  `           * coc#_insert_key('request', '62b5810a-124f-11ea-89c8-57bbad1cd424')
+i  jj          * <Esc>
+i  {           * coc#_insert_key('request', '62b58104-124f-11ea-89c8-57bbad1cd424')
+i  }           * coc#_insert_key('request', '62b58105-124f-11ea-89c8-57bbad1cd424')
