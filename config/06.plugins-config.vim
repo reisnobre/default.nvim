@@ -58,3 +58,5 @@ let g:better_whitespace_filetypes_blacklist = [
 \   'mail', 'muttrc'
 \ ]
 let g:better_whitespace_operator = ''
+
+let g:gtm_plugin_status_enabled = 1

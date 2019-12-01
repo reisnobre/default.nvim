@@ -9,7 +9,7 @@ endif
 
 
 " Enable syntax highlighting
-syntax enable 
+syntax enable
 
 " Add a bit extra margin to the left
 set foldcolumn=1

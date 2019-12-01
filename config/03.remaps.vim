@@ -36,10 +36,10 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 
 " Split Moving
-map <c-j> <C-W>j<C-W>_
-map <c-k> <C-W>k<C-W>_
-map <c-h> <C-W>h<C-W>\|
-map <c-l> <C-W>l<C-W>\|
+" map <c-j> <C-W>j<C-W>_
+" map <c-k> <C-W>k<C-W>_
+" map <c-h> <C-W>h<C-W>\|
+" map <c-l> <C-W>l<C-W>\|
 
 " Learn it
 cnoremap $t <CR>:t''<CR>

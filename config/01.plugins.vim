@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""
-" => Plugins 
+" => Plugins
 """"""""""""""""""""""""""""""
 
 call plug#begin()
@@ -23,7 +23,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'maximbaz/lightline-ale'
-Plug 'pgdouyon/vim-evanesco'
+Plug 'reisnobre/vim-evanesco'
 Plug 'liuchengxu/vista.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'Yggdroot/indentLine'
@@ -36,6 +36,8 @@ Plug 'StanAngeloff/php.vim'
 Plug 'ap/vim-css-color'
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
+Plug 'git-time-metric/gtm-vim-plugin'
+
 "
 " Snippets
 Plug 'freencis/snippets'

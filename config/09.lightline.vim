@@ -6,14 +6,15 @@ let g:lightline = {
             \     'left': [
             \         [ 'mode', 'paste' ],
             \         [ 'fugitive' ],
-            \     	  [ 'filepath', 'filename_active', 'current_tag', 'readonly', 'modified' ],
+            \     	  [ 'gtmstatus','filepath', 'filename_active', 'current_tag', 'readonly', 'modified' ],
             \     ],
             \     'right': [
             \         [ 'filetype', 'fileinfo' ],
-            \         [ 'lineinfo', 'coc_status', 'coc_error', 'coc_warning', 'coc_fix', 'coc_hint' ],
+            \         [ 'coc_status', 'coc_error', 'coc_warning', 'coc_fix', 'coc_hint' ],
             \	    ]
             \ },
             \ 'component_function': {
+            \     'gtmstatus'        : 'GTMStatusline',
             \     'current_tag'      : 'LightlineCurrentTag',
             \     'coc_status'       : 'LightlineCocStatus',
             \     'fugitive'         : 'LightlineFugitive',

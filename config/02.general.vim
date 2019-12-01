@@ -15,7 +15,7 @@ set cmdheight=2
 
 
 " don't give |ins-completion-menu| messages.
-set shortmess+=c
+set shortmess=aFc
 set cursorline
 
 " always show signcolumns
