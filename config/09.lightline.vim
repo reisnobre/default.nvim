@@ -64,11 +64,14 @@ let g:lightline.component_type = {
             \   'coc_status'       : 'middle',
             \ }
 
-let iterm_profile = $ITERM_PROFILE
-if iterm_profile == 'Nord'
-  let g:lightline.colorscheme = 'nord'
+if system('uname 2> /dev/null') =~ 'Darwin'
+  if $ITERM_PROFILE =~ 'Nord'
+    let g:lightline.colorscheme = 'nord'
+  else
+    let g:lightline.colorscheme = 'solarized'
+  endif
 else
-  let g:lightline.colorscheme = 'solarized'
+    let g:lightline.colorscheme = 'nord'
 endif
 
 " Helper functions

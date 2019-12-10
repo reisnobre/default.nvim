@@ -30,6 +30,10 @@ Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
 Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons  on vim
+Plug 'https://github.com/jalvesaq/Nvim-R' " work with R language
+Plug 'https://github.com/francoiscabrol/ranger.vim'
+Plug 'https://github.com/tpope/vim-obsession'
+
 
 " To be replaced or removed
 Plug 'https://github.com/brooth/far.vim' " global refactor
@@ -43,7 +47,7 @@ Plug 'https://github.com/pangloss/vim-javascript'
 
 " To be replaced or removed
 Plug 'https://github.com/StanAngeloff/php.vim'
-" Plug 'https://github.com/posva/vim-vue'
+Plug 'https://github.com/posva/vim-vue'
 " Plug 'https://github.com/ap/vim-css-color'
 "
 " =============== SNIPPETS

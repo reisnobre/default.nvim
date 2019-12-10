@@ -52,3 +52,5 @@ let g:better_whitespace_filetypes_blacklist = [
 
 let g:better_whitespace_operator = ''
 let g:gtm_plugin_status_enabled = 1
+let g:indentLine_enabled = 1
+let g:vue_pre_processors = ['scss']
