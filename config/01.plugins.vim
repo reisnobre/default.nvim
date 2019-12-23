@@ -13,9 +13,7 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and mor
 Plug 'https://github.com/scrooloose/nerdtree' " file tree
 Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
 Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
-Plug 'https://github.com/tomtom/tcomment_vim' " easy commentin
-Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/ctrlpvim/ctrlp.vim' " fuzzy find files
 
 
@@ -31,25 +29,38 @@ Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
 Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons  on vim
 Plug 'https://github.com/jalvesaq/Nvim-R' " work with R language
-Plug 'https://github.com/francoiscabrol/ranger.vim'
-Plug 'https://github.com/tpope/vim-obsession'
+Plug 'https://github.com/tpope/vim-obsession' " save sessions
 
+" To learn
+Plug 'https://github.com/tpope/vim-fugitive' " git interaction
+Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 
 " To be replaced or removed
 Plug 'https://github.com/brooth/far.vim' " global refactor
 
-
+" Testing
+Plug 'https://github.com/junegunn/goyo.vim'
+Plug 'https://github.com/mateusbraga/vim-spell-pt-br'
 
 " =============== SYNTAX
 " Essentials
 Plug 'https://github.com/pangloss/vim-javascript'
+Plug 'https://github.com/posva/vim-vue'
+Plug 'https://github.com/StanAngeloff/php.vim'
+Plug 'https://github.com/jwalton512/vim-blade'
+
 " Nice to have
 
 " To be replaced or removed
-Plug 'https://github.com/StanAngeloff/php.vim'
-Plug 'https://github.com/posva/vim-vue'
-" Plug 'https://github.com/ap/vim-css-color'
-"
+
+" Testing
+Plug 'https://github.com/chr4/nginx.vim'
+Plug 'https://github.com/lervag/vimtex'
+Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/cakebaker/scss-syntax.vim'
+Plug 'https://github.com/isruslan/vim-es6'
+
+
 " =============== SNIPPETS
 Plug 'https://github.com/freencis/snippets'
 Plug 'https://github.com/reisnobre/snippets.nvim'
@@ -78,4 +89,10 @@ Plug 'https://github.com/rakr/vim-two-firewatch'
 " Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI
 " Plug 'SirVer/ultisnips'
 call plug#end()
-" }}}
+"
+" EMMET Remap
+let g:user_emmet_leader_key='<C-y>'
+
+" Quick comment shit
+noremap <Leader>cs 80i=<esc>
+

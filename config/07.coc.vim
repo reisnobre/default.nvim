@@ -29,6 +29,7 @@ let g:coc_global_extensions = [
   \ 'coc-vetur',
   \ 'coc-vimlsp',
   \ 'coc-yank',
+  \ 'coc-vimtex',
   \ ]
 
 

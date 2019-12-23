@@ -19,6 +19,7 @@ set hidden " if hidden is not set, TextEdit might fail.
 set nobackup " Some server have issues with backup files, see #649
 set nowritebackup
 set cursorline " highlight  the line where the cursor is
+" set cursorcolumn " highlight column
 set si " Smart indent
 set ai "Auto indent
 set nowrap "No wrap lines
@@ -33,6 +34,7 @@ set rnu " relative ruler
 set shellslash " auto slash at the end of file path
 set expandtab " use spaces instead of tabs
 autocmd BufEnter * silent! lcd %:p:h " change dirs as files are oppened
+set splitbelow splitright " change default split direction
 
 " Enable filetype plugins
 filetype plugin on
