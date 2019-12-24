@@ -56,9 +56,9 @@ Plug 'https://github.com/jwalton512/vim-blade'
 " Testing
 Plug 'https://github.com/chr4/nginx.vim'
 Plug 'https://github.com/lervag/vimtex'
-Plug 'https://github.com/sheerun/vim-polyglot'
-Plug 'https://github.com/cakebaker/scss-syntax.vim'
-Plug 'https://github.com/isruslan/vim-es6'
+" Plug 'https://github.com/sheerun/vim-polyglot'
+" Plug 'https://github.com/cakebaker/scss-syntax.vim'
+" Plug 'https://github.com/isruslan/vim-es6'
 
 
 " =============== SNIPPETS

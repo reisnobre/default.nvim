@@ -54,3 +54,4 @@ let g:session_autoload = 'yes'
 set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
 " :autocmd BufWinEnter * !cd $(git root)
 :autocmd BufWinLeave * silent! !cd $(git root)
+let g:loaded_matchparen = 1
