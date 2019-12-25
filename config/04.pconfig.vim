@@ -12,10 +12,12 @@ let g:buffergator_autoexpand_on_split = 0
 
 
 " =============== NERDTree
-nnoremap <Leader>n :NERDTree<CR>
-let NERDTreeQuitOnOpen=1
-let g:NERDTreeGitStatusWithFlags = 1
-let g:NERDTreeIgnore = ['^node_modules$']
+nnoremap <Leader>n :CocCommand explorer<CR>
+" nmap ge :CocCommand explorer<CR>
+
+" let NERDTreeQuitOnOpen=1
+" let g:NERDTreeGitStatusWithFlags = 1
+" let g:NERDTreeIgnore = ['^node_modules$']
 
 " =============== FAR
 let g:ackprg = 'ag --vimgrep --smart-case'

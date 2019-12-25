@@ -5,14 +5,10 @@
 call plug#begin()
 " =============== IDE
 " Essentials
-Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
 Plug 'https://github.com/itchyny/lightline.vim' " lightline
-Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
 Plug 'https://github.com/mileszs/ack.vim' " find anyware
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and more
-Plug 'https://github.com/scrooloose/nerdtree' " file tree
 Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
-Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/ctrlpvim/ctrlp.vim' " fuzzy find files
 
@@ -37,6 +33,11 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 
 " To be replaced or removed
 Plug 'https://github.com/brooth/far.vim' " global refactor
+
+" Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
+" Plug 'https://github.com/scrooloose/nerdtree' " file tree
+" Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
+" Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
 
 " Testing
 Plug 'https://github.com/junegunn/goyo.vim'

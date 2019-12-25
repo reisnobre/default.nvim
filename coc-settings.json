@@ -54,6 +54,9 @@
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.icon.enableVimDevions": true,
+  "explorer.quitOnOpen": true,
   "languageserver": {
     "ccls": {
       "command": "ccls",
