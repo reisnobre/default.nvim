@@ -75,4 +75,9 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
+" EMMET Remap
+let g:user_emmet_leader_key='<C-y>'
+
+" Quick comment shit
+noremap <Leader>cs 80i=<esc>
 

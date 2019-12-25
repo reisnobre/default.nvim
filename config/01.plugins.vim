@@ -26,6 +26,8 @@ Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons  on vim
 Plug 'https://github.com/jalvesaq/Nvim-R' " work with R language
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
+Plug 'https://github.com/junegunn/goyo.vim'
+Plug 'https://github.com/mateusbraga/vim-spell-pt-br'
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
@@ -33,15 +35,12 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 
 " To be replaced or removed
 Plug 'https://github.com/brooth/far.vim' " global refactor
-
 " Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
 " Plug 'https://github.com/scrooloose/nerdtree' " file tree
 " Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
 " Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
 
 " Testing
-Plug 'https://github.com/junegunn/goyo.vim'
-Plug 'https://github.com/mateusbraga/vim-spell-pt-br'
 
 " =============== SYNTAX
 " Essentials
@@ -51,16 +50,12 @@ Plug 'https://github.com/StanAngeloff/php.vim'
 Plug 'https://github.com/jwalton512/vim-blade'
 
 " Nice to have
+Plug 'https://github.com/chr4/nginx.vim'
+Plug 'https://github.com/lervag/vimtex'
 
 " To be replaced or removed
 
 " Testing
-Plug 'https://github.com/chr4/nginx.vim'
-Plug 'https://github.com/lervag/vimtex'
-" Plug 'https://github.com/sheerun/vim-polyglot'
-" Plug 'https://github.com/cakebaker/scss-syntax.vim'
-" Plug 'https://github.com/isruslan/vim-es6'
-
 
 " =============== SNIPPETS
 Plug 'https://github.com/freencis/snippets'
@@ -73,27 +68,4 @@ Plug 'https://github.com/arcticicestudio/nord-vim'
 Plug 'https://github.com/rakr/vim-two-firewatch'
 
 " =============== VAULT
-" Plug 'justinmk/vim-syntax-extra'
-" Plug 'jwalton512/vim-blade'
-" Plug 'kshenoy/vim-signature'
-" Plug 'majutsushi/tagbar'
-" Plug 'myusuf3/numbers.vim'
-" Plug 'othree/javascript-libraries-syntax.vim'
-" Plug 'terryma/vim-multiple-cursors'
-" Plug 'tpope/vim-repeat'
-" Plug 'honza/vim-snippets'
-" Plug 'https://github.com/SirVer/ultisnips.git'
-" Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'scrooloose/nerdcommenter'
-" Plug 'dense-analysis/ale' " linter
-" Plug 'maximbaz/lightline-ale' " linter integration
-" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax UI
-" Plug 'SirVer/ultisnips'
 call plug#end()
-"
-" EMMET Remap
-let g:user_emmet_leader_key='<C-y>'
-
-" Quick comment shit
-noremap <Leader>cs 80i=<esc>
-

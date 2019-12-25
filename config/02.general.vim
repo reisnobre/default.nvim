@@ -52,15 +52,16 @@ set novisualbell
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:session_autoload = 'yes'
 set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
-" :autocmd BufWinEnter * silent! :CocCommand explorer
+
 function Startup()
   :CocCommand explorer
-  :execute "normal! \<C-w>o"
+  " :execute "normal! \<C-w>o"
 endfunction
 
-au VimEnter * silent! call Startup()
+autocmd VimEnter * silent! call Startup()
 
-:autocmd BufWinLeave * silent! !cd $(git roo)
+" autocmd BufWinLeave * silent! !cd $(git roo)
+"
 let g:loaded_matchparen = 1
 
 let g:loaded_netrw       = 1
