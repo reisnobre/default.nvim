@@ -12,24 +12,26 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 let g:coc_global_extensions = [
-  \ 'coc-css',
-  \ 'coc-emmet',
-  \ 'coc-eslint',
-  \ 'coc-html',
+  \ 'coc-yank',
+  \ 'coc-snippets',
+  \ 'coc-prettier',
+  \ 'coc-pairs',
+  \ 'coc-marketplace',
   \ 'coc-imselect',
   \ 'coc-highlight',
-  \ 'coc-json',
-  \ 'coc-marketplace',
-  \ 'coc-pairs',
-  \ 'coc-phpls',
-  \ 'coc-prettier',
-  \ 'coc-python',
-  \ 'coc-snippets',
-  \ 'coc-tsserver',
-  \ 'coc-vetur',
-  \ 'coc-vimlsp',
-  \ 'coc-yank',
+  \ 'coc-explorer',
+  \ 'coc-eslint',
+  \ 'coc-emmet',
   \ 'coc-vimtex',
+  \ 'coc-vimlsp',
+  \ 'coc-vetur',
+  \ 'coc-tsserver',
+  \ 'coc-python',
+  \ 'coc-phpls',
+  \ 'coc-json',
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-markdownlint'
   \ ]
 
 
