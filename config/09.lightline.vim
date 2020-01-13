@@ -67,6 +67,8 @@ let g:lightline.component_type = {
 if system('uname 2> /dev/null') =~ 'Darwin'
   if $ITERM_PROFILE =~ 'Nord'
     let g:lightline.colorscheme = 'nord'
+  elseif $ITERM_PROFILE =~ 'Dracula'
+    let g:lightline.colorscheme = 'dracula'
   else
     let g:lightline.colorscheme = 'solarized'
   endif

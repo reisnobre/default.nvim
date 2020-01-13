@@ -54,7 +54,7 @@ let g:session_autoload = 'yes'
 set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
 
 function Startup()
-  :CocCommand explorer
+  " :CocCommand explorer
   " :execute "normal! \<C-w>o"
 endfunction
 
