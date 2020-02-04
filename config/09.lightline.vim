@@ -9,8 +9,8 @@ let g:lightline = {
             \     	  [ 'gtmstatus','filepath', 'filename_active', 'current_tag', 'readonly', 'modified' ],
             \     ],
             \     'right': [
-            \         [ 'filetype', 'fileinfo' ],
             \         [ 'coc_status', 'coc_error', 'coc_warning', 'coc_fix', 'coc_hint' ],
+            \         [ 'lineinfo', 'filetype', 'fileinfo' ],
             \	    ]
             \ },
             \ 'component_function': {
@@ -67,10 +67,6 @@ let g:lightline.component_type = {
 if system('uname 2> /dev/null') =~ 'Darwin'
   if $ITERM_PROFILE =~ 'Nord'
     let g:lightline.colorscheme = 'nord'
-  elseif $ITERM_PROFILE =~ 'Dracula'
-    let g:lightline.colorscheme = 'dracula'
-  else
-    let g:lightline.colorscheme = 'solarized'
   endif
 else
     let g:lightline.colorscheme = 'nord'

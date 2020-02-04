@@ -12,12 +12,16 @@ let g:buffergator_autoexpand_on_split = 0
 
 
 " =============== NERDTree
-nnoremap <Leader>n :CocCommand explorer<CR>
-" nmap ge :CocCommand explorer<CR>
+function s:explorer()
+endfunction
 
-" let NERDTreeQuitOnOpen=1
-" let g:NERDTreeGitStatusWithFlags = 1
-" let g:NERDTreeIgnore = ['^node_modules$']
+" nnoremap <Leader>n   :CocCommand explorer<CR>
+nmap ge :CocCommand explorer<CR>
+" =============== NERDTree
+nnoremap <Leader>n :NERDTree<CR>
+let NERDTreeQuitOnOpen=1	" nmap ge :CocCommand explorer<CR>
+let g:NERDTreeGitStatusWithFlags = 1
+let g:NERDTreeIgnore = ['^node_modules$']
 
 " =============== FAR
 let g:ackprg = 'ag --vimgrep --smart-case'
@@ -81,3 +85,4 @@ let g:user_emmet_leader_key='<C-y>'
 " Quick comment shit
 noremap <Leader>cs 80i=<esc>
 
+let g:python_highlight_all = 1

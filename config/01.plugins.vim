@@ -37,20 +37,26 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 " To be replaced or removed
 Plug 'https://github.com/brooth/far.vim' " global refactor
 
+Plug 'https://github.com/preservim/nerdtree' " file tree
+Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
+Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
+
 " Testing
 
 " =============== SYNTAX
 " Essentials
-Plug 'https://github.com/pangloss/vim-javascript'
-Plug 'https://github.com/posva/vim-vue'
-Plug 'https://github.com/StanAngeloff/php.vim'
-Plug 'https://github.com/jwalton512/vim-blade'
+Plug 'https://github.com/sheerun/vim-polyglot' " language support
 
 " Nice to have
-Plug 'https://github.com/chr4/nginx.vim'
-Plug 'https://github.com/lervag/vimtex'
 
 " To be replaced or removed
+" Plug 'https://github.com/pangloss/vim-javascript'
+" Plug 'https://github.com/posva/vim-vue'
+" Plug 'https://github.com/StanAngeloff/php.vim'
+" Plug 'https://github.com/jwalton512/vim-blade'
+" Plug 'https://github.com/vim-python/python-syntax'
+" Plug 'https://github.com/chr4/nginx.vim'
+" Plug 'https://github.com/lervag/vimtex'
 
 " Testing
 
@@ -62,6 +68,6 @@ Plug 'https://github.com/mattn/emmet-vim'
 
 " =============== THEMES
 Plug 'https://github.com/arcticicestudio/nord-vim'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'https://github.com/morhetz/gruvbox'
 
 call plug#end()

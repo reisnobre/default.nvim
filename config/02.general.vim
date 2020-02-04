@@ -66,3 +66,11 @@ let g:loaded_matchparen = 1
 
 let g:loaded_netrw       = 1
 let g:loaded_netrwPlugin = 1
+
+if !has('nvim')
+  set viminfo+=n~/vim/viminfo
+else
+  " Do nothing here to use the neovim default
+  " or do soemething like:
+  " set viminfo+=n~/.shada
+endif
