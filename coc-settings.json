@@ -45,6 +45,7 @@
   "coc.preferences.hoverTarget": "echo",
   "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"," python"],
   "html.filetypes": [ "html", "vue"],
+  "eslint.packageManager": "yarn",
   "prettier.semi": false,
   "prettier.trailingComma": "none",
   "prettier.singleQuote": true,
