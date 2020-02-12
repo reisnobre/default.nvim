@@ -13,7 +13,8 @@ let maplocalleader = ' '
 noremap <Leader>s :update<CR>
 
 " Quick single file refactor
-noremap <Leader>r ye:%s,",
+noremap <Leader>rf ye:%s,",
+noremap <Leader>rl ye:s,",
 
 " Call Ack!
 nnoremap <Leader>a :Ack! -w 

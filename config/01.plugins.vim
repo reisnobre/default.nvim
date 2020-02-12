@@ -37,9 +37,9 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 " To be replaced or removed
 Plug 'https://github.com/brooth/far.vim' " global refactor
 
-Plug 'https://github.com/preservim/nerdtree' " file tree
-Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
-Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
+" Plug 'https://github.com/preservim/nerdtree' " file tree
+" Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
+" Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
 
 " Testing
 
