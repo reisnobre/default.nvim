@@ -23,17 +23,16 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-vimtex',
   \ 'coc-vimlsp',
-  \ 'coc-vetur',
   \ 'coc-tsserver',
   \ 'coc-python',
   \ 'coc-phpls',
   \ 'coc-json',
   \ 'coc-css',
   \ 'coc-html',
-  \ 'coc-markdownlint'
+  \ 'coc-markdownlint',
+  \ 'coc-vetur',
   \ ]
 
-" \ 'coc-explorer',
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.

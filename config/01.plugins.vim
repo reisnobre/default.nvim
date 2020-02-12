@@ -13,6 +13,8 @@ Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
+Plug 'https://github.com/dense-analysis/ale'
+
 
 " Nice to have
 Plug 'https://github.com/Shougo/echodoc.vim' " function documentation below the status bar

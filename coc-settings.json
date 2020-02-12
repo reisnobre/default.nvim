@@ -43,21 +43,32 @@
   "signature.target": "echo",
   "signature.preferShownAbove": false,
   "coc.preferences.hoverTarget": "echo",
-  "coc.preferences.formatOnSaveFiletypes": ["javascript", "vue", "scss"," python"],
   "html.filetypes": [ "html", "vue"],
   "eslint.packageManager": "yarn",
+  "prettier.disableLanguages": [
+    "vue"
+  ],
+  "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.trailingComma": "none",
-  "prettier.singleQuote": true,
-  "prettier.bracketSpacing": true,
-  "prettier.parser": "babylon",
-  "prettier.disableLanguages": [],
+  "prettier.tabWidth": 2,
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevions": true,
   "explorer.quitOnOpen": true,
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.options.tabSize": 2,
+  "vetur.format.options.useTabs": false,
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "singleQuote": true,
+      "semi": true,
+      "trailingComma": "none",
+      "tabWidth": 2
+    }
+  },
   "languageserver": {
     "ccls": {
       "command": "ccls",
