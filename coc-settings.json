@@ -69,5 +69,6 @@
         }
       }
     }
-  }
+  },
+  "vetur.useWorkspaceDependencies": true
 }
