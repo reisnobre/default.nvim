@@ -40,14 +40,12 @@
     "typescript": ["javascript"]
   },
   "snippets.ultisnips.directories": ["UltiSnips", "gosnippets/UltiSnips"],
+  "coc.preferences.formatOnSaveFiletypes": [".vue"],
   "signature.target": "echo",
   "signature.preferShownAbove": false,
   "coc.preferences.hoverTarget": "echo",
   "html.filetypes": [ "html", "vue"],
   "eslint.packageManager": "yarn",
-  "prettier.disableLanguages": [
-    "vue"
-  ],
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.trailingComma": "none",

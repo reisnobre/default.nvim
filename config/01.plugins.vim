@@ -10,7 +10,6 @@ Plug 'https://github.com/mileszs/ack.vim' " find anyware
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and more
 Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
-Plug 'https://github.com/ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
 Plug 'https://github.com/dense-analysis/ale'
@@ -31,19 +30,23 @@ Plug 'https://github.com/tpope/vim-obsession' " save sessions
 Plug 'https://github.com/junegunn/goyo.vim' " better vim writting
 Plug 'https://github.com/mateusbraga/vim-spell-pt-br' " vim spelling
 Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
+Plug 'https://github.com/andymass/vim-matchup'
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 
 " To be replaced or removed
-Plug 'https://github.com/brooth/far.vim' " global refactor
+" Plug 'https://github.com/brooth/far.vim' " global refactor
+" Plug 'https://github.com/ctrlpvim/ctrlp.vim' " fuzzy find files
 
 " Plug 'https://github.com/preservim/nerdtree' " file tree
 " Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin' " indicates on nerdtree git status of a file
 " Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
 
 " Testing
+Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' }
+Plug 'https://github.com/junegunn/fzf.vim'
 
 " =============== SYNTAX
 " Essentials
