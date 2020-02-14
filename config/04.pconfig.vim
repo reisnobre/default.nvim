@@ -3,12 +3,18 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " =============== CTRLP
-set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.cs.meta
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|meta|swp|wav)$'
-let g:buffergator_autoexpand_on_split = 0
+" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.cs.meta
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|meta|swp|wav)$'
+" let g:buffergator_autoexpand_on_split = 0
+
+" =============== FZF
+" nnoremap <silent> <C-p> :GFiles<CR>
+" map <C-d> :call Fzf_git_diff_files_with_dev_icons()<CR>
+map <C-f> :call Fzf_files_with_dev_icons($FZF_DEFAULT_COMMAND)<CR>
+map <C-p> :call Fzf_files_with_dev_icons("git ls-files \| uniq")<CR>
 
 
 " =============== NERDTree
@@ -17,7 +23,7 @@ endfunction
 
 nnoremap <Leader>n   :CocCommand explorer<CR>
 nmap ge :CocCommand explorer<CR>
-let g:indentLine_fileTypeExclude=['coc-explorer']
+let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf']
 " =============== NERDTree
 " nnoremap <Leader>n :NERDTree<CR>
 " let NERDTreeQuitOnOpen=1	" nmap ge :CocCommand explorer<CR>
