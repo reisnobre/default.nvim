@@ -12,7 +12,7 @@ Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
-Plug 'https://github.com/dense-analysis/ale'
+" Plug 'https://github.com/dense-analysis/ale'
 
 
 " Nice to have
@@ -47,6 +47,7 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 " Testing
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' }
 Plug 'https://github.com/junegunn/fzf.vim'
+Plug 'https://github.com/airblade/vim-rooter'
 
 " =============== SYNTAX
 " Essentials

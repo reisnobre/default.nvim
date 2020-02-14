@@ -9,11 +9,7 @@ let g:lightline.active = {
 \     ['filepath', 'filename_active', 'current_tag']
 \   ],
 \   'right': [
-\     ['lineinfo',
-\      'coc_error', 'coc_warning', 'coc_info', 'coc_hint', 'coc_fix', 'coc_status',
-\      'ale_error', 'ale_warning', 'ale_info', 'ale_style_error', 'ale_style_warning'],
-\     ['filetype'],
-\     ['fileinfo']
+\     ['lineinfo', 'filetype', 'fileinfo']
 \   ]
 \ }
 
@@ -23,9 +19,7 @@ let g:lightline.inactive = {
 \     ['filepath', 'filename_inactive']
 \   ],
 \   'right': [
-\     ['lineinfo'],
-\     ['filetype'],
-\     ['fileinfo']
+\     ['lineinfo', 'filetype', 'fileinfo']
 \   ]
 \ }
 
@@ -46,31 +40,9 @@ let g:lightline.component_function = {
 \ }
 
 let g:lightline.component_expand = {
-\   'coc_error'        : 'LightlineCocErrors',
-\   'coc_warning'      : 'LightlineCocWarnings',
-\   'coc_info'         : 'LightlineCocInfos',
-\   'coc_hint'         : 'LightlineCocHints',
-\   'coc_fix'          : 'LightlineCocFixes',
-\   'coc_status'       : 'LightlineCocStatus',
-\   'ale_error'        : 'LightlineAleErrors',
-\   'ale_warning'      : 'LightlineAleWarnings',
-\   'ale_info'         : 'LightlineAleInfos',
-\   'ale_style_error'  : 'LightlineAleStyleErrors',
-\   'ale_style_warning': 'LightlineAleStyleWarnings'
 \ }
 
 let g:lightline.component_type = {
-\   'coc_error'        : 'error',
-\   'coc_warning'      : 'warning',
-\   'coc_info'         : 'tabsel',
-\   'coc_hint'         : 'middle',
-\   'coc_fix'          : 'middle',
-\   'coc_status'       : 'middle',
-\   'ale_error'        : 'error',
-\   'ale_warning'      : 'warning',
-\   'ale_info'         : 'tabsel',
-\   'ale_style_error'  : 'error',
-\   'ale_style_warning': 'warning'
 \ }
 
 let g:lightline.separator = {'left': '', 'right': ''}
@@ -199,51 +171,6 @@ function! LightlineFiletype() abort
   return &filetype . (exists('*WebDevIconsGetFileTypeSymbol') ? ' ' . WebDevIconsGetFileTypeSymbol() : '')
 endfunction
 
-function! LightlineCocErrors() abort
-  return s:lightline_coc_diagnostic('error', 'error')
-endfunction
-
-function! LightlineCocWarnings() abort
-  return s:lightline_coc_diagnostic('warning', 'warning')
-endfunction
-
-function! LightlineCocInfos() abort
-  return s:lightline_coc_diagnostic('information', 'info')
-endfunction
-
-function! LightlineCocHints() abort
-  return s:lightline_coc_diagnostic('hints', 'hint')
-endfunction
-
-function! LightlineCocFixes() abort
-  let b:coc_line_fixes = get(get(b:, 'coc_quickfixes', {}), line('.'), 0)
-  return b:coc_line_fixes > 0 ? printf('%d ', b:coc_line_fixes) : ''
-endfunction
-
-function! LightlineCocStatus() abort
-  return get(g:, 'coc_status', '')
-endfunction
-
-function! LightlineAleErrors() abort
-  return s:lightline_ale_diagnostic('error')
-endfunction
-
-function! LightlineAleWarnings() abort
-  return s:lightline_ale_diagnostic('warning')
-endfunction
-
-function! LightlineAleInfos() abort
-  return s:lightline_ale_diagnostic('info')
-endfunction
-
-function! LightlineAleStyleErrors() abort
-  return s:lightline_ale_diagnostic('style_error')
-endfunction
-
-function! LightlineAleStyleWarnings() abort
-  return s:lightline_ale_diagnostic('style_warning')
-endfunction
-
 function! s:lightline_is_lean() abort
   return &filetype =~? '\v^(vim-plug|defx|vista(_kind)?|mundo(diff)?)$'
 endfunction
@@ -274,35 +201,3 @@ function! s:lightline_patch_palette(colorscheme) abort
   endtry
 endfunction
 
-function! s:lightline_coc_diagnostic(kind, sign) abort
-  if !get(g:, 'coc_enabled', 0)
-    return ''
-  endif
-  let c = get(b:, 'coc_diagnostic_info', 0)
-  if empty(c) || get(c, a:kind, 0) ==# 0
-    return ''
-  endif
-  try
-    let s = g:coc_user_config['diagnostic'][a:sign . 'Sign']
-  catch
-    let s = '!'
-  endtry
-  return printf('%d %s', c[a:kind], s)
-endfunction
-
-function! s:lightline_ale_diagnostic(kind) abort
-  if !get(g:, 'ale_enabled', 0)
-    return ''
-  endif
-  if !get(b:, 'ale_linted', 0)
-    return ''
-  endif
-  if ale#engine#IsCheckingBuffer(bufnr(''))
-    return ''
-  endif
-  let c = ale#statusline#Count(bufnr(''))
-  if empty(c) || get(c, a:kind, 0) ==# 0
-    return ''
-  endif
-  return printf('%d %s', c[a:kind], get(g:, 'ale_sign_' . a:kind, '!'))
-endfunction
