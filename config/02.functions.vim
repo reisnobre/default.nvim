@@ -30,7 +30,7 @@ function! Fzf_files_with_dev_icons(command)
 endfunction
 
 function! Fzf_git_diff_files_with_dev_icons()
-  let l:fzf_files_options = '--ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d; bat --theme=ansi-dark --color always --style numbers {3..}) | head -'.&lines.'\""'
+  let l:fzf_files_options = '--ansi --preview "sh -c \"(git diff --color=always -- {3..} | sed 1,4d; bat --color always --style numbers {3..}) | head -'.&lines.'\""'
    function! s:edit_devicon_prepended_file_diff(item)
     echom a:item
     let l:file_path = a:item[7:-1]

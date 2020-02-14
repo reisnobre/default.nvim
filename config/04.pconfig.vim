@@ -11,11 +11,8 @@
 " let g:buffergator_autoexpand_on_split = 0
 
 " =============== FZF
-" nnoremap <silent> <C-p> :GFiles<CR>
-" map <silent> <C-f> :call Fzf_files_with_dev_icons($FZF_DEFAULT_COMMAND)<CR>
 noremap <silent> <C-p> :call Fzf_files_with_dev_icons("git ls-files \| uniq")<CR>
 noremap <silent> <Leader>df :call Fzf_git_diff_files_with_dev_icons()<CR>
-
 
 " =============== NERDTree
 function s:explorer()
@@ -145,5 +142,3 @@ function! s:ale_highlight() abort
          \                     , 'lightblue' , s:bg('ALEInfoLine'    , 'cterm'))
   endif
 endfunction
-
-" autocmd vimrc VimEnter,ColorScheme * call s:ale_highlight()
