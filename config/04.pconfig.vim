@@ -2,30 +2,14 @@
 " => SETTINGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" =============== CTRLP
-" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.meta,*.cs.meta
-" let g:ctrlp_map = '<c-p>'
-" let g:ctrlp_cmd = 'CtrlP'
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|meta|swp|wav)$'
-" let g:buffergator_autoexpand_on_split = 0
-
 " =============== FZF
 noremap <silent> <C-p> :call Fzf_files_with_dev_icons("git ls-files \| uniq")<CR>
 noremap <silent> <Leader>df :call Fzf_git_diff_files_with_dev_icons()<CR>
 
-" =============== NERDTree
-function s:explorer()
-endfunction
-
+" =============== EXPLORER 
 nnoremap <Leader>n   :CocCommand explorer<CR>
 nmap ge :CocCommand explorer<CR>
 let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf']
-" =============== NERDTree
-" nnoremap <Leader>n :NERDTree<CR>
-" let NERDTreeQuitOnOpen=1	" nmap ge :CocCommand explorer<CR>
-" let g:NERDTreeGitStatusWithFlags = 1
-" let g:NERDTreeIgnore = ['^node_modules$']
 
 " =============== FAR
 let g:ackprg = 'ag --vimgrep --smart-case'

@@ -2,6 +2,7 @@
 " => Lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {'colorscheme': 'nord'}
+
 let g:lightline.active = {
 \   'left' : [
 \     ['mode', 'paste'],
@@ -30,7 +31,6 @@ let g:lightline.component = {
 
 let g:lightline.component_function = {
 \   'fugitive'         : 'LightlineFugitive',
-\   'filepath'         : 'LightlineFilepath',
 \   'filename_active'  : 'LightlineFilenameActive',
 \   'filename_inactive': 'LightlineFilenameInactive',
 \   'current_tag'      : 'LightlineCurrentTag',
@@ -65,6 +65,24 @@ function! s:attr(group, attr, ...) abort
     let a = synIDattr(synIDtrans(hlID(a:group)), a:attr)
   endif
   return empty(a) || a ==# '-1' ? 'NONE' :  a
+endfunction
+
+function! s:lightline_is_plain() abort
+  return &buftype ==? 'terminal' || &filetype ==? 'help'
+endfunction
+
+function! s:lightline_is_lean() abort
+  return &filetype =~? '\v^(vim-plug|defx|vista(_kind)?|mundo(diff)?)$'
+endfunction
+
+function! s:lightline_modified() abort
+  return s:lightline_is_lean() || s:lightline_is_plain() ?  ''  :
+  \      &modified                                       ?  '' :
+  \      &modifiable                                     ?  ''  : '-'
+endfunction
+
+function! s:lightline_readonly() abort
+  return (s:lightline_is_lean() || s:lightline_is_plain()) && &filetype !=? 'help' ? '' : &readonly ? '' : ''
 endfunction
 
 function! LightlineMode() abort
@@ -155,49 +173,10 @@ function! LightlineLineinfo() abort
   \      printf('%d:%d ☰ %d%%', line('.'), col('.'), 100*line('.')/line('$'))
 endfunction
 
-function! LightlineFileinfo() abort
-  if s:lightline_is_lean() || s:lightline_is_plain() || winwidth(0) < 80
-    return ''
-  endif
-  return printf('%s[%s]',
-         \      empty(&fileencoding) ? &encoding : &fileencoding,
-         \      &fileformat . (exists('*WebDevIconsGetFileFormatSymbol') ? ' ' . WebDevIconsGetFileFormatSymbol() : ''))
-endfunction
-
 function! LightlineFiletype() abort
   if empty(&filetype) || s:lightline_is_lean() || s:lightline_is_plain()
     return ''
   endif
   return &filetype . (exists('*WebDevIconsGetFileTypeSymbol') ? ' ' . WebDevIconsGetFileTypeSymbol() : '')
-endfunction
-
-function! s:lightline_is_lean() abort
-  return &filetype =~? '\v^(vim-plug|defx|vista(_kind)?|mundo(diff)?)$'
-endfunction
-
-function! s:lightline_is_plain() abort
-  return &buftype ==? 'terminal' || &filetype ==? 'help'
-endfunction
-
-function! s:lightline_modified() abort
-  return s:lightline_is_lean() || s:lightline_is_plain() ?  ''  :
-  \      &modified                                       ?  '' :
-  \      &modifiable                                     ?  ''  : '-'
-endfunction
-
-function! s:lightline_readonly() abort
-  return (s:lightline_is_lean() || s:lightline_is_plain()) && &filetype !=? 'help' ? '' : &readonly ? '' : ''
-endfunction
-
-function! s:lightline_patch_palette(colorscheme) abort
-  try
-    let palette = g:lightline#colorscheme#{a:colorscheme}#palette
-
-    call add(palette.normal.left[0], 'bold')
-    call add(palette.insert.left[0], 'bold')
-    call add(palette.visual.left[0], 'bold')
-    call add(palette.replace.left[0], 'bold')
-  catch
-  endtry
 endfunction
 

@@ -14,7 +14,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 let g:coc_global_extensions = [
   \ 'coc-yank',
   \ 'coc-snippets',
-  \ 'coc-prettier',
   \ 'coc-pairs',
   \ 'coc-marketplace',
   \ 'coc-imselect',

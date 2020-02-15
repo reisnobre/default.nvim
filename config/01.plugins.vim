@@ -31,10 +31,14 @@ Plug 'https://github.com/junegunn/goyo.vim' " better vim writting
 Plug 'https://github.com/mateusbraga/vim-spell-pt-br' " vim spelling
 Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup'
+Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
+Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
+Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
+" Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
 
 " To be replaced or removed
 " Plug 'https://github.com/brooth/far.vim' " global refactor
@@ -45,9 +49,7 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 " Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight' " beautiful nerdtree
 
 " Testing
-Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' }
-Plug 'https://github.com/junegunn/fzf.vim'
-Plug 'https://github.com/airblade/vim-rooter'
+
 
 " =============== SYNTAX
 " Essentials

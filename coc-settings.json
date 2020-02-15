@@ -29,7 +29,6 @@
     "typeParameter"         : "\uf278",
     "default"               : "\uf29c"
   },
-  "diagnostic.refreshOnInsertMode": true,
   "diagnostic.messageTarget": "echo",
   "diagnostic.errorSign": "",
   "diagnostic.warningSign": "",
@@ -38,14 +37,13 @@
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
-    "typescript": ["javascript"]
+    "typescript": ["javascript"],
+    "vue": ["javascript", "html"]
   },
   "snippets.ultisnips.directories": ["UltiSnips", "gosnippets/UltiSnips"],
-  "coc.preferences.formatOnSaveFiletypes": [".vue"],
-  "signature.target": "echo",
   "signature.preferShownAbove": false,
-  "coc.preferences.hoverTarget": "echo",
-  "html.filetypes": [ "html", "vue"],
+  "signature.target": "echo",
+  "html.filetypes": ["html", "vue"],
   "eslint.packageManager": "yarn",
   "eslint.filetypes": [
     "javascript",
@@ -54,28 +52,10 @@
     "typescriptreact",
     "vue"
   ],
-  "prettier.disableLanguages": [
-    "vue"
-  ],
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevions": true,
-  "explorer.quitOnOpen": true,
-  "vetur.format.defaultFormatter.js": "prettier",
-  "vetur.format.options.tabSize": 2,
-  "vetur.format.options.useTabs": false,
-  "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
-      "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        }
-      }
-    }
-  }
+  "explorer.quitOnOpen": true
 }
