@@ -5,6 +5,9 @@
 " JJ ESC
 ino jj <esc>
 
+" Documentatio header
+noremap <Leader>cs 15i=<esc>
+
 " New Leader
 let mapleader = ' '
 let maplocalleader = ' '
@@ -15,15 +18,6 @@ noremap <Leader>s :update<CR>
 " Quick single file refactor
 noremap <Leader>rf ye:%s,",
 noremap <Leader>rl ye:s,",
-
-" Call Ack!
-nnoremap <Leader>a :Ack! -w 
-
-" Quick all files refactor with vim-far
-noremap <Leader>f ye:Far "
-
-" Open Vista
-noremap <silent> <Leader>v :Vista!!<CR>
 
 " Elite Resize
 nnoremap <Up>    :resize +2<CR>

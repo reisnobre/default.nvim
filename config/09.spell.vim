@@ -35,7 +35,4 @@ augroup latex_files
   autocmd FileType tex syn region texZone      start="\\begin{verbatimtab}"        end="\\end{verbatimtab}\|%stopzone\>"   contains=@Spell
   autocmd FileType tex syn region texZone      start="\\begin{verbatimwrite}"      end="\\end{verbatimwrite}\|%stopzone\>" contains=@Spell
   autocmd FileType tex syn region texZone      start="\\begin{boxedverbatim}"      end="\\end{boxedverbatim}\|%stopzone\>" contains=@Spell
-  " autocmd FileType tex call lexima#add_rule({'char': '$', 'input_after': '$', 'filetype': 'tex'})
-  " autocmd FileType tex call lexima#add_rule({'char': '$', 'at': '\%#\$', 'leave': 1, 'filetype': 'tex'})
-  " autocmd FileType tex call lexima#add_rule({'char': '<BS>', 'at': '\$\%#\$', 'delete': 1, 'filetype': 'tex'})
 augroup end

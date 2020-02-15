@@ -4,7 +4,6 @@
 
 function! s:coc_config() abort
   let root_patterns = ['.vim/', '.git/', '.hg/', '.projections.json']
-
   let g:coc_status_error_sign   = ''
   let g:coc_status_warning_sign = ''
 endfunction
@@ -77,8 +76,6 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> cn <Plug>(coc-diagnostic-next)
 nmap <silent> cp <Plug>(coc-diagnostic-prev)
 nnoremap <silent> <Leader>d  :<C-u>CocList diagnostics<cr>
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
 
 imap <silent><expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -101,3 +98,8 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+" =============== EXPLORER 
+nnoremap <Leader>n   :CocCommand explorer<CR>
+nmap ge :CocCommand explorer<CR>
+let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf']

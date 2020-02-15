@@ -1,6 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme Nord " colorscheme
 set encoding=utf8 " Set utf8 as standard encoding and en_US as the standard language
 set fileformat=unix " Default file format
 set updatetime=300 " Smaller updatetime for CursorHold & CursorHoldI and swap file to be written on folder
