@@ -75,7 +75,6 @@ nmap <silent> gr <Plug>(coc-references)
 " Coc diagnostic
 nmap <silent> cn <Plug>(coc-diagnostic-next)
 nmap <silent> cp <Plug>(coc-diagnostic-prev)
-nnoremap <silent> <Leader>d  :<C-u>CocList diagnostics<cr>
 
 imap <silent><expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
 imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -102,4 +101,3 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " =============== EXPLORER 
 nnoremap <Leader>n   :CocCommand explorer<CR>
 nmap ge :CocCommand explorer<CR>
-let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf']

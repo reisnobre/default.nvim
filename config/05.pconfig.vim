@@ -3,27 +3,43 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " =============== FZF
+let g:fzf_layout = { 'window': 'call FloatingFZF(0.9, 0.6, "Comment")' }
+let g:fzf_files_options = '-m --preview "bat --theme=Nord --color always --style numbers {2..} | head -'.&lines.'"'
+
+" https://coreyja.com/vim-fzf-with-devicons/
+command! -bang -nargs=? -complete=dir Buffers 
+    \ call fzf#vim#buffers(<q-args>, {'options': g:fzf_files_options}, <bang>0)
+
 function! FZF_default(command) " search in git files
-  let l:fzf_files_options = '--preview "bat --theme=ansi-dark --color always --style numbers {2..} | head -'.&lines.'"'
+
   function! s:edit_devicon_prepended_file(item)
     let l:file_path = a:item[4:-1]
     execute 'silent e' l:file_path
   endfunction
-  call fzf#run({
-        \ 'source': a:command.' | devicon-lookup',
-        \ 'sink':   function('s:edit_devicon_prepended_file'),
-        \ 'options': '-m ' . l:fzf_files_options,
-        \ 'window':    'call Floating_window()'})
-endfunction
 
-noremap <silent> <C-p> :call FZF_default("git ls-files \| uniq")<CR>
-" noremap <silent> <Leader>df :call Fzf_git_diff_files_with_dev_icons()<CR>
+  call fzf#run({
+        \ 'source': a:command.' | devicon-lookup --color',
+        \ 'sink':   function('s:edit_devicon_prepended_file'),
+        \ 'options': '-m ' . g:fzf_files_options,
+        \ 'window':    'call FloatingFZF(0.9, 0.6, "Comment")'})
+endfunction
+" "
+nnoremap <silent> <C-p> :call FZF_default("git ls-files --exclude-standard \| uniq")<CR>
+nnoremap <silent> <Leader>a :Ag<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+
+" =============== COC-FZF
+noremap <silent> <Leader>d :CocFzfListDiagnostics<CR>
+noremap <silent> <Leader>e :CocFzfListExtensions<CR>
+noremap <silent> <Leader>da :CocFzfListActions<CR>
+
 
 " =============== ACK
-nnoremap <Leader>a :Ack! -w 
-let g:ackprg = 'ag --vimgrep --smart-case'
-let g:ackhighlight = 1
-set backupcopy=yes
+" nnoremap <Leader>a :Ack! -w 
+" let g:ackprg = 'ag --vimgrep --smart-case'
+" let g:ackhighlight = 1
+" set backupcopy=yes
 
 " =============== GOYO
 nnoremap <Leader>g :Goyo<CR>
@@ -65,11 +81,13 @@ let g:vista_executive_for = {
 
 " EMMET Remap
 let g:user_emmet_leader_key='<C-y>'
-
-
 let g:python_highlight_all = 1
 let g:rooter_silent_chdir = 1
 let g:gtm_plugin_status_enabled = 1
 let g:indentLine_enabled = 1
 let g:vue_pre_processors = ['scss']
 let g:matchup_matchparen_offscreen = {}
+let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf', 'startify']
+let g:startify_custom_header =
+      \ 'startify#center(startify#fortune#cowsay())'
+

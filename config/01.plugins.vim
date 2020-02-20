@@ -12,20 +12,17 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and mor
 Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
-Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
 Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
 
 " Nice to have
-" Plug 'https://github.com/Shougo/echodoc.vim' " function documentation below the status bar
-" Plug 'https://github.com/ntpeters/vim-better-whitespace' " show whitespace on the interface
 Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
 Plug 'https://github.com/airblade/vim-gitgutter' " git status on the side
 Plug 'https://github.com/liuchengxu/vista.vim' " tags
 Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
-Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
+" Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 Plug 'https://github.com/jalvesaq/Nvim-R' " work with R language
 Plug 'https://github.com/junegunn/goyo.vim' " better vim writting
@@ -40,8 +37,12 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 " Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
 
 " To be replaced or removed
+" Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
 
 " Testing
+" =============== DEVELOPING
+Plug 'https://github.com/reisnobre/coc-fzf', { 'branch': 'coc-actions' } " fuzzy find coc things
+
 
 
 " =============== SYNTAX
@@ -61,4 +62,6 @@ Plug 'https://github.com/mattn/emmet-vim'
 
 " =============== THEMES
 Plug 'https://github.com/arcticicestudio/nord-vim'
+
 call plug#end()
+

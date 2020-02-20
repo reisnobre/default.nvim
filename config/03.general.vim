@@ -75,3 +75,8 @@ else
   " or do soemething like:
   " set viminfo+=n~/.shada
 endif
+
+if has('nvim')
+  au TermOpen * setlocal nonumber norelativenumber
+  set inccommand=nosplit
+endif

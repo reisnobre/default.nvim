@@ -57,5 +57,37 @@
   "python.linting.flake8Enabled": true,
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevions": true,
-  "explorer.quitOnOpen": true
+  "explorer.quitOnOpen": true,
+  "explorer.previewAction.onHover": true,
+  "explorer.previewAction.strategy": "labeling",
+  "explorer.file.columns": [
+    "git",
+    "selection",
+    "clip",
+    "diagnosticError",
+    "indent",
+    "icon",
+    "filename",
+    "size",
+    "modified",
+    "readonly",
+    [
+      "fullpath"
+    ],
+    [
+      "size"
+    ],
+    [
+      "accessed"
+    ],
+    [
+      "modified"
+    ],
+    [
+      "created"
+    ],
+    [
+      "readonly"
+    ]
+  ]
 }
