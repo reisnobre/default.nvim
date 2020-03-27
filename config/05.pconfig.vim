@@ -17,6 +17,8 @@ function! FZF_default(command) " search in git files
     execute 'silent e' l:file_path
   endfunction
 
+  " echo a:command
+
   call fzf#run({
         \ 'source': a:command.' | devicon-lookup --color',
         \ 'sink':   function('s:edit_devicon_prepended_file'),
@@ -79,8 +81,7 @@ let g:vista_executive_for = {
       \   'html': 'coc', 'css': 'coc', 'javascript': 'coc', 'typescript': 'coc'
       \}
 
-" EMMET Remap
-let g:user_emmet_leader_key='<C-y>'
+let g:user_emmet_leader_key='<C-y>' " EMMET Remap
 let g:python_highlight_all = 1
 let g:rooter_silent_chdir = 1
 let g:gtm_plugin_status_enabled = 1
@@ -88,6 +89,3 @@ let g:indentLine_enabled = 1
 let g:vue_pre_processors = ['scss']
 let g:matchup_matchparen_offscreen = {}
 let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf', 'startify']
-let g:startify_custom_header =
-      \ 'startify#center(startify#fortune#cowsay())'
-

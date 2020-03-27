@@ -53,3 +53,5 @@ cnoreabbrev wQ wq
 cnoreabbrev WQ wq
 cnoreabbrev W w
 cnoreabbrev Q q
+cnoreabbrev Vs vs
+cnoreabbrev Sp sp

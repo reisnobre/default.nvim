@@ -22,7 +22,6 @@ Plug 'https://github.com/airblade/vim-gitgutter' " git status on the side
 Plug 'https://github.com/liuchengxu/vista.vim' " tags
 Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
-" Plug 'https://github.com/git-time-metric/gtm-vim-plugin' " time tracking
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 Plug 'https://github.com/jalvesaq/Nvim-R' " work with R language
 Plug 'https://github.com/junegunn/goyo.vim' " better vim writting
@@ -37,7 +36,7 @@ Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 " Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
 
 " To be replaced or removed
-" Plug 'https://github.com/jeetsukumaran/vim-buffergator' " manage vim buffers
+" Plug 'https://github.com/jeetsukumaran/vim-buffergator' " shortcuts for vim buffers
 
 " Testing
 " =============== DEVELOPING

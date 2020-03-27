@@ -11,6 +11,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 let g:coc_global_extensions = [
+  \ 'coc-explorer',
   \ 'coc-yank',
   \ 'coc-snippets',
   \ 'coc-pairs',
