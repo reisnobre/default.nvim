@@ -44,9 +44,6 @@ noremap <silent> <Leader>da :CocFzfListActions<CR>
 " let g:ackhighlight = 1
 " set backupcopy=yes
 
-" =============== GOYO
-nnoremap <Leader>g :Goyo<CR>
-
 function! s:goyo_enter()
 if executable('tmux') && strlen($TMUX)
   silent !tmux set status off
@@ -94,13 +91,14 @@ let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf', 'startify']
 " =============== Fugitive
 nnoremap <space>ga :Git add %:p<CR><CR>
 nnoremap <space>gs :Gstatus<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
 nnoremap <space>gt :Gcommit -v -q %:p<CR>
-" nnoremap <space>gd :Gdiff<CR>
+nnoremap <space>gc :Gcommit -v -q<CR>
+nnoremap <space>gdf :Gdiff<CR>
 nnoremap <space>ge :Gedit<CR>
-" nnoremap <space>gr :Gread<CR>
-nnoremap <space>gw :Gwrite<CR><CR>
+nnoremap <space>grf :Gread<CR>
 nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
+
+nnoremap <space>gw :Gwrite<CR><CR>
 nnoremap <space>gp :Ggrep<Space>
 nnoremap <space>gm :Gmove<Space>
 nnoremap <space>gb :Git branch<Space>
