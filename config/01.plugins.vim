@@ -33,16 +33,14 @@ Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
-" Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
+Plug 'https://github.com/kshenoy/vim-signature'
 
 " To be replaced or removed
-" Plug 'https://github.com/jeetsukumaran/vim-buffergator' " shortcuts for vim buffers
 
 " Testing
+
 " =============== DEVELOPING
 Plug 'https://github.com/reisnobre/coc-fzf', { 'branch': 'coc-actions' } " fuzzy find coc things
-
-
 
 " =============== SYNTAX
 " Essentials
@@ -55,6 +53,7 @@ Plug 'https://github.com/sheerun/vim-polyglot' " language support
 " Testing
 
 " =============== SNIPPETS
+Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/freencis/snippets'
 Plug 'https://github.com/reisnobre/snippets.nvim'
 Plug 'https://github.com/mattn/emmet-vim'
