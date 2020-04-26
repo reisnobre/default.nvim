@@ -9,14 +9,14 @@ call plug#begin()
 Plug 'https://github.com/itchyny/lightline.vim' " lightline
 Plug 'https://github.com/mileszs/ack.vim' " find anywere
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and more
-Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
-Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
 Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
 
 " Nice to have
+Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
+Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
 Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
 Plug 'https://github.com/airblade/vim-gitgutter' " git status on the side
 Plug 'https://github.com/liuchengxu/vista.vim' " tags
