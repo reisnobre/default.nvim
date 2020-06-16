@@ -29,18 +29,20 @@ Plug 'https://github.com/mateusbraga/vim-spell-pt-br' " vim spelling
 Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
 Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
+Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 Plug 'https://github.com/kshenoy/vim-signature'
+Plug 'https://github.com/tpope/vim-repeat' " 
 
 " To be replaced or removed
 
 " Testing
+Plug 'https://github.com/voldikss/vim-floaterm'
 
 " =============== DEVELOPING
-Plug 'https://github.com/reisnobre/coc-fzf', { 'branch': 'coc-actions' } " fuzzy find coc things
 
 " =============== SYNTAX
 " Essentials

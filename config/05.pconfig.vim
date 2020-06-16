@@ -18,31 +18,16 @@ function! FZF_default(command) " search in git files
     execute 'silent e' l:file_path
   endfunction
 
-  " echo a:command
-
   call fzf#run({
         \ 'source': a:command.' | devicon-lookup --color',
         \ 'sink':   function('s:edit_devicon_prepended_file'),
         \ 'options': '-m ' . g:fzf_files_options,
         \ 'window':    'call FloatingFZF(0.9, 0.6, "Comment")'})
 endfunction
-" "
+
 nnoremap <silent> <C-p> :call FZF_default("git ls-files --exclude-standard \| uniq")<CR>
 nnoremap <silent> <Leader>a :Ag<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
-
-
-" =============== COC-FZF
-noremap <silent> <Leader>d :CocFzfListDiagnostics<CR>
-noremap <silent> <Leader>e :CocFzfListExtensions<CR>
-noremap <silent> <Leader>da :CocFzfListActions<CR>
-
-
-" =============== ACK
-" nnoremap <Leader>a :Ack! -w 
-" let g:ackprg = 'ag --vimgrep --smart-case'
-" let g:ackhighlight = 1
-" set backupcopy=yes
 
 function! s:goyo_enter()
 if executable('tmux') && strlen($TMUX)

@@ -6,11 +6,11 @@ let g:lightline = {'colorscheme': 'nord'}
 let g:lightline.active = {
 \   'left' : [
 \     ['mode', 'paste'],
-\     ['fugitive'],
-\     ['filepath', 'filename_active', 'current_tag']
+\     ['filename_active'],
+\     ['fugitive', 'readonly'],
 \   ],
 \   'right': [
-\     ['lineinfo', 'filetype', 'fileinfo']
+\     ['filetype', 'fileencoding', 'lineinfo', 'percent'],
 \   ]
 \ }
 
@@ -30,13 +30,14 @@ let g:lightline.component = {
 \ }
 
 let g:lightline.component_function = {
+\   'spell'            : '%{&spell?&spelllang:"no spell"}',
 \   'fugitive'         : 'LightlineFugitive',
 \   'filename_active'  : 'LightlineFilenameActive',
 \   'filename_inactive': 'LightlineFilenameInactive',
 \   'current_tag'      : 'LightlineCurrentTag',
 \   'lineinfo'         : 'LightlineLineinfo',
 \   'fileinfo'         : 'LightlineFileinfo',
-\   'filetype'         : 'LightlineFiletype'
+\   'filetype'         : 'LightlineFiletype',
 \ }
 
 let g:lightline.component_expand = {
@@ -67,10 +68,12 @@ function! s:attr(group, attr, ...) abort
   return empty(a) || a ==# '-1' ? 'NONE' :  a
 endfunction
 
+" If the window open is a helper window
 function! s:lightline_is_plain() abort
   return &buftype ==? 'terminal' || &filetype ==? 'help'
 endfunction
 
+" If the window open is a simple window
 function! s:lightline_is_lean() abort
   return &filetype =~? '\v^(vim-plug|defx|vista(_kind)?|mundo(diff)?)$'
 endfunction
@@ -85,6 +88,12 @@ function! s:lightline_readonly() abort
   return (s:lightline_is_lean() || s:lightline_is_plain()) && &filetype !=? 'help' ? '' : &readonly ? '' : ''
 endfunction
 
+" Fugitive status on lightline
+function! LightlineFugitive() abort
+  let b = fugitive#statusline()
+  return b !=# '' ? '' . (winwidth(0) < 80 ? '' : ' ' . b) : ''
+endfunction
+
 function! LightlineMode() abort
   call s:hi('RedStar', '#ff0000', s:bg('LightlineLeft_active_0', 'gui')
        \             , 196, s:bg('LightlineLeft_active_0', 'cterm'))
@@ -97,17 +106,6 @@ function! LightlineMode() abort
   return s:lightline_is_lean() || s:lightline_is_plain() ? toupper(&filetype) : lightline#mode()
 endfunction
 
-function! LightlineFugitive() abort
-  if s:lightline_is_lean() || s:lightline_is_plain() || !exists('*fugitive#head')
-    return ''
-  endif
-  try
-    let b = fugitive#head()
-  catch
-    return ''
-  endtry
-  return b !=# '' ? '' . (winwidth(0) < 80 ? '' : ' ' . b) : ''
-endfunction
 
 function! LightlineFilepath() abort
   if s:lightline_is_lean()
