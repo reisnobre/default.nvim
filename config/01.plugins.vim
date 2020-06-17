@@ -41,6 +41,7 @@ Plug 'https://github.com/tpope/vim-repeat' "
 
 " Testing
 Plug 'https://github.com/voldikss/vim-floaterm'
+" Plug 'https://github.com/yuki-ycino/fzf-preview.vim'
 
 " =============== DEVELOPING
 

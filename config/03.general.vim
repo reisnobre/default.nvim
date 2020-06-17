@@ -19,8 +19,6 @@ set foldcolumn=2 " Add a bit extra margin to the left
 set hidden " if hidden is not set, TextEdit might fail.
 set nobackup " Some server have issues with backup files, see #649
 set nowritebackup
-set cursorline " highlight  the line where the cursor is
-" set cursorcolumn " highlight column
 set si " Smart indent
 set ai "Auto indent
 set nowrap "No wrap lines
@@ -55,6 +53,7 @@ let g:session_autoload = 'yes'
 set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
 
 " https://github.com/Shougo/defx.nvim/issues/19#issue-362323112
+" autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :FzfPreviewProjectFiles | endif 
 autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | call FZF_default("git ls-files --exclude-standard \| uniq") | endif 
 
 let g:loaded_matchparen = 1
