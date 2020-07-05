@@ -12,7 +12,7 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and mor
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
-Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
+Plug 'https://github.com/yuki-ycino/fzf-preview.vim' " replaces fzf.vim as fuzzy finder when inside of vim
 
 " Nice to have
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
@@ -38,10 +38,10 @@ Plug 'https://github.com/kshenoy/vim-signature'
 Plug 'https://github.com/tpope/vim-repeat' " 
 
 " To be replaced or removed
+" Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
 
 " Testing
 Plug 'https://github.com/voldikss/vim-floaterm'
-" Plug 'https://github.com/yuki-ycino/fzf-preview.vim'
 
 " =============== DEVELOPING
 
