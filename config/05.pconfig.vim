@@ -50,6 +50,7 @@ let g:indentLine_fileTypeExclude=['coc-explorer', 'fzf', 'startify']
 
 " =============== Fugitive
 nnoremap <space>ga :Git add %:p<CR><CR>
+" nnoremap <space>gs :Gstatus<CR>
 nnoremap <space>gt :Gcommit -v -q %:p<CR>
 nnoremap <space>gc :Gcommit -v -q<CR>
 nnoremap <space>gdf :Gdiff<CR>
@@ -67,20 +68,44 @@ nnoremap <space>gpl :Dispatch! git pull<CR>
 
 " =============== FZF Preview
 " Use vim-devicons
-let g:fzf_preview_use_dev_icons = 0
+" let g:fzf_preview_use_dev_icons = 1
 
 " devicons character width
-let g:fzf_preview_dev_icon_prefix_length = 5
+" let g:fzf_preview_dev_icon_prefix_length = 2
 
-" let g:fzf_preview_grep_cmd = 'ag'
+" nmap <Leader>f [fzf-p]
+" xmap <Leader>f [fzf-p]
+"
+" nnoremap <silent> <C-p> :FzfPreviewProjectFiles<CR>
+" nnoremap <silent> <Leader>b :FzfPreviewAllBuffers<CR>
+" nnoremap <silent> <Leader>gs :FzfPreviewGitStatus<CR>
+"
+" nnoremap <silent> <Leader>a :FzfPreviewProjectGrep ''<CR>
+"
+" nnoremap <silent> [fzf-p]gs :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_fugitive_processors<CR>
 
-nnoremap <silent> <C-p> :FzfPreviewFromResources project_mru git<CR>
-nnoremap <silent> <Leader>f :FzfPreviewProjectFiles<CR>
-nnoremap <silent> <Leader>b :FzfPreviewAllBuffers<CR>
-nnoremap <silent> <Leader>gs :FzfPreviewGitStatus<CR>
-nnoremap <silent> <Leader>m :FzfPreviewMarks<CR>
+" =============== FZF
+let g:fzf_layout = { 'window': 'call FloatingFZF(0.9, 0.6, "Comment")' }
+let g:fzf_files_options = '-m --preview "bat --theme=Nord --color always --style numbers {2..} | head -'.&lines.'"'
 
-nnoremap <silent> <Leader>a :FzfPreviewProjectGrep ''<CR>
+" https://coreyja.com/vim-fzf-with-devicons/
+command! -bang -nargs=? -complete=dir Buffers 
+    \ call fzf#vim#buffers(<q-args>, {'options': g:fzf_files_options}, <bang>0)
 
-nnoremap <silent> [fzf-p]gs :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_fugitive_processors<CR>
+function! FZF_default(command) " search in git files
 
+  function! s:edit_devicon_prepended_file(item)
+    let l:file_path = a:item[4:-1]
+    execute 'silent e' l:file_path
+  endfunction
+
+  call fzf#run({
+        \ 'source': a:command.' | devicon-lookup --color',
+        \ 'sink':   function('s:edit_devicon_prepended_file'),
+        \ 'options': '-m ' . g:fzf_files_options,
+        \ 'window':    'call FloatingFZF(0.9, 0.6, "Comment")'})
+endfunction
+
+nnoremap <silent> <C-p> :call FZF_default("git ls-files --exclude-standard \| uniq")<CR>
+nnoremap <silent> <Leader>a :Ag<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>

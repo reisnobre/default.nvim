@@ -53,7 +53,8 @@ let g:session_autoload = 'yes'
 set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
 
 " https://github.com/Shougo/defx.nvim/issues/19#issue-362323112
-autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :FzfPreviewProjectFiles | endif 
+" autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :FzfPreviewProjectFiles | endif 
+autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | call FZF_default("git ls-files --exclude-standard \| uniq") | endif 
 
 let g:loaded_matchparen = 1
 
