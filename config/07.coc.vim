@@ -31,6 +31,7 @@ let g:coc_global_extensions = [
   \ 'coc-markdownlint',
   \ 'coc-vetur',
   \ 'coc-cssmodules',
+  \ 'coc-fzf-preview',
   \ ]
 
 let g:coc_explorer_global_presets = {
