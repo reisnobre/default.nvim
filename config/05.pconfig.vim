@@ -67,21 +67,22 @@ nnoremap <space>gpl :Dispatch! git pull<CR>
 
 " =============== FZF Preview
 " Use vim-devicons
-let g:fzf_preview_use_dev_icons = 0
+let g:fzf_preview_use_dev_icons = 1
 
 " devicons character width
 let g:fzf_preview_dev_icon_prefix_length = 5
+let g:fzf_preview_use_look_ahead_mr_cache = 1
 
 " let g:fzf_preview_grep_cmd = 'ag'
 
-" nnoremap <silent> <C-p> :CocCommand fzf-preview.FromResources project_mru git<CR>
-nnoremap <silent> <C-p> :CocCommand fzf-preview.ProjectFiles<CR>
-nnoremap <silent> <Leader>f :FzfPreviewProjectFiles<CR>
-nnoremap <silent> <Leader>b :FzfPreviewAllBuffers<CR>
-nnoremap <silent> <Leader>gs :FzfPreviewGitStatus<CR>
-nnoremap <silent> <Leader>m :FzfPreviewMarks<CR>
+nnoremap <silent> <C-p> :CocCommand fzf-preview.FromResources project_mru git<CR>
+" nnoremap <silent> <C-p> :CocCommand fzf-preview.ProjectFiles<CR>
+nnoremap <silent> <Leader>f :CocCommand fzf-preview.ProjectFiles<CR>
+nnoremap <silent> <Leader>b :CocCommand fzf-preview.AllBuffers<CR>
+nnoremap <silent> <Leader>gs :CocCommand fzf-preview.GitStatus<CR>
+nnoremap <silent> <Leader>m :CocCommand fzf-preview.Marks<CR>
 
-nnoremap <silent> <Leader>a :FzfPreviewProjectGrep ''<CR>
+nnoremap <silent> <Leader>a :CocCommand fzf-preview.ProjectGrep ''<CR>
 
 nnoremap <silent> [fzf-p]gs :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_fugitive_processors<CR>
 

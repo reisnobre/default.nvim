@@ -12,7 +12,6 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and mor
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
-Plug 'https://github.com/yuki-ycino/fzf-preview.vim', { 'do': ':FzfPreviewInstall' } " replaces fzf.vim as fuzzy finder when inside of vim
 
 " Nice to have
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
@@ -30,6 +29,7 @@ Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
 Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
+Plug 'https://github.com/dstein64/vim-startuptime'
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
