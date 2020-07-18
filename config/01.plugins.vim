@@ -29,7 +29,6 @@ Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
 Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
-Plug 'https://github.com/dstein64/vim-startuptime'
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
@@ -41,7 +40,8 @@ Plug 'https://github.com/tpope/vim-repeat' "
 " Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
 
 " Testing
-Plug 'https://github.com/voldikss/vim-floaterm'
+" Plug 'https://github.com/voldikss/vim-floaterm'
+Plug 'https://github.com/dstein64/vim-startuptime'
 
 " =============== DEVELOPING
 

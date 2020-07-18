@@ -71,7 +71,8 @@ let g:fzf_preview_use_dev_icons = 1
 
 " devicons character width
 let g:fzf_preview_dev_icon_prefix_length = 5
-let g:fzf_preview_use_look_ahead_mr_cache = 1
+let g:fzf_preview_use_look_ahead_mr_cache = 0
+let g:fzf_preview_buffers_jump = 0
 
 " let g:fzf_preview_grep_cmd = 'ag'
 

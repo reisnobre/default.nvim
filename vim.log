@@ -1,0 +1,128 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.154  000.154: --- NVIM STARTING ---
+001.194  001.039: locale set
+009.669  008.475: inits 1
+009.697  000.028: window checked
+009.706  000.009: parsing arguments
+009.950  000.244: expanding arguments
+010.027  000.078: inits 2
+010.501  000.473: init highlight
+010.667  000.166: waiting for UI
+012.393  001.726: done waiting for UI
+012.411  000.017: initialized screen early for UI
+015.407  002.051  002.051: sourcing /Users/reisnobre/.local/share/nvim/site/autoload/plug.vim
+031.766  000.157  000.157: sourcing /Users/reisnobre/.config/nvim/plugged/Nvim-R/ftdetect/r.vim
+032.414  000.195  000.195: sourcing /Users/reisnobre/.config/nvim/plugged/vim-fugitive/ftdetect/fugitive.vim
+035.690  002.524  002.524: sourcing /Users/reisnobre/.config/nvim/plugged/vim-polyglot/ftdetect/polyglot.vim
+036.276  000.170  000.170: sourcing /Users/reisnobre/.config/nvim/plugged/ultisnips/ftdetect/snippets.vim
+036.533  014.302  011.256: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/filetype.vim
+037.324  000.424  000.424: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/ftplugin.vim
+037.956  000.266  000.266: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/indent.vim
+039.723  000.547  000.547: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+039.892  001.140  000.593: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/synload.vim
+039.924  001.773  000.633: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syntax.vim
+039.942  026.806  007.991: sourcing /Users/reisnobre/.config/nvim/config/01.plugins.vim
+040.188  000.162  000.162: sourcing /Users/reisnobre/.config/nvim/config/02.functions.vim
+041.760  000.167  000.167: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+042.549  000.196  000.196: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/syntax/syncolor.vim
+051.995  011.113  010.750: sourcing /Users/reisnobre/.config/nvim/plugged/nord-vim/colors/Nord.vim
+052.481  000.023  000.023: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/filetype.vim
+052.845  000.019  000.019: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/ftplugin.vim
+053.322  000.038  000.038: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/filetype.vim
+053.706  000.020  000.020: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/indent.vim
+053.833  013.582  002.370: sourcing /Users/reisnobre/.config/nvim/config/03.general.vim
+054.252  000.351  000.351: sourcing /Users/reisnobre/.config/nvim/config/04.remaps.vim
+054.532  000.193  000.193: sourcing /Users/reisnobre/.config/nvim/config/05.pconfig.vim
+054.811  000.202  000.202: sourcing /Users/reisnobre/.config/nvim/config/06.languages.vim
+055.750  000.848  000.848: sourcing /Users/reisnobre/.config/nvim/config/07.coc.vim
+056.301  000.453  000.453: sourcing /Users/reisnobre/.config/nvim/config/08.lightline.vim
+056.983  000.593  000.593: sourcing /Users/reisnobre/.config/nvim/config/09.spell.vim
+057.001  044.384  001.193: sourcing /Users/reisnobre/.config/nvim/init.vim
+057.008  000.213: sourcing vimrc file(s)
+058.196  000.270  000.270: sourcing /Users/reisnobre/.config/nvim/plugged/lightline.vim/plugin/lightline.vim
+059.240  000.359  000.359: sourcing /Users/reisnobre/.config/nvim/plugged/ack.vim/plugin/ack.vim
+060.300  000.305  000.305: sourcing /Users/reisnobre/.config/nvim/plugged/coc.nvim/autoload/coc/rpc.vim
+061.499  001.072  001.072: sourcing /Users/reisnobre/.config/nvim/plugged/coc.nvim/autoload/coc/util.vim
+062.344  000.491  000.491: sourcing /Users/reisnobre/.config/nvim/plugged/coc.nvim/autoload/coc/client.vim
+067.486  007.823  005.954: sourcing /Users/reisnobre/.config/nvim/plugged/coc.nvim/plugin/coc.vim
+068.593  000.511  000.511: sourcing /Users/reisnobre/.config/nvim/plugged/vim-tmux-navigator/plugin/tmux_navigator.vim
+069.584  000.433  000.433: sourcing /Users/reisnobre/.config/nvim/plugged/vim-obsession/plugin/obsession.vim
+071.483  001.331  001.331: sourcing /Users/reisnobre/.config/nvim/plugged/fzf/plugin/fzf.vim
+072.517  000.253  000.253: sourcing /Users/reisnobre/.config/nvim/plugged/tcomment_vim/autoload/tcomment/deprecated.vim
+075.330  003.324  003.071: sourcing /Users/reisnobre/.config/nvim/plugged/tcomment_vim/plugin/tcomment.vim
+076.914  000.435  000.435: sourcing /Users/reisnobre/.config/nvim/plugged/vim-gitgutter/autoload/gitgutter/utility.vim
+077.986  000.413  000.413: sourcing /Users/reisnobre/.config/nvim/plugged/vim-gitgutter/autoload/gitgutter/highlight.vim
+079.035  003.073  002.225: sourcing /Users/reisnobre/.config/nvim/plugged/vim-gitgutter/plugin/gitgutter.vim
+079.736  000.222  000.222: sourcing /Users/reisnobre/.config/nvim/plugged/vista.vim/plugin/vista.vim
+080.781  000.568  000.568: sourcing /Users/reisnobre/.config/nvim/plugged/vim-evanesco/plugin/evanesco.vim
+088.474  007.488  007.488: sourcing /Users/reisnobre/.config/nvim/plugged/vim-wakatime/plugin/wakatime.vim
+091.858  002.831  002.831: sourcing /Users/reisnobre/.config/nvim/plugged/vim-devicons/plugin/webdevicons.vim
+094.220  000.247  000.247: sourcing /Users/reisnobre/.config/nvim/plugged/goyo.vim/plugin/goyo.vim
+095.644  000.162  000.162: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/matchparen.vim
+096.458  000.425  000.425: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/matchparen.vim
+098.431  000.778  000.778: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/autoload/matchup.vim
+099.196  000.487  000.487: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/autoload/matchup/perf.vim
+101.227  001.084  001.084: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/autoload/matchup/loader.vim
+105.729  002.020  002.020: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/autoload/matchup/matchparen.vim
+108.583  013.697  008.740: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/plugin/matchup.vim
+109.869  000.714  000.714: sourcing /Users/reisnobre/.config/nvim/plugged/vim-rooter/plugin/rooter.vim
+110.678  000.240  000.240: sourcing /Users/reisnobre/.config/nvim/plugged/coc-fzf/plugin/coc_fzf.vim
+111.711  000.307  000.307: sourcing /Users/reisnobre/.config/nvim/plugged/vim-startuptime/plugin/startuptime.vim
+113.658  001.735  001.735: sourcing /Users/reisnobre/.config/nvim/plugged/vim-fugitive/plugin/fugitive.vim
+114.963  000.853  000.853: sourcing /Users/reisnobre/.config/nvim/plugged/vim-surround/plugin/surround.vim
+116.294  000.381  000.381: sourcing /Users/reisnobre/.config/nvim/plugged/vim-signature/autoload/signature/utils.vim
+117.652  002.202  001.821: sourcing /Users/reisnobre/.config/nvim/plugged/vim-signature/plugin/signature.vim
+118.937  000.628  000.628: sourcing /Users/reisnobre/.config/nvim/plugged/vim-floaterm/plugin/floaterm.vim
+120.075  000.364  000.364: sourcing /Users/reisnobre/.config/nvim/plugged/ultisnips/autoload/UltiSnips/map_keys.vim
+120.213  001.047  000.683: sourcing /Users/reisnobre/.config/nvim/plugged/ultisnips/plugin/UltiSnips.vim
+123.701  002.848  002.848: sourcing /Users/reisnobre/.config/nvim/plugged/emmet-vim/plugin/emmet.vim
+125.613  000.540  000.540: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/gzip.vim
+125.846  000.146  000.146: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/health.vim
+126.187  000.265  000.265: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/man.vim
+128.613  000.164  000.164: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+128.688  002.420  002.257: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/matchit.vim
+128.777  000.021  000.021: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/matchparen.vim
+128.985  000.136  000.136: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/netrwPlugin.vim
+130.636  000.507  000.507: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/autoload/remote/host.vim
+130.720  001.333  000.826: sourcing /Users/reisnobre/.local/share/nvim/rplugin.vim
+130.729  001.671  000.337: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/rplugin.vim
+131.259  000.405  000.405: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/shada.vim
+131.551  000.178  000.178: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/spellfile.vim
+132.020  000.358  000.358: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/tarPlugin.vim
+132.530  000.402  000.402: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/tohtml.vim
+132.774  000.143  000.143: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/tutor.vim
+133.248  000.394  000.394: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/plugin/zipPlugin.vim
+133.261  016.426: loading plugins
+133.402  000.141: loading packages
+135.071  000.977  000.977: sourcing /Users/reisnobre/.config/nvim/plugged/indentLine/after/plugin/indentLine.vim
+135.500  000.013  000.013: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/after/plugin/matchit.vim
+136.827  000.853  000.853: sourcing /Users/reisnobre/.config/nvim/plugged/coc-fzf/after/plugin/coc_fzf.vim
+137.517  000.171  000.171: sourcing /Users/reisnobre/.config/nvim/plugged/vim-signature/after/plugin/signature.vim
+138.133  000.267  000.267: sourcing /Users/reisnobre/.config/nvim/plugged/ultisnips/after/plugin/UltiSnips_after.vim
+138.174  002.492: loading after plugins
+138.190  000.016: inits 3
+142.102  003.912: reading ShaDa
+143.377  000.202  000.202: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/autoload/matchup/re.vim
+144.202  001.898: opening buffers
+145.384  000.960  000.960: sourcing /Users/reisnobre/.config/nvim/plugged/lightline.vim/autoload/lightline.vim
+152.875  006.689  006.689: sourcing /Users/reisnobre/.config/nvim/plugged/vim-fugitive/autoload/fugitive.vim
+153.565  000.400  000.400: sourcing /Users/reisnobre/.config/nvim/plugged/lightline.vim/autoload/lightline/tab.vim
+154.510  000.427  000.427: sourcing /Users/reisnobre/.config/nvim/plugged/lightline.vim/autoload/lightline/colorscheme.vim
+155.000  001.227  000.800: sourcing /Users/reisnobre/.config/nvim/plugged/lightline.vim/autoload/lightline/colorscheme/nord.vim
+158.799  000.643  000.643: sourcing /Users/reisnobre/.config/nvim/plugged/vim-gitgutter/autoload/gitgutter.vim
+161.580  000.558  000.558: sourcing /Users/reisnobre/.config/nvim/plugged/vim-signature/autoload/signature/sign.vim
+162.612  000.615  000.615: sourcing /Users/reisnobre/.config/nvim/plugged/vim-signature/autoload/signature/mark.vim
+166.116  010.821: BufEnter autocommands
+166.121  000.006: editing files in windows
+166.235  000.113: VimEnter autocommands
+166.237  000.002: UIEnter autocommands
+167.272  000.661  000.661: sourcing /usr/local/Cellar/neovim/0.4.3/share/nvim/runtime/autoload/provider/clipboard.vim
+167.288  000.391: before starting main loop
+168.211  000.547  000.547: sourcing /Users/reisnobre/.config/nvim/plugged/vim-matchup/autoload/matchup/pos.vim
+170.485  002.650: first screen update
+170.490  000.005: --- NVIM STARTED ---
