@@ -16,19 +16,17 @@ Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy find
 " Nice to have
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
+Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
 Plug 'https://github.com/airblade/vim-gitgutter' " git status on the side
-Plug 'https://github.com/liuchengxu/vista.vim' " tags
 Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
-Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
-Plug 'https://github.com/jalvesaq/Nvim-R' " work with R language
 Plug 'https://github.com/junegunn/goyo.vim' " better vim writting
 Plug 'https://github.com/mateusbraga/vim-spell-pt-br' " vim spelling
 Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
-Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
+" Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
