@@ -12,11 +12,11 @@ Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and mor
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
+Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
+Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 
 " Nice to have
-Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
-Plug 'https://github.com/terryma/vim-smooth-scroll' " scroll
-Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
+Plug 'https://github.com/terryma/vim-smooth-scroll' " smotth scrolling
 Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
 Plug 'https://github.com/airblade/vim-gitgutter' " git status on the side
 Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
@@ -25,21 +25,18 @@ Plug 'https://github.com/junegunn/goyo.vim' " better vim writting
 Plug 'https://github.com/mateusbraga/vim-spell-pt-br' " vim spelling
 Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
-Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
-" Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
+Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 Plug 'https://github.com/kshenoy/vim-signature'
 Plug 'https://github.com/tpope/vim-repeat' " 
+Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
 
 " To be replaced or removed
-" Plug 'https://github.com/junegunn/fzf.vim' " better fuzzy finder, replaces ctrlp
 
 " Testing
-" Plug 'https://github.com/voldikss/vim-floaterm'
-Plug 'https://github.com/dstein64/vim-startuptime'
 
 " =============== DEVELOPING
 

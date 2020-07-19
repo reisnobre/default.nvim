@@ -29,16 +29,6 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
-" =============== VISTA
-noremap <silent> <Leader>v :Vista!!<CR>
-
-let g:vista_icon_indent = ["‚ï∞‚îÄ‚ñ∏ ", "‚îú‚îÄ‚ñ∏ "]
-let g:vista_sidebar_width = &columns / 4
-let g:vista_executive_for = {
-      \   'c': 'coc', 'cpp': 'coc', 'go': 'coc', 'rust': 'coc', 'python': 'coc',
-      \   'html': 'coc', 'css': 'coc', 'javascript': 'coc', 'typescript': 'coc'
-      \}
-
 let g:user_emmet_leader_key='<C-y>' " EMMET Remap
 let g:python_highlight_all = 1
 let g:rooter_silent_chdir = 1
@@ -64,22 +54,3 @@ nnoremap <space>gb :Git branch<Space>
 nnoremap <space>go :Git checkout<Space>
 nnoremap <space>gps :Dispatch! git push<CR>
 nnoremap <space>gpl :Dispatch! git pull<CR>
-
-" =============== FZF Preview
-" Use vim-devicons
-let g:fzf_preview_use_dev_icons = 0
-
-" devicons character width
-let g:fzf_preview_dev_icon_prefix_length = 5
-
-nnoremap <silent> <C-p> :CocCommand fzf-preview.FromResources project_mru git<CR>
-" nnoremap <silent> <C-p> :CocCommand fzf-preview.ProjectFiles<CR>
-nnoremap <silent> <Leader>f :CocCommand fzf-preview.ProjectFiles<CR>
-nnoremap <silent> <Leader>b :CocCommand fzf-preview.AllBuffers<CR>
-nnoremap <silent> <Leader>gs :CocCommand fzf-preview.GitStatus<CR>
-nnoremap <silent> <Leader>m :CocCommand fzf-preview.Marks<CR>
-
-nnoremap <silent> <Leader>a :CocCommand fzf-preview.ProjectGrep ''<CR>
-
-nnoremap <silent> [fzf-p]gs :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_fugitive_processors<CR>
-

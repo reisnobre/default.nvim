@@ -46,18 +46,28 @@ set clipboard=unnamed
 set noerrorbells
 set novisualbell
 
+" Avoid shift mistakes
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Vs vs
+cnoreabbrev Sp sp
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Session
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:session_autoload = 'yes'
 set viewoptions=cursor,folds,slash,unix,options "Remember options when reopening files
 
-" https://github.com/Shougo/defx.nvim/issues/19#issue-362323112Preview
-autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :CocCommand fzf-preview.ProjectFiles | endif 
+autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :CocCommand fzf-preview.ProjectFiles | endif " Open fzf files if the buffer is empty
 
 let g:loaded_matchparen = 1
-
-let g:loaded_netrw       = 1
+let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 
 if !has('nvim')
