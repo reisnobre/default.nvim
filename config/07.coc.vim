@@ -120,7 +120,6 @@ nnoremap <silent><Leader>n :CocCommand explorer<CR>
 nmap ge :CocCommand explorer<CR>
 
 " =============== Coc FZF Preview
-<<<<<<< HEAD
 
 let g:fzf_preview_use_dev_icons = 1
 
@@ -143,7 +142,6 @@ function! s:fugitive_reset(paths) abort
   echomsg 'Git reset ' . join(a:paths, ', ')
 endfunction
 
-=======
 augroup fzf_preview
   autocmd!
   autocmd User fzf_preview#initialized call s:fzf_preview_settings()
@@ -162,8 +160,6 @@ function! s:fugitive_reset(paths) abort
   endfor
   echomsg 'Git reset ' . join(a:paths, ', ')
 endfunction
-
->>>>>>> d408301a5f64967a0740833c93bb716f0a4e077d
 function! s:fugitive_patch(paths) abort
   for path in a:paths
     execute 'silent tabedit ' . path . ' | silent Gdiff'
