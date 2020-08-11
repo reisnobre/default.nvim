@@ -26,6 +26,7 @@ Plug 'https://github.com/mateusbraga/vim-spell-pt-br' " vim spelling
 Plug 'https://github.com/ap/vim-css-color' " css color preview on any file
 Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
+Plug 'https://github.com/junegunn/fzf.vim'
 
 " To learn
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
