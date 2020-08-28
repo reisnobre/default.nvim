@@ -10,7 +10,8 @@ let g:lightline.active = {
 \     ['fugitive', 'readonly'],
 \   ],
 \   'right': [
-\     ['filetype', 'fileencoding', 'lineinfo', 'percent'],
+\     ['filetype', 'fileencoding', 'lineinfo'],
+\     ['blame']
 \   ]
 \ }
 
@@ -38,6 +39,7 @@ let g:lightline.component_function = {
 \   'lineinfo'         : 'LightlineLineinfo',
 \   'fileinfo'         : 'LightlineFileinfo',
 \   'filetype'         : 'LightlineFiletype',
+\   'blame'            : 'LightlineGitBlame',
 \ }
 
 let g:lightline.component_expand = {
@@ -178,3 +180,8 @@ function! LightlineFiletype() abort
   return &filetype . (exists('*WebDevIconsGetFileTypeSymbol') ? ' ' . WebDevIconsGetFileTypeSymbol() : '')
 endfunction
 
+function! LightlineGitBlame() abort
+  let blame = get(b:, 'coc_git_blame', '')
+  " return blame
+  return winwidth(0) > 120 ? blame : ''
+endfunction

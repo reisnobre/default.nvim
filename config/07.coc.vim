@@ -34,6 +34,7 @@ let g:coc_global_extensions = [
   \ 'coc-vetur',
   \ 'coc-cssmodules',
   \ 'coc-fzf-preview',
+  \ 'coc-git'
   \ ]
 
 " =============== General configuration
@@ -193,3 +194,4 @@ nnoremap <silent> [fzf-p]t     :<C-u>CocCommand fzf-preview.BufferTags<CR>
 nnoremap <silent> [fzf-p]q     :<C-u>CocCommand fzf-preview.QuickFix<CR>
 nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
 
+nnoremap <silent> [fzf-p]mm     :<C-u>CocCommand fzf-preview.Bookmarks<CR>

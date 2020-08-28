@@ -55,6 +55,12 @@
   "python.jediEnabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
+  "git.addGBlameToVirtualText" : true,
+  "git.addedSign.hlGroup": "GitGutterAdd",
+  "git.changedSign.hlGroup": "GitGutterChange",
+  "git.removedSign.hlGroup": "GitGutterDelete",
+  "git.topRemovedSign.hlGroup": "GitGutterDelete",
+  "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
   "explorer.icon.enableNerdfont": true,
   "explorer.icon.enableVimDevions": true,
   "explorer.quitOnOpen": true,
@@ -89,5 +95,6 @@
     [
       "readonly"
     ]
-  ]
+  ],
+  "git.enableGutters": false
 }

@@ -7,7 +7,6 @@ call plug#begin()
 " =============== IDE
 " Essentials
 Plug 'https://github.com/itchyny/lightline.vim' " lightline
-Plug 'https://github.com/mileszs/ack.vim' " find anywere
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and more
 Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/tpope/vim-obsession' " save sessions
@@ -33,7 +32,8 @@ Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 Plug 'https://github.com/kshenoy/vim-signature'
 Plug 'https://github.com/tpope/vim-repeat' " 
-Plug 'https://github.com/antoinemadec/coc-fzf' " fuzzy find coc things
+Plug 'https://github.com/MattesGroeger/vim-bookmarks'
+" Plug 'https://github.com/APZelos/blamer.nvim' " blamer 
 
 " To be replaced or removed
 
