@@ -2,99 +2,31 @@
   "suggest.enablePreview": true,
   "suggest.snippetIndicator": " ",
   "suggest.maxCompleteItemCount": 20,
-  "suggest.completionItemKindLabels": {
-    "function"              : "\uf794",
-    "method"                : "\uf6a6",
-    "variable"              : "\uf71b",
-    "constant"              : "\uf8ff",
-    "struct"                : "\ufb44",
-    "class"                 : "\uf0e8",
-    "interface"             : "\ufa52",
-    "text"                  : "\ue612",
-    "enum"                  : "\uf435",
-    "enumMember"            : "\uf02b",
-    "module"                : "\uf668",
-    "color"                 : "\ue22b",
-    "property"              : "\ufab6",
-    "field"                 : "\uf93d",
-    "unit"                  : "\uf475",
-    "file"                  : "\uf471",
-    "value"                 : "\uf8a3",
-    "event"                 : "\ufacd",
-    "folder"                : "\uf115",
-    "keyword"               : "\uf893",
-    "snippet"               : "\uf64d",
-    "operator"              : "\uf915",
-    "reference"             : "\uf87a",
-    "typeParameter"         : "\uf278",
-    "default"               : "\uf29c"
-  },
-  "diagnostic.messageTarget": "echo",
-  "diagnostic.errorSign": "",
-  "diagnostic.warningSign": "",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": "ﯦ",
   "snippets.extends": {
     "cpp": ["c"],
     "javascriptreact": ["javascript"],
     "typescript": ["javascript"],
     "vue": ["javascript", "html"]
   },
-  "snippets.ultisnips.directories": ["UltiSnips", "gosnippets/UltiSnips"],
   "signature.preferShownAbove": false,
   "signature.target": "echo",
   "html.filetypes": ["html", "vue"],
   "eslint.packageManager": "yarn",
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue"
-  ],
-  "python.jediEnabled": false,
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Enabled": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue"],
   "git.addGBlameToVirtualText" : true,
   "git.addedSign.hlGroup": "GitGutterAdd",
   "git.changedSign.hlGroup": "GitGutterChange",
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+  "explorer.file.column.indent.indentLine": false,
   "explorer.icon.enableNerdfont": true,
-  "explorer.icon.enableVimDevions": true,
-  "explorer.quitOnOpen": true,
   "explorer.previewAction.onHover": true,
   "explorer.previewAction.strategy": "labeling",
-  "explorer.file.columns": [
-    "git",
-    "selection",
-    "clip",
-    "diagnosticError",
-    "indent",
-    "icon",
-    "filename",
-    "size",
-    "modified",
-    "readonly",
-    [
-      "fullpath"
-    ],
-    [
-      "size"
-    ],
-    [
-      "accessed"
-    ],
-    [
-      "modified"
-    ],
-    [
-      "created"
-    ],
-    [
-      "readonly"
-    ]
-  ],
-  "git.enableGutters": false
+  "explorer.quitOnOpen": true,
+  "explorer.width": 30,
+  "git.enableGutters": false,
+  "python.jediEnabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true
 }
