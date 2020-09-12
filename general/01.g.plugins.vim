@@ -23,6 +23,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
 Plug 'https://github.com/norcalli/nvim-colorizer.lua' " css colors
 Plug 'https://github.com/mhinz/vim-signify' " git integration
+Plug 'https://github.com/rbong/vim-flog'
 
 " To learn
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
@@ -36,6 +37,7 @@ Plug 'https://github.com/tpope/vim-repeat' "
 
 " =============== SYNTAX
 " Essentials
+Plug 'https://github.com/sheerun/vim-polyglot' " language support
 
 " Nice to have
 
@@ -44,6 +46,10 @@ Plug 'https://github.com/tpope/vim-repeat' "
 " Testing
 
 " =============== SNIPPETS
+Plug 'https://github.com/SirVer/ultisnips'
+Plug 'https://github.com/freencis/snippets'
+Plug 'https://github.com/reisnobre/snippets.nvim'
+Plug 'https://github.com/mattn/emmet-vim'
 
 " =============== THEMES
 Plug 'https://github.com/arcticicestudio/nord-vim'
