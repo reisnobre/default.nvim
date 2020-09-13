@@ -45,7 +45,7 @@ Plug 'https://github.com/sheerun/vim-polyglot' " language support
 " Testing
 
 " =============== SNIPPETS
-Plug 'https://github.com/SirVer/ultisnips'
+" Plug 'https://github.com/SirVer/ultisnips'
 Plug 'https://github.com/freencis/snippets'
 Plug 'https://github.com/reisnobre/snippets.nvim'
 Plug 'https://github.com/mattn/emmet-vim'
