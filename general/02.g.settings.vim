@@ -70,5 +70,3 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Vs vs
 cnoreabbrev Sp sp
-
-" autocmd BufEnter * silent! lcd %:p:h " change dirs as files are oppened
