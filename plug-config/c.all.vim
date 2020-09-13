@@ -1,17 +1,20 @@
 " =============== Fugitive Mappings
-nnoremap <space>ga :Git add %:p<CR><CR>
-nnoremap <space>gt :Gcommit -v -q %:p<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
-nnoremap <space>gdf :Gdiff<CR>
+nmap <Leader>g [fugitive-g]
+xmap <Leader>g [fugitive-g]
+
+nnoremap <silent> [fugitive-g]a :G add %:p<CR>
+nnoremap <silent> [fugitive-g]c :G commit -v -q<CR>
+nnoremap <silent> [fugitive-g]t :G commit -v -q  %:p<CR>
+nnoremap <silent> [fugitive-g]b :G branch<Space>
+nnoremap <silent> [fugitive-g]o :G checkout<Space>
+nnoremap <silent> [fugitive-g]d :G diff<Space>
+nnoremap <silent> [fugitive-g]l :G log<CR>:bot copen<CR>
+
 nnoremap <space>ge :Gedit<CR>
 nnoremap <space>grf :Gread<CR>
-nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
-
 nnoremap <space>gw :Gwrite<CR><CR>
 nnoremap <space>gp :Ggrep<Space>
 nnoremap <space>gm :Gmove<Space>
-nnoremap <space>gb :Git branch<Space>
-nnoremap <space>go :Git checkout<Space>
 nnoremap <space>gps :Dispatch! git push<CR>
 nnoremap <space>gpl :Dispatch! git pull<CR>
 
@@ -35,4 +38,4 @@ let g:signify_sign_show_text = 1
 " nmap <leader>gJ 9999<leader>gJ
 " nmap <leader>gK 9999<leader>gk
 
-lua require'colorizer'.setup()
+
