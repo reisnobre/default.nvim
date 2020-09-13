@@ -14,15 +14,14 @@ Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/terryma/vim-smooth-scroll' " smotth scrolling
 Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
+Plug 'https://github.com/mhinz/vim-signify' " git integration
 
 " Nice to have
 Plug 'https://github.com/MattesGroeger/vim-bookmarks' " bookmarks
-Plug 'https://github.com/andymass/vim-matchup' " highlight matching pairs
 Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
 Plug 'https://github.com/norcalli/nvim-colorizer.lua' " css colors
-Plug 'https://github.com/mhinz/vim-signify' " git integration
 Plug 'https://github.com/rbong/vim-flog'
 
 " To learn
