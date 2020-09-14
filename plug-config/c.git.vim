@@ -1,3 +1,15 @@
+" =============== Signify
+" Change these if you want
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+
+" I find the numbers disctracting
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
+
 " =============== Fugitive Mappings
 nmap <Leader>g [fugitive-g]
 xmap <Leader>g [fugitive-g]
@@ -22,3 +34,7 @@ nnoremap <space>gw :Gwrite<CR><CR>
 nnoremap <space>gp :Ggrep<Space>
 nnoremap <space>gps :Dispatch! git push<CR>
 nnoremap <space>gpl :Dispatch! git pull<CR>
+
+" =============== COC Git Mappings
+nnoremap <silent> [fugitive-g]n <Plug>(coc-git-prevchunk)
+nnoremap <silent> [fugitive-g]p <Plug>(coc-git-nextchunk)

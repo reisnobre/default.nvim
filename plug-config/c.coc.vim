@@ -10,6 +10,8 @@ endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight') " Highlight symbol under cursor on CursorHold
 
+" new hunk
+
 " =============== Extensions to install
 "
 let g:coc_global_extensions = [
@@ -177,6 +179,8 @@ imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 imap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
+
+" new hunk
 
 " =============== coc-explorer
 nnoremap <silent><Leader>n :CocCommand explorer<CR>
