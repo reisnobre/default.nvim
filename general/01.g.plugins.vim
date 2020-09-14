@@ -23,6 +23,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
 Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
 Plug 'https://github.com/norcalli/nvim-colorizer.lua' " css colors
 Plug 'https://github.com/rbong/vim-flog'
+Plug 'https://github.com/mhinz/vim-startify'
 
 " To learn
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words

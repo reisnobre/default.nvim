@@ -53,7 +53,7 @@ let g:elite_mode=1 " Enable Elite mode, arrows resize windows
 let g:loaded_netrw = 1 " disable netrw
 let g:loaded_netrwPlugin = 1 " disable netrw
 
-autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :CocCommand fzf-preview.ProjectFiles | endif " Open fzf files if the buffer is empty
+autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :Startify | endif " Open startify if the buffer is empty
 
 " No annoying sound on errors
 set noerrorbells
