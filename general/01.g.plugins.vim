@@ -15,6 +15,7 @@ Plug 'https://github.com/tpope/vim-fugitive' " git interaction
 Plug 'https://github.com/terryma/vim-smooth-scroll' " smotth scrolling
 Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
 Plug 'https://github.com/mhinz/vim-signify' " git integration
+Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 
 " Nice to have
 Plug 'https://github.com/MattesGroeger/vim-bookmarks' " bookmarks
