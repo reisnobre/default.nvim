@@ -25,6 +25,7 @@ nnoremap <silent> [fugitive-g]d :G diff<Space>
 nnoremap <silent> [fugitive-g]o :G checkout<Space>
 
 nnoremap <silent> [fugitive-g]m :G merge<Space>
+nnoremap <silent> [fugitive-g]mt :G mergetool<Space>
 nnoremap <silent> [fugitive-g]mj :diffget //3<CR>
 nnoremap <silent> [fugitive-g]mf :diffget //2<CR>
 
