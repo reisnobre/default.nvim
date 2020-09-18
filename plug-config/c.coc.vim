@@ -16,25 +16,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight') " Highlight symbol 
 "
 let g:coc_global_extensions = [
   \ 'coc-explorer',
-  \ 'coc-yank',
-  \ 'coc-snippets',
-  \ 'coc-pairs',
-  \ 'coc-marketplace',
-  \ 'coc-imselect',
-  \ 'coc-highlight',
-  \ 'coc-eslint',
-  \ 'coc-emmet',
-  \ 'coc-vimtex',
-  \ 'coc-vimlsp',
-  \ 'coc-tsserver',
-  \ 'coc-python',
-  \ 'coc-phpls',
-  \ 'coc-json',
-  \ 'coc-css',
-  \ 'coc-html',
-  \ 'coc-markdownlint',
-  \ 'coc-vetur',
-  \ 'coc-cssmodules',
   \ 'coc-fzf-preview',
   \ 'coc-git'
   \ ]
@@ -75,7 +56,7 @@ endfunction
 
 
 " =============== Coc FZF Preview
-let g:fzf_preview_use_dev_icons = 1
+let g:fzf_preview_use_dev_icons = 0
 
 function! s:fzf_preview_settings() abort
   let g:fzf_preview_fugitive_processes = fzf_preview#remote#process#get_default_processes('open-file', 'coc')

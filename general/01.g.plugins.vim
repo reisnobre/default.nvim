@@ -7,7 +7,6 @@ call plug#begin()
 " =============== IDE
 " Essentials
 Plug 'https://github.com/neoclide/coc.nvim', {'branch': 'release'} " lsp and more
-Plug 'https://github.com/christoomey/vim-tmux-navigator' " easy vim + tmux navigation
 Plug 'https://github.com/itchyny/lightline.vim' " lightline
 Plug 'https://github.com/junegunn/fzf', { 'do': './install --bin' } " fuzzy finder
 Plug 'https://github.com/tomtom/tcomment_vim' " easy comments
@@ -18,13 +17,7 @@ Plug 'https://github.com/mhinz/vim-signify' " git integration
 Plug 'https://github.com/airblade/vim-rooter' " changes the working directory to the root of the project
 
 " Nice to have
-Plug 'https://github.com/MattesGroeger/vim-bookmarks' " bookmarks
 Plug 'https://github.com/reisnobre/vim-evanesco' " easy :noh
-Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
-Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
-Plug 'https://github.com/norcalli/nvim-colorizer.lua' " css colors
-Plug 'https://github.com/rbong/vim-flog'
-Plug 'https://github.com/mhinz/vim-startify'
 
 " To learn
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
@@ -38,7 +31,6 @@ Plug 'https://github.com/tpope/vim-repeat' "
 
 " =============== SYNTAX
 " Essentials
-Plug 'https://github.com/sheerun/vim-polyglot' " language support
 
 " Nice to have
 
@@ -47,10 +39,6 @@ Plug 'https://github.com/sheerun/vim-polyglot' " language support
 " Testing
 
 " =============== SNIPPETS
-" Plug 'https://github.com/SirVer/ultisnips'
-Plug 'https://github.com/freencis/snippets'
-Plug 'https://github.com/reisnobre/snippets.nvim'
-Plug 'https://github.com/mattn/emmet-vim'
 
 " =============== THEMES
 Plug 'https://github.com/arcticicestudio/nord-vim'
