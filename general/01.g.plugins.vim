@@ -25,10 +25,12 @@ Plug 'https://github.com/wakatime/vim-wakatime' " time tracking
 Plug 'https://github.com/norcalli/nvim-colorizer.lua' " css colors
 Plug 'https://github.com/rbong/vim-flog'
 Plug 'https://github.com/mhinz/vim-startify'
+Plug 'https://github.com/ntpeters/vim-better-whitespace'
 
 " To learn
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
-Plug 'https://github.com/tpope/vim-repeat' " 
+Plug 'https://github.com/tpope/vim-repeat' "
+Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
 
 " To be replaced or removed
 
@@ -37,6 +39,7 @@ Plug 'https://github.com/tpope/vim-repeat' "
 " =============== DEVELOPING
 
 " =============== SYNTAX
+
 " Essentials
 Plug 'https://github.com/sheerun/vim-polyglot' " language support
 

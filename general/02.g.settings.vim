@@ -36,7 +36,6 @@ set foldcolumn=2                        " Add a bit extra margin to the left
 set foldmethod=indent                   " fold by indent
 set formatoptions-=cro                  " Stop newline continution of comments
 set history=500                         " Sets how many lines of history VIM has to remember
-set iskeyword+=-                      	" treat dash separated words as a word text object"
 set pumheight=10                        " Makes popup menu smaller
 set shiftwidth=2                        " size of autoindent
 set shortmess=aFc                       " don't give ins-completion-menu messages.
