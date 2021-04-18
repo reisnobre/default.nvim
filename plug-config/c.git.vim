@@ -12,13 +12,13 @@ let g:signify_sign_show_text = 1
 
 " =============== Fugitive Mappings
 nmap <Leader>g [fugitive-g]
-xmap <Leader>g [fugitive-g]
+xmap <Leader>gt[fugitive-g]
 
 nnoremap <silent> [fugitive-g]s :G<CR>
 nnoremap <silent> [fugitive-g]a :G add %:p<CR>
 nnoremap <silent> [fugitive-g]c :G commit -v -q<CR>
-nnoremap <silent> [fugitive-g]t :G commit -v -q  %:p<CR>
-nnoremap <silent> [fugitive-g]l :G log<CR>:bot copen<CR>
+nnoremap <silent> [fugitive-g]C :G commit -v -q  %:p<CR>
+nnoremap <silent> [fugitive-g]l :G log<CR>
 
 nnoremap <silent> [fugitive-g]b :G branch<Space>
 nnoremap <silent> [fugitive-g]d :G diff<Space>
@@ -32,10 +32,10 @@ nnoremap <silent> [fugitive-g]mf :diffget //2<CR>
 nnoremap <space>ge :Gedit<CR>
 nnoremap <space>grf :Gread<CR>
 nnoremap <space>gw :Gwrite<CR><CR>
-nnoremap <space>gp :Ggrep<Space>
+" nnoremap <space>gp :Ggrep<Space>
 nnoremap <space>gps :Dispatch! git push<CR>
 nnoremap <space>gpl :Dispatch! git pull<CR>
 
 " =============== COC Git Mappings
-nnoremap <silent> [fugitive-g]n <Plug>(coc-git-prevchunk)
-nnoremap <silent> [fugitive-g]p <Plug>(coc-git-nextchunk)
+nnoremap <silent> [fugitive-g]N <Plug>(coc-git-prevchunk)
+nnoremap <silent> [fugitive-g]P <Plug>(coc-git-nextchunk)

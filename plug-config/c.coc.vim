@@ -119,11 +119,10 @@ nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
 
 " new hunk
 
-" =============== coc-explorer
+" =============== COC-EXPLORER
 nnoremap <silent><Leader>n :CocCommand explorer<CR>
-nmap ge :CocCommand explorer<CR>
 
-" =============== coc-fzf-preview
+" =============== COC-FZF-PREVIEW
 let g:fzf_preview_use_dev_icons = 1
 
 function! s:fzf_preview_settings() abort
@@ -184,27 +183,46 @@ function! s:fzf_preview_settings() abort
   let g:fzf_preview_grep_preview_cmd = 'COLORTERM=truecolor ' . g:fzf_preview_grep_preview_cmd
 endfunction
 
+
+" =============== COC-FZF-PREVIEW BINDINGS
+
+" define a map for dealing with files
 nmap <Leader>f [fzf-p]
 xmap <Leader>f [fzf-p]
 
+" =============== list files
+" List files by mru git
 nnoremap <silent> [fzf-p]p     :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>
-nnoremap <silent> [fzf-p]ga    :<C-u>CocCommand fzf-preview.GitActions<CR>
-nnoremap <silent> [fzf-p]gs    :<C-u>CocCommand fzf-preview.GitStatus<CR>
+
+" List files from selected resources eg (project, git, directory, buffer, project_old, project_mru, project_mrw, old, mru, mrw)
+nnoremap <silent> [fzf-p]o     :<C-u>CocCommand fzf-preview.FromResources buffer project_mru<CR>
+
+" =============== buffers
+" List files open on buffer, you can close marking with tab and closing with C-q
 nnoremap <silent> [fzf-p]b     :<C-u>CocCommand fzf-preview.Buffers<CR>
 nnoremap <silent> [fzf-p]B     :<C-u>CocCommand fzf-preview.AllBuffers<CR>
-nnoremap <silent> [fzf-p]o     :<C-u>CocCommand fzf-preview.FromResources buffer project_mru<CR>
-nnoremap <silent> [fzf-p]<C-o> :<C-u>CocCommand fzf-preview.Jumps<CR>
-nnoremap <silent> [fzf-p]g;    :<C-u>CocCommand fzf-preview.Changes<CR>
+" Jump to a buffer that is already open
+nnoremap <silent> [fzf-p]j     :<C-u>CocCommand fzf-preview.Jumps<CR>
+
+" =============== search
+" search for query
 nnoremap <silent> [fzf-p]/     :<C-u>CocCommand fzf-preview.Lines --add-fzf-arg=--no-sort --add-fzf-arg=--query=""<CR>
+" search for word what is in the query
 nnoremap <silent> [fzf-p]*     :<C-u>CocCommand fzf-preview.Lines --add-fzf-arg=--no-sort --add-fzf-arg=--query="<C-r>=expand('<cword>')<CR>"<CR>
+" search on project
 nnoremap          [fzf-p]a     :<C-u>CocCommand fzf-preview.ProjectGrep<Space>
 xnoremap          [fzf-p]a     "sy:CocCommand   fzf-preview.ProjectGrep<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
-nnoremap <silent> [fzf-p]t     :<C-u>CocCommand fzf-preview.BufferTags<CR>
+
+" =============== fixes
 nnoremap <silent> [fzf-p]q     :<C-u>CocCommand fzf-preview.QuickFix<CR>
 nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
 
-
-nnoremap <silent> [fzf-p]mm     :<C-u>CocCommand fzf-preview.Bookmarks<CR>
+" =============== git integration
+" List files by mru git
+nnoremap <silent> [fzf-p]ga    :<C-u>CocCommand fzf-preview.GitActions<CR>
+nnoremap <silent> [fzf-p]gs    :<C-u>CocCommand fzf-preview.GitStatus<CR>
+" List changes for on a  file
+nnoremap <silent> [fzf-p]gc    :<C-u>CocCommand fzf-preview.Changes<CR>
 
 " navigate chunks of current buffer
 nmap [g <Plug>(coc-git-prevchunk)
