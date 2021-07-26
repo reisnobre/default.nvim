@@ -27,7 +27,6 @@ Plug 'https://github.com/norcalli/nvim-colorizer.lua' " css colors
 " To learn
 Plug 'https://github.com/tpope/vim-surround' " easy sorround of words
 Plug 'https://github.com/tpope/vim-repeat' " repeat writing .
-" Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
 
 " To be replaced or removed
 

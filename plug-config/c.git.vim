@@ -17,6 +17,7 @@ xmap <Leader>gt[fugitive-g]
 nnoremap <silent> [fugitive-g]s :G<CR>
 nnoremap <silent> [fugitive-g]a :G add %:p<CR>
 nnoremap <silent> [fugitive-g]c :G commit -v -q<CR>
+nnoremap <silent> [fugitive-g]ca :G commit -v -q --amend<CR>
 nnoremap <silent> [fugitive-g]C :G commit -v -q  %:p<CR>
 nnoremap <silent> [fugitive-g]l :G log<CR>
 
@@ -33,7 +34,7 @@ nnoremap <space>ge :Gedit<CR>
 nnoremap <space>grf :Gread<CR>
 nnoremap <space>gw :Gwrite<CR><CR>
 " nnoremap <space>gp :Ggrep<Space>
-nnoremap <space>gps :Dispatch! git push<CR>
+nnoremap <space>gps :Git push<CR>
 nnoremap <space>gpl :Dispatch! git pull<CR>
 
 " =============== COC Git Mappings
