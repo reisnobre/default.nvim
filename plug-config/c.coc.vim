@@ -1,16 +1,13 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => COC
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 function! s:coc_config() abort
   let root_patterns = ['.vim/', '.git/', '.hg/', '.projections.json']
   let g:coc_status_error_sign   = ''
   let g:coc_status_warning_sign = ''
 endfunction
 
-" autocmd CursorHold * silent call CocActionAsync('highlight') " Highlight symbol under cursor on CursorHold
-
-" new hunk
+autocmd CursorHold * silent call CocActionAsync('highlight') " Highlight symbol under cursor on CursorHold
 
 " =============== Extensions to install
 "
@@ -35,6 +32,7 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-vimtex',
   \ 'coc-yank',
+  \ 'coc-tailwindcss'
   \ ]
 
 " =============== General configuration
@@ -99,7 +97,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac <Plug>(coc-codeaction-selected)
+nmap <leader>ac <Plug>(coc-codeaction)
 nmap <leader>acl <Plug>(coc-codeaction-line)
 
 " Apply AutoFix to problem on the current line.
@@ -116,8 +114,6 @@ imap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 imap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
-
-" new hunk
 
 " =============== COC-EXPLORER
 nnoremap <silent><Leader>n :CocCommand explorer<CR>
@@ -182,7 +178,6 @@ function! s:fzf_preview_settings() abort
   let g:fzf_preview_command = 'COLORTERM=truecolor ' . g:fzf_preview_command
   let g:fzf_preview_grep_preview_cmd = 'COLORTERM=truecolor ' . g:fzf_preview_grep_preview_cmd
 endfunction
-
 
 " =============== COC-FZF-PREVIEW BINDINGS
 

@@ -36,7 +36,6 @@
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "intelephense.licenceKey": "00BR6YDLX9HRNT4",
-  "phpls.path": "/usr/local/bin/intelephense",
   "css.customData": ["./css_custom_data.json"],
   "css.lint.unknownAtRules": "ignore",
   "scss.validate": false

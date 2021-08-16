@@ -17,10 +17,10 @@ set magic " For regular expressions turn magic on
 set nobackup " Some server have issues with backup files, see #649
 set nowrap "No wrap lines
 set nowritebackup
-set nu " numeric ruler
-set rnu " relative ruler
-set shellslash " auto slash at the end of file path
-set si " Smart indent
+set nu                                  " numeric ruler
+set rnu                                 " relative ruler
+set shellslash                          " auto slash at the end of file path
+set si                                  " Smart indent
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
@@ -48,9 +48,9 @@ set updatetime=300                      " Smaller updatetime for CursorHold & Cu
 set laststatus=2
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 
-let g:elite_mode=1 " Enable Elite mode, arrows resize windows
-let g:loaded_netrw = 1 " disable netrw
-let g:loaded_netrwPlugin = 1 " disable netrw
+let g:elite_mode=1                      " Enable Elite mode, arrows resize windows
+let g:loaded_netrw = 1                  " disable netrw
+let g:loaded_netrwPlugin = 1            " disable netrw
 
 autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :Startify | endif " Open startify if the buffer is empty
 
