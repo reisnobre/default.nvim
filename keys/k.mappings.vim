@@ -55,10 +55,10 @@ nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
 
 " Scrolling
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
+" noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 10, 2)<CR>
+" noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 10, 2)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 
 " =============== FMaps
 set pastetoggle=<F2>

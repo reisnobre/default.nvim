@@ -12,3 +12,7 @@ endfor
 for f in split(glob('~/.config/nvim/plug-config/*.vim'), '\n')
 	exe 'source' f
 endfor
+
+for f in split(glob('~/.config/nvim/plug-config/*.lua'), '\n')
+	exe 'source' f
+endfor
