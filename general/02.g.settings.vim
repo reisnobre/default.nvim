@@ -69,3 +69,6 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Vs vs
 cnoreabbrev Sp sp
+
+let g:rooter_silent_chdir = 1
+autocmd BufEnter * silent! lcd %:p:h " change dirs as files are oppened

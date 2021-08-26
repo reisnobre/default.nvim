@@ -14,7 +14,7 @@ Plug 'https://github.com/Yggdroot/indentLine' " indentation indicator
 Plug 'https://github.com/tpope/vim-fugitive' " git interaction/integration
 Plug 'hoob3rt/lualine.nvim' " substitute for lightline
 Plug 'https://github.com/ryanoasis/vim-devicons' " nice devicons on vim
-Plug 'psliwka/vim-smoothie'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Nice to have
 Plug 'https://github.com/mhinz/vim-startify' " startup menu with quick access to recent files

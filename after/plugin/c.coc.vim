@@ -20,7 +20,6 @@ let g:coc_global_extensions = [
   \ 'coc-git',
   \ 'coc-highlight',
   \ 'coc-html',
-  \ 'coc-imselect',
   \ 'coc-json',
   \ 'coc-marketplace',
   \ 'coc-pairs',
