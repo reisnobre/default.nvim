@@ -16,8 +16,6 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-eslint',
   \ 'coc-explorer',
-  \ 'coc-fzf-preview',
-  \ 'coc-git',
   \ 'coc-highlight',
   \ 'coc-html',
   \ 'coc-imselect',
@@ -118,68 +116,7 @@ nnoremap <silent> <Leader>k :call <SID>show_documentation()<CR>
 " =============== COC-EXPLORER
 nnoremap <silent><Leader>n :CocCommand explorer<CR>
 
-" =============== COC-FZF-PREVIEW
-let g:fzf_preview_use_dev_icons = 1
-
-function! s:fzf_preview_settings() abort
-  let g:fzf_preview_fugitive_processes = fzf_preview#remote#process#get_default_processes('open-file', 'coc')
-  let g:fzf_preview_fugitive_processes['ctrl-a'] = get(function('s:fugitive_add'), 'name')
-  let g:fzf_preview_fugitive_processes['ctrl-r'] = get(function('s:fugitive_reset'), 'name')
-  let g:fzf_preview_fugitive_processes['ctrl-c'] = get(function('s:fugitive_patch'), 'name')
-
-  let g:fzf_preview_grep_preview_cmd = 'COLORTERM=truecolor ' . g:fzf_preview_grep_preview_cmd
-endfunction
-
-function! s:fugitive_add(paths) abort
-  for path in a:paths
-    execute 'silent G add ' . path
-  endfor
-  echomsg 'Git add ' . join(a:paths, ', ')
-endfunction
-
-function! s:fugitive_reset(paths) abort
-  for path in a:paths
-    execute 'silent G reset ' . path
-  endfor
-  echomsg 'Git reset ' . join(a:paths, ', ')
-endfunction
-
-augroup fzf_preview
-  autocmd!
-  autocmd User fzf_preview#initialized call s:fzf_preview_settings()
-augroup END
-
-function! s:fugitive_add(paths) abort
-  for path in a:paths
-    execute 'silent G add ' . path
-  endfor
-  echomsg 'Git add ' . join(a:paths, ', ')
-endfunction
-
-function! s:fugitive_reset(paths) abort
-  for path in a:paths
-    execute 'silent G reset ' . path
-  endfor
-  echomsg 'Git reset ' . join(a:paths, ', ')
-endfunction
-function! s:fugitive_patch(paths) abort
-  for path in a:paths
-    execute 'silent tabedit ' . path . ' | silent Gdiff'
-  endfor
-  echomsg 'Git add --patch ' . join(a:paths, ', ')
-endfunction
-
-" theme
-let $FZF_PREVIEW_PREVIEW_BAT_THEME = 'Nord'
-let $BAT_THEME = 'Nord'
-
-" truecolors
-function! s:fzf_preview_settings() abort
-  let g:fzf_preview_command = 'COLORTERM=truecolor ' . g:fzf_preview_command
-  let g:fzf_preview_grep_preview_cmd = 'COLORTERM=truecolor ' . g:fzf_preview_grep_preview_cmd
-endfunction
-
-" =============== COC-FZF-PREVIEW BINDINGS
+" =============== Telescope
 
 " define a map for dealing with files
 nmap <Leader>f [fzf-p]
@@ -187,37 +124,11 @@ xmap <Leader>f [fzf-p]
 
 " =============== list files
 " List files by mru git
-nnoremap <silent> [fzf-p]p     :<C-u>CocCommand fzf-preview.FromResources project_mru git<CR>
-
-" List files from selected resources eg (project, git, directory, buffer, project_old, project_mru, project_mrw, old, mru, mrw)
-nnoremap <silent> [fzf-p]o     :<C-u>CocCommand fzf-preview.FromResources buffer project_mru<CR>
-
-" =============== buffers
-" List files open on buffer, you can close marking with tab and closing with C-q
-nnoremap <silent> [fzf-p]b     :<C-u>CocCommand fzf-preview.Buffers<CR>
-nnoremap <silent> [fzf-p]B     :<C-u>CocCommand fzf-preview.AllBuffers<CR>
-" Jump to a buffer that is already open
-nnoremap <silent> [fzf-p]j     :<C-u>CocCommand fzf-preview.Jumps<CR>
-
-" =============== search
-" search for query
-nnoremap <silent> [fzf-p]/     :<C-u>CocCommand fzf-preview.Lines --add-fzf-arg=--no-sort --add-fzf-arg=--query=""<CR>
-" search for word what is in the query
-nnoremap <silent> [fzf-p]*     :<C-u>CocCommand fzf-preview.Lines --add-fzf-arg=--no-sort --add-fzf-arg=--query="<C-r>=expand('<cword>')<CR>"<CR>
-" search on project
-nnoremap          [fzf-p]a     :<C-u>CocCommand fzf-preview.ProjectGrep<Space>
-xnoremap          [fzf-p]a     "sy:CocCommand   fzf-preview.ProjectGrep<Space>-F<Space>"<C-r>=substitute(substitute(@s, '\n', '', 'g'), '/', '\\/', 'g')<CR>"
-
-" =============== fixes
-nnoremap <silent> [fzf-p]q     :<C-u>CocCommand fzf-preview.QuickFix<CR>
-nnoremap <silent> [fzf-p]l     :<C-u>CocCommand fzf-preview.LocationList<CR>
-
-" =============== git integration
-" List files by mru git
-nnoremap <silent> [fzf-p]ga    :<C-u>CocCommand fzf-preview.GitActions<CR>
-nnoremap <silent> [fzf-p]gs    :<C-u>CocCommand fzf-preview.GitStatus<CR>
-" List changes for on a  file
-nnoremap <silent> [fzf-p]gc    :<C-u>CocCommand fzf-preview.Changes<CR>
+nnoremap <silent> [fzf-p]p     :<C-u>Telescope find_files<CR>
+nnoremap <silent> [fzf-p]a     :<C-u>Telescope live_grep<CR>
+nnoremap <silent> [fzf-p]b     :<C-u>Telescope buffers<CR>
+nnoremap <silent> [fzf-p]gc    :<C-u>Telescope git_commits<CR>
+nnoremap <silent> [fzf-p]gs    :<C-u>Telescope git_status<CR>
 
 " navigate chunks of current buffer
 nmap [g <Plug>(coc-git-prevchunk)

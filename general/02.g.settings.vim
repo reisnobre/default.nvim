@@ -32,7 +32,6 @@ set conceallevel=0                      " So that I can see `` in markdown files
 set encoding=utf8                       " Set utf8 as standard encoding and en_US as the standard language
 set fileencoding=utf-8                  " The encoding written to file
 set fileformat=unix                     " Default file format
-set foldcolumn=2                        " Add a bit extra margin to the left
 set foldmethod=indent                   " fold by indent
 set formatoptions-=cro                  " Stop newline continution of comments
 set history=500                         " Sets how many lines of history VIM has to remember
