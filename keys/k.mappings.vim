@@ -64,3 +64,25 @@ noremap <silent> <F9> :!find $(git root) -type d -d 1 -name 'public' -exec open 
 noremap <F10> :so $MYVIMRC <CR>
 noremap <F12> :tabe $MYVIMRC <CR>
 
+inoremap <silent><expr> <C-CR> compe#complete()
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
+inoremap <silent><expr> <C-e>     compe#close('<C-e>')
+inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
+inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+
+" =============== COC-FZF-PREVIEW BINDINGS
+
+" define a map for dealing with files
+nmap <Leader>f [tele-p]
+xmap <Leader>f [tele-p]
+
+" Find files using Telescope command-line sugar.
+nnoremap [tele-p]p <cmd>Telescope find_files<cr>
+nnoremap [tele-p]a <cmd>Telescope live_grep<cr>
+nnoremap [tele-p]b <cmd>Telescope buffers<cr>
+nnoremap [tele-p]h <cmd>Telescope help_tags<cr>
+nnoremap [tele-p]gc <cmd>Telescope git_commits<cr>
+nnoremap [tele-p]gb <cmd>Telescope git_branches<cr>
+nnoremap [tele-p]gs <cmd>Telescope git_status<cr>
+

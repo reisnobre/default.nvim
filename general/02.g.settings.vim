@@ -5,13 +5,15 @@
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
+set encoding=utf8                       " Set utf8 as standard encoding and en_US as the standard language
+set fileencoding=utf-8                  " The encoding written to file
+set fileformat=unix                     " Default file format
 
-set termguicolors " this
 set autoindent " set autoindent
 set autoread " Set to auto read when a file is changed from the outside
 set expandtab " use spaces instead of tabs
 set hidden " if hidden is not set, TextEdit might fail.
-set incsearch " Makes search act like search in modern browsers
+" set incsearch " Makes search act like search in modern browsers
 set lazyredraw " Don't redraw while executing macros (good performance config)
 set magic " For regular expressions turn magic on
 set nobackup " Some server have issues with backup files, see #649
@@ -24,22 +26,18 @@ set si                                  " Smart indent
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
-syntax enable                           " Enables syntax highlighing
-
+"
 set cmdheight=2                         " Better display for messages
-set completeopt=longest,menuone
+set completeopt=menuone,noselect
 set conceallevel=0                      " So that I can see `` in markdown files
-set encoding=utf8                       " Set utf8 as standard encoding and en_US as the standard language
-set fileencoding=utf-8                  " The encoding written to file
-set fileformat=unix                     " Default file format
-set foldcolumn=2                        " Add a bit extra margin to the left
 set foldmethod=indent                   " fold by indent
+" set foldexpr=nvim_treesitter#foldexpr()
 set formatoptions-=cro                  " Stop newline continution of comments
 set history=500                         " Sets how many lines of history VIM has to remember
 set pumheight=10                        " Makes popup menu smaller
 set shiftwidth=2                        " size of autoindent
 set shortmess=aFc                       " don't give ins-completion-menu messages.
-set showtabline=2                       " Always show tabs
+" set showtabline=2                       " Always show tabs
 set signcolumn=yes                      " always show signcolumns
 set t_Co=256                            " Support 256 colors
 set tabstop=2                           " size of tab
@@ -51,8 +49,6 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 let g:elite_mode=1                      " Enable Elite mode, arrows resize windows
 let g:loaded_netrw = 1                  " disable netrw
 let g:loaded_netrwPlugin = 1            " disable netrw
-
-autocmd VimEnter * if isdirectory(expand(printf('#%s:p', expand('<abuf>')))) | :Startify | endif " Open startify if the buffer is empty
 
 " No annoying sound on errors
 set noerrorbells
@@ -70,5 +66,16 @@ cnoreabbrev Q q
 cnoreabbrev Vs vs
 cnoreabbrev Sp sp
 
-let g:rooter_silent_chdir = 1
-autocmd BufEnter * silent! lcd %:p:h " change dirs as files are oppened
+" true color
+if exists("&termguicolors") && exists("&winblend")
+  syntax enable
+  set termguicolors
+  set winblend=0
+  set wildoptions=pum
+  set pumblend=5
+  set background=dark
+
+  colorscheme Nord
+  let g:nord_contrast = v:true
+  let g:nord_borders = v:true
+endif
